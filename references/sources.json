@@ -1,0 +1,795 @@
+[
+  {
+    "id": "S01",
+    "title": "Microsoft Secure Score",
+    "url": "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score",
+    "publisher": "Microsoft",
+    "focus": "Score limitations; prioritization rather than assurance.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S02",
+    "title": "Zero Trust deployment plan with Microsoft 365",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "Architecture and phased deployment; verify canonical redirect during link validation.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S03",
+    "title": "ScubaGear",
+    "url": "https://github.com/cisagov/ScubaGear",
+    "publisher": "CISA",
+    "focus": "Independent configuration assessment tool and baseline inventory.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S04",
+    "title": "ScubaGear v1.8.0 assumptions",
+    "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/assumptions.md",
+    "publisher": "CISA",
+    "focus": "Tested license bundles; DoD endpoint testing caveat; third-party mitigations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S05",
+    "title": "CIS Microsoft 365 Benchmarks",
+    "url": "https://www.cisecurity.org/benchmark/microsoft_365",
+    "publisher": "CIS",
+    "focus": "Public benchmark catalog only; full benchmark text was not obtained or reviewed.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S06",
+    "title": "NIST SP 800-53A Rev. 5",
+    "url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final",
+    "publisher": "NIST",
+    "focus": "Assessment methodology publication; no claim of complete NIST control mapping.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S07",
+    "title": "Manage emergency access accounts",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+    "publisher": "Microsoft",
+    "focus": "Cloud-only emergency access; strong authentication; tested access and monitoring.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S08",
+    "title": "Analyze Conditional Access policy impact",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+    "publisher": "Microsoft",
+    "focus": "Report-only evaluates without enforcement.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S09",
+    "title": "Conditional Access overview",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+    "publisher": "Microsoft",
+    "focus": "Policy signals and licensing prerequisites.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S10",
+    "title": "Conditional Access for workload identities",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
+    "publisher": "Microsoft",
+    "focus": "Non-human identities, licensing, assignment and coverage limitations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S11",
+    "title": "Microsoft Entra authentication overview",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+    "publisher": "Microsoft",
+    "focus": "Authentication methods and stronger authentication.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S12",
+    "title": "Microsoft Entra ID Governance licensing fundamentals",
+    "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+    "publisher": "Microsoft",
+    "focus": "Feature-level licensing; avoid assuming every E5 or P2 feature is identical.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S13",
+    "title": "Configure user consent to applications",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+    "publisher": "Microsoft",
+    "focus": "Consent restrictions are prospective; existing grants require separate review.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S14",
+    "title": "App consent grant investigation",
+    "url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+    "publisher": "Microsoft",
+    "focus": "Consent abuse investigation and evidence.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S15",
+    "title": "Revoke user access in an emergency",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+    "publisher": "Microsoft",
+    "focus": "Token and application session limitations; hybrid revocation.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S16",
+    "title": "Cross-tenant access overview",
+    "url": "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
+    "publisher": "Microsoft",
+    "focus": "Inbound/outbound access, trust claims and partner overrides.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S17",
+    "title": "Microsoft Entra data retention",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+    "publisher": "Microsoft",
+    "focus": "Entra audit and sign-in retention versus Purview UAL.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S18",
+    "title": "Manage audit log retention policies",
+    "url": "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+    "publisher": "Microsoft",
+    "focus": "Per-user licensing, workload defaults, policy priority and long-term retention.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S19",
+    "title": "Search the audit log",
+    "url": "https://learn.microsoft.com/en-us/purview/audit-search",
+    "publisher": "Microsoft",
+    "focus": "Search roles, licensing and collection caveats.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S20",
+    "title": "Manage mailbox auditing",
+    "url": "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+    "publisher": "Microsoft",
+    "focus": "Organization-level auditing, audited actions and bypass considerations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S21",
+    "title": "Preset security policies",
+    "url": "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
+    "publisher": "Microsoft",
+    "focus": "Recipient coverage and precedence across preset and custom policies.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S22",
+    "title": "Configure SPF",
+    "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+    "publisher": "Microsoft",
+    "focus": "Authorized senders and DNS record validation.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S23",
+    "title": "Configure DKIM",
+    "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+    "publisher": "Microsoft",
+    "focus": "Signing, selector records and verification.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S24",
+    "title": "Configure DMARC",
+    "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+    "publisher": "Microsoft",
+    "focus": "Alignment and deployment sequencing.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S25",
+    "title": "Control external email forwarding",
+    "url": "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
+    "publisher": "Microsoft",
+    "focus": "Explicit forwarding controls and interactions; Automatic can differ by organization.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S26",
+    "title": "Updated SMTP AUTH Basic Authentication deprecation timeline",
+    "url": "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+    "publisher": "Microsoft Exchange Team",
+    "focus": "January 2026 replacement for older retirement dates; recheck at execution.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S27",
+    "title": "Overview of external sharing in SharePoint and OneDrive",
+    "url": "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+    "publisher": "Microsoft",
+    "focus": "Organization/site sharing and existing access.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S28",
+    "title": "Restrict discovery of SharePoint sites and content",
+    "url": "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
+    "publisher": "Microsoft",
+    "focus": "Discovery restriction does not change permissions.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S29",
+    "title": "Teams guest access and external access",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
+    "publisher": "Microsoft",
+    "focus": "Separate external communication and guest collaboration paths.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S30",
+    "title": "Shared channels in Microsoft Teams",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+    "publisher": "Microsoft",
+    "focus": "B2B direct connect and shared-channel scope.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S31",
+    "title": "Teams meetings with three tiers of protection",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
+    "publisher": "Microsoft",
+    "focus": "Meeting controls, recordings, transcripts and tier-specific choices.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S32",
+    "title": "Intune device compliance policies",
+    "url": "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+    "publisher": "Microsoft",
+    "focus": "Compliance settings and integration with access enforcement.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S33",
+    "title": "Intune app protection policies",
+    "url": "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+    "publisher": "Microsoft",
+    "focus": "Managed application data and supported user/application conditions.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S34",
+    "title": "Manage Intune security baseline profiles",
+    "url": "https://learn.microsoft.com/en-us/intune/intune-service/protect/security-baselines-configure",
+    "publisher": "Microsoft",
+    "focus": "Baseline versions, assignments and updates.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S35",
+    "title": "Onboard devices to Defender for Endpoint",
+    "url": "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+    "publisher": "Microsoft",
+    "focus": "Device coverage and onboarding visibility.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S36",
+    "title": "Sensitivity labels",
+    "url": "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+    "publisher": "Microsoft",
+    "focus": "Content protection versus container labeling.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S37",
+    "title": "Data loss prevention",
+    "url": "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+    "publisher": "Microsoft",
+    "focus": "Location-dependent coverage and policy design.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S38",
+    "title": "Retention policies and retention labels",
+    "url": "https://learn.microsoft.com/en-us/purview/retention",
+    "publisher": "Microsoft",
+    "focus": "Content retention, holds and precedence.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S39",
+    "title": "eDiscovery features and components",
+    "url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+    "publisher": "Microsoft",
+    "focus": "Current case, search, hold, export and permission concepts.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S40",
+    "title": "Microsoft Purview Compliance Manager",
+    "url": "https://learn.microsoft.com/en-us/purview/compliance-manager",
+    "publisher": "Microsoft",
+    "focus": "Assessment and improvement-action management.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S41",
+    "title": "Microsoft 365 Backup overview",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "Backup architecture, workload scope and performance qualifications.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S42",
+    "title": "Microsoft 365 Backup FAQ",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "DR, versions, legal holds and mass restoration are distinct.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S43",
+    "title": "Incident response playbooks",
+    "url": "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+    "publisher": "Microsoft Incident Response",
+    "focus": "Response scenario library.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S44",
+    "title": "Microsoft 365 service health",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "Operational service health and delegated access.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S45",
+    "title": "Microsoft Product Terms",
+    "url": "https://www.microsoft.com/licensing/terms/",
+    "publisher": "Microsoft",
+    "focus": "Licensing authority entry point; select actual program, product and agreement date.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S46",
+    "title": "Office 365 GCC High and DoD",
+    "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+    "publisher": "Microsoft",
+    "focus": "Government cloud overlay and differences.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S47",
+    "title": "Data, Privacy, and Security for Microsoft Copilot",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+    "publisher": "Microsoft",
+    "focus": "Access context, enterprise data use, extensions and service commitments.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S48",
+    "title": "Restricted SharePoint Search",
+    "url": "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search",
+    "publisher": "Microsoft",
+    "focus": "Retiring temporary control; not a permission boundary.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S49",
+    "title": "Power Platform data policy strategy",
+    "url": "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+    "publisher": "Microsoft",
+    "focus": "Policy scope and classic connector-control limitations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S50",
+    "title": "Power Platform advanced connector policies",
+    "url": "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+    "publisher": "Microsoft",
+    "focus": "Newer allowlist model; availability, modes and known limitations must be checked.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S51",
+    "title": "Fabric export and sharing tenant settings",
+    "url": "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+    "publisher": "Microsoft",
+    "focus": "Tenant sharing, exports, external access and scoped exceptions.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S52",
+    "title": "Power BI Publish to web",
+    "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web",
+    "publisher": "Microsoft",
+    "focus": "Unauthenticated public exposure, including underlying model data.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S53",
+    "title": "Microsoft Graph paging",
+    "url": "https://learn.microsoft.com/en-us/graph/paging",
+    "publisher": "Microsoft",
+    "focus": "Follow all nextLink pages; a first page is not a population.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S54",
+    "title": "Microsoft Graph permissions overview",
+    "url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
+    "publisher": "Microsoft",
+    "focus": "Delegated/application permissions and additional RBAC requirements.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S55",
+    "title": "Graph: List Conditional Access policies",
+    "url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+    "publisher": "Microsoft",
+    "focus": "Read endpoint, permission and national cloud support.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S56",
+    "title": "Search-UnifiedAuditLog",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+    "publisher": "Microsoft",
+    "focus": "Result limits, repeated retrieval, and Management Activity API recommendation.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S57",
+    "title": "ScubaGear v1.8.0 output schema",
+    "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/tooloutputschema.md",
+    "publisher": "CISA",
+    "focus": "Manual checks, errors, omissions and result semantics.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S58",
+    "title": "Maester installation guide",
+    "url": "https://maester.dev/docs/installation/",
+    "publisher": "Maester maintainers",
+    "focus": "Optional modules and missing-connection skips.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S59",
+    "title": "ORCA README",
+    "url": "https://github.com/cammurray/orca/blob/master/README.md",
+    "publisher": "ORCA maintainer",
+    "focus": "Email configuration scope and incomplete Configuration Health Index coverage.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S60",
+    "title": "Turn auditing on or off",
+    "url": "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+    "publisher": "Microsoft",
+    "focus": "Verify real ingestion; SMB exceptions; use Exchange Online session.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S61",
+    "title": "ScubaGear v1.8.0 reports",
+    "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/execution/reports.md",
+    "publisher": "CISA",
+    "focus": "JSON versus CSV evidence and ActionPlan limitations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S62",
+    "title": "CISA Entra baseline, ScubaGear v1.8.0",
+    "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/PowerShell/ScubaGear/baselines/aad.md",
+    "publisher": "CISA",
+    "focus": "Baseline requirements, license assumptions and non-federal applicability.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S63",
+    "title": "Security defaults in Microsoft Entra ID",
+    "url": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+    "publisher": "Microsoft",
+    "focus": "Foundational protection; alternative to custom Conditional Access.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S64",
+    "title": "Microsoft Entra built-in roles",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+    "publisher": "Microsoft",
+    "focus": "Role responsibilities; not a universal cross-workload access guarantee.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S65",
+    "title": "Entra Connect prerequisites",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
+    "publisher": "Microsoft",
+    "focus": "Hybrid infrastructure prerequisites and security considerations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S66",
+    "title": "Microsoft 365 data residency",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "Stored versus processed data and service-specific commitments.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S67",
+    "title": "Compare Microsoft 365 data residency offerings",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/moving-data-to-new-datacenter-geos?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "ADR, education and Multi-Geo eligibility differ.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S68",
+    "title": "Microsoft 365 Multi-Geo",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-multi-geo",
+    "publisher": "Microsoft",
+    "focus": "Workload and licensing scope.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S69",
+    "title": "DLP simulation mode",
+    "url": "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn",
+    "publisher": "Microsoft",
+    "focus": "Simulation generates evaluation evidence without enforcement.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S70",
+    "title": "SMTP AUTH configuration",
+    "url": "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission",
+    "publisher": "Microsoft",
+    "focus": "Organization and mailbox settings; OAuth versus Basic authentication.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S71",
+    "title": "Maester 3.0 preview transition",
+    "url": "https://maester.dev/blog/maester-3-0/",
+    "publisher": "Maester maintainers",
+    "focus": "Dated October 2026 breaking-change advisory; pin engine and tests.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S72",
+    "title": "Government Office application availability",
+    "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
+    "publisher": "Microsoft",
+    "focus": "Workload availability differs by government cloud.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S73",
+    "title": "Purview eDiscovery legacy solutions",
+    "url": "https://learn.microsoft.com/en-us/purview/ediscovery",
+    "publisher": "Microsoft",
+    "focus": "Classic experience retirement and 21Vianet exception.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S74",
+    "title": "Intune endpoint security",
+    "url": "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
+    "publisher": "Microsoft",
+    "focus": "Security policy families and endpoint control scope.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S75",
+    "title": "Power Platform connector classification",
+    "url": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification",
+    "publisher": "Microsoft",
+    "focus": "Nonblockable connectors in classic data policies.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S76",
+    "title": "Microsoft phishing investigation playbook",
+    "url": "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
+    "publisher": "Microsoft Incident Response",
+    "focus": "Investigation workflow and cross-workload evidence.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S77",
+    "title": "Loop governance and compliance",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide",
+    "publisher": "Microsoft",
+    "focus": "Storage-dependent governance and current capability limitations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S78",
+    "title": "Set up Microsoft Forms",
+    "url": "https://learn.microsoft.com/en-us/microsoft-forms/set-up-microsoft-forms",
+    "publisher": "Microsoft",
+    "focus": "Administrative controls and external sharing.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S79",
+    "title": "Conditional Access app control limitations",
+    "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/caac-known-issues",
+    "publisher": "Microsoft",
+    "focus": "Client, content inspection and session coverage limitations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S80",
+    "title": "Conditional Access app control",
+    "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad",
+    "publisher": "Microsoft",
+    "focus": "Session routing and native-client bypass considerations.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S81",
+    "title": "Microsoft 365 service encryption",
+    "url": "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption",
+    "publisher": "Microsoft",
+    "focus": "Customer Key and separation from Customer Lockbox.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S82",
+    "title": "Customer Lockbox",
+    "url": "https://learn.microsoft.com/en-us/purview/customer-lockbox-requests",
+    "publisher": "Microsoft",
+    "focus": "Support-access approval workflow and supported workloads.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S83",
+    "title": "Identity Protection risk policies",
+    "url": "https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies",
+    "publisher": "Microsoft",
+    "focus": "User and sign-in risk controls and licensing.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  },
+  {
+    "id": "S84",
+    "title": "SharePoint Embedded overview",
+    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview",
+    "publisher": "Microsoft",
+    "focus": "Application-controlled containers and tenant governance.",
+    "accessed": "2026-10-12",
+    "review": "Targeted documentation review; source is a living document unless version is pinned."
+  }
+,
+{
+  "id": "S85",
+  "title": "Microsoft Graph PowerShell authentication",
+  "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0",
+  "focus": "Connection context, tenant and cloud environment.",
+  "publisher": "Microsoft",
+  "accessed": "2026-10-12",
+  "review": "Targeted command documentation review; examples were not executed against a tenant."
+},
+{
+  "id": "S86",
+  "title": "Connect to Exchange Online PowerShell",
+  "url": "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps",
+  "focus": "Supported connection and module prerequisites.",
+  "publisher": "Microsoft",
+  "accessed": "2026-10-12",
+  "review": "Targeted command documentation review; examples were not executed against a tenant."
+},
+{
+  "id": "S87",
+  "title": "Get-InboxRule",
+  "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+  "focus": "Read rule details including supported hidden-rule option.",
+  "publisher": "Microsoft",
+  "accessed": "2026-10-12",
+  "review": "Targeted command documentation review; examples were not executed against a tenant."
+},
+{
+  "id": "S88",
+  "title": "Get-SPOSite",
+  "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/get-sposite?view=sharepoint-ps",
+  "focus": "Site enumeration limits and property retrieval caveats.",
+  "publisher": "Microsoft",
+  "accessed": "2026-10-12",
+  "review": "Targeted command documentation review; examples were not executed against a tenant."
+}
+]

@@ -1,0 +1,74 @@
+{
+  "checked_utc": "2026-10-13T02:41:00.613242+00:00",
+  "controls": 90,
+  "domains": 17,
+  "sources": 88,
+  "microsoft_sources": 78,
+  "markdown_files": 12,
+  "local_links_checked": 81,
+  "synthetic_cases_passed": 8,
+  "synthetic_cases": [
+    {
+      "name": "Report-only MFA",
+      "enforcement_required": true,
+      "report_only": true,
+      "expected": "Fail",
+      "actual": "Fail",
+      "matched": true
+    },
+    {
+      "name": "Excluded ordinary administrator",
+      "coverage_gap": true,
+      "operating_evidence": true,
+      "expected": "Partially implemented",
+      "actual": "Partially implemented",
+      "matched": true
+    },
+    {
+      "name": "Registered MFA without enforcement evidence",
+      "operating_evidence": false,
+      "expected": "Not assessed",
+      "actual": "Not assessed",
+      "matched": true
+    },
+    {
+      "name": "Log access denied misread as no activity",
+      "access_denied": true,
+      "expected": "Not assessed",
+      "actual": "Not assessed",
+      "matched": true
+    },
+    {
+      "name": "Premium capability unavailable and alternative not assessed",
+      "capability_unavailable": true,
+      "expected": "Not assessed",
+      "actual": "Not assessed",
+      "matched": true
+    },
+    {
+      "name": "Existing prohibited grant survives sharing restriction",
+      "prohibited_access": true,
+      "expected": "Fail",
+      "actual": "Fail",
+      "matched": true
+    },
+    {
+      "name": "Backup configured without restore evidence",
+      "operating_evidence": false,
+      "expected": "Not assessed",
+      "actual": "Not assessed",
+      "matched": true
+    },
+    {
+      "name": "Scanner manual check unfinished",
+      "manual_unfinished": true,
+      "expected": "Not assessed",
+      "actual": "Not assessed",
+      "matched": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Structural and synthetic checks only. No real tenant, tool integration or security control was validated."
+  ]
+}

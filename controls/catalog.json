@@ -1,0 +1,1794 @@
+[
+  {
+    "id": "GOV-01",
+    "domain": "Governance",
+    "title": "Tenant and workload boundary",
+    "objective": "Establish the complete population being assessed.",
+    "applicability": "Every engagement, including acquisitions and test tenants.",
+    "owner": "Audit sponsor",
+    "priority": "P1",
+    "evidence": "Tenant IDs; verified domains; subscription export; service inventory; architecture diagram; acquisition register.",
+    "procedure": "Reconcile finance, identity and administrator inventories. Include production, development, acquired and partner-managed tenants. Record enabled workloads, geographies, business owners, external dependencies and explicit exclusions.",
+    "criterion": "The sponsor approves a boundary with every discovered tenant and workload accounted for; unexamined dependencies appear as limitations.",
+    "falsification": "Compare the approved list with a subsidiary's domain and license invoices; an unexplained tenant disproves completeness.",
+    "remediation": "Assign owners to discovered tenants and extend scope or obtain a documented limitation.",
+    "sources": [
+      "S02",
+      "S45",
+      "S66"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "GOV-02",
+    "domain": "Governance",
+    "title": "Obligations and control criteria",
+    "objective": "Translate business commitments into testable requirements.",
+    "applicability": "All tenants; add sector-specific obligations when applicable.",
+    "owner": "Risk and compliance lead",
+    "priority": "P1",
+    "evidence": "Contracts; internal standards; data classification; retention schedule; control crosswalk; legal interpretation.",
+    "procedure": "Identify mandatory obligations, contractual promises and internal targets separately. Select dated Microsoft, CISA and licensed CIS criteria. Map each adopted requirement to evidence and a control owner; mark unmapped requirements.",
+    "criterion": "Every claimed obligation has an owner, applicable population and assessment procedure. No benchmark score is presented as legal certification.",
+    "falsification": "Ask for the requirement supporting a proposed seven-year retention period; absence means it is an unapproved assumption.",
+    "remediation": "Have the accountable legal/compliance owner define the requirement before configuring it.",
+    "sources": [
+      "S06",
+      "S40",
+      "S45",
+      "S62"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "GOV-03",
+    "domain": "Governance",
+    "title": "Roles, accountability and separation",
+    "objective": "Prevent unowned or self-approved security administration.",
+    "applicability": "All tenant and service administrators, including outsourced support.",
+    "owner": "CIO or service owner",
+    "priority": "P1",
+    "evidence": "RACI; role exports; change approvals; privileged access reviews; support contracts.",
+    "procedure": "Match operational responsibilities to actual permissions. Examine who approves their own elevation, grants consent, exports investigations and accepts risk. Review conflicts and independent oversight.",
+    "criterion": "Sensitive functions have named accountable owners, justified access and independent review where separation is impractical.",
+    "falsification": "Trace one emergency production change from request to approval; identical requester and approver with no review challenges the design.",
+    "remediation": "Separate approval from execution or introduce logged independent review with a deadline.",
+    "sources": [
+      "S64",
+      "S54",
+      "S06"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "GOV-04",
+    "domain": "Governance",
+    "title": "Exception governance",
+    "objective": "Keep accepted risk visible and time bounded.",
+    "applicability": "All policy exclusions, scanner omissions and compensating controls.",
+    "owner": "Risk owner",
+    "priority": "P1",
+    "evidence": "Exception register; expiration dates; approvals; mitigation evidence; scanner configuration.",
+    "procedure": "Join exceptions to actual users, applications, locations and policy IDs. Verify business necessity, expiration, compensating evidence and reapproval. Look for expired exclusions still active.",
+    "criterion": "Every active exception is discoverable, justified, approved and bounded; residual risk remains visible in reporting.",
+    "falsification": "Select an omitted scanner control and demand operating evidence for its claimed alternate mitigation.",
+    "remediation": "Remove obsolete exclusions through change control; document and retest valid exceptions.",
+    "sources": [
+      "S03",
+      "S04",
+      "S57",
+      "S09"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "GOV-05",
+    "domain": "Governance",
+    "title": "License and entitlement assurance",
+    "objective": "Determine which controls can actually be used and sustained.",
+    "applicability": "Every license family, add-on, trial, guest and service population.",
+    "owner": "Licensing owner",
+    "priority": "P1",
+    "evidence": "Subscribed SKUs; assigned service plans; contracts; renewal dates; usage reports; feature matrix.",
+    "procedure": "Distinguish Microsoft 365 from Office 365 bundles. Match benefiting users and workloads to feature prerequisites; inspect disabled plans and trial expiration. Validate backup and AI consumption separately.",
+    "criterion": "Required capabilities have verified entitlement and assignment, or an evidenced alternative and recorded gap. Missing licensing never becomes an automatic Pass.",
+    "falsification": "Inspect an advanced feature configured during a trial after its entitlement expires.",
+    "remediation": "Correct assignments, procure justified capability or test an alternative; preserve the underlying control objective.",
+    "sources": [
+      "S12",
+      "S18",
+      "S45"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-01",
+    "domain": "Identity and privileged access",
+    "title": "Privileged role population",
+    "objective": "Identify every effective route to high privilege.",
+    "applicability": "All Entra roles and service-specific administrators.",
+    "owner": "Identity lead",
+    "priority": "P0",
+    "evidence": "Active and eligible role assignments; role-assignable groups; group membership; workload RBAC; partner access.",
+    "procedure": "Enumerate permanent, eligible, scoped and group-derived roles. Resolve memberships and app principals. Include Exchange, SharePoint, Teams, Purview, Intune and Defender administration; compare with HR and support rosters.",
+    "criterion": "Every effective privilege has a current owner and justification; unauthorized paths are findings, regardless of Global Administrator count.",
+    "falsification": "Follow a non-admin user's ownership of a privileged group or application to test indirect control.",
+    "remediation": "Remove unjustified paths with rollback planning; use narrower roles and time-bound elevation where supported.",
+    "sources": [
+      "S64",
+      "S12",
+      "S54"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-02",
+    "domain": "Identity and privileged access",
+    "title": "Effective MFA and authentication strength",
+    "objective": "Verify required identities receive the intended authentication control.",
+    "applicability": "Human identities; evaluate service principals separately.",
+    "owner": "Identity lead",
+    "priority": "P0",
+    "evidence": "Authentication method registrations; policy exports; exclusions; sign-in authentication details; approved test matrix.",
+    "procedure": "Define required strength by role and risk. Reconcile registrations with policy scope. Test administrator, employee, guest and exception identities using fresh sessions; include trusted locations and alternate clients. Interpret token claims rather than requiring a prompt every time.",
+    "criterion": "The intended population is covered by enforced controls and observed outcomes, with documented exceptions; registration alone is insufficient.",
+    "falsification": "A registered user who can obtain an unprotected session through an excluded path falsifies population-wide enforcement.",
+    "remediation": "Close scope gaps; migrate sensitive roles to supported phishing-resistant methods with recovery readiness.",
+    "sources": [
+      "S08",
+      "S09",
+      "S11",
+      "S63"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-03",
+    "domain": "Identity and privileged access",
+    "title": "Conditional Access coverage and interaction",
+    "objective": "Find gaps caused by policy state, scope and combined evaluation.",
+    "applicability": "Tenants using Conditional Access; map security-defaults alternative separately.",
+    "owner": "Identity lead",
+    "priority": "P0",
+    "evidence": "All policy states; included/excluded users and resources; named locations; device filters; sign-in details.",
+    "procedure": "Build an identity-by-resource-by-client matrix. Check exclusions, authentication strengths, grant operators and session controls. Use What If for design analysis, then corroborate with sign-ins and approved tests. Account for existing tokens and dependencies.",
+    "criterion": "No unexplained route bypasses the adopted access requirements; report-only policies are assessed as design evidence only.",
+    "falsification": "Try an in-scope test identity on an excluded resource or trusted-location path.",
+    "remediation": "Stage corrections in report-only, assess business impact and move to enforcement under change control.",
+    "sources": [
+      "S08",
+      "S09",
+      "S55"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-04",
+    "domain": "Identity and privileged access",
+    "title": "Emergency administrative access",
+    "objective": "Maintain independently usable recovery access without uncontrolled privilege.",
+    "applicability": "All tenants.",
+    "owner": "Identity lead",
+    "priority": "P0",
+    "evidence": "Emergency account inventory; authentication methods; custody records; monitoring rules; last exercise.",
+    "procedure": "Review at least two cloud-only emergency accounts, independent strong credentials, active role assignment and relevant policy exclusions against current Microsoft guidance. Observe an authorized sign-in exercise, alert delivery and secure credential recovery.",
+    "criterion": "Recovery access works when normal admin dependencies fail; access is monitored, controlled and exercised. Password-only MFA bypass is not a blanket recommendation.",
+    "falsification": "Simulate unavailability of the usual admin phone or federation path without disrupting production.",
+    "remediation": "Repair independent credentials, custody and alert routing; schedule recurring exercises.",
+    "sources": [
+      "S07"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-05",
+    "domain": "Identity and privileged access",
+    "title": "Privileged elevation and review",
+    "objective": "Limit standing administrative access and verify elevation governance.",
+    "applicability": "PIM-capable tenants; use documented manual alternatives elsewhere.",
+    "owner": "Identity governance lead",
+    "priority": "P1",
+    "evidence": "PIM assignments and settings; activation logs; approvers; access reviews; emergency exceptions.",
+    "procedure": "Examine approval, justification, duration and authentication requirements for sensitive roles. Sample activations and subsequent use. Check stale eligible assignments and whether approvers can be unavailable simultaneously.",
+    "criterion": "Elevation is justified, constrained and reviewed; approved emergency access remains available. A configured PIM policy without operational review is insufficient.",
+    "falsification": "Inspect an activation outside working hours or one approved by the requester.",
+    "remediation": "Reduce unnecessary standing roles; correct approval chains and enforce periodic entitlement review.",
+    "sources": [
+      "S12",
+      "S64",
+      "S07"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-06",
+    "domain": "Identity and privileged access",
+    "title": "Joiner, mover and leaver lifecycle",
+    "objective": "Remove access when business authorization ends.",
+    "applicability": "Employees, contractors, guests and privileged accounts.",
+    "owner": "HR and identity operations",
+    "priority": "P0",
+    "evidence": "HR termination dates; ticket timestamps; account status; group changes; token revocation; application sessions.",
+    "procedure": "Select recent leavers, movers and urgent terminations. Compare authoritative timestamps to disablement and downstream access removal. Check hybrid source, refresh tokens, application sessions, mailbox delegation and owned automations.",
+    "criterion": "Access removal meets the organization's documented SLA across relevant systems; preservation and business continuity are handled separately.",
+    "falsification": "Test whether a disabled test user retains an existing application session beyond the approved window.",
+    "remediation": "Repair HR triggers and downstream deprovisioning; document actual session-expiry limitations.",
+    "sources": [
+      "S15",
+      "S13"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-07",
+    "domain": "Identity and privileged access",
+    "title": "External identity lifecycle and partner trust",
+    "objective": "Constrain guest and cross-tenant access to approved collaboration.",
+    "applicability": "Tenants with guests, partner access or cross-tenant synchronization.",
+    "owner": "Identity and collaboration leads",
+    "priority": "P1",
+    "evidence": "Guest roster; sponsors; last activity; reviews; inbound/outbound settings; partner overrides.",
+    "procedure": "Resolve guest sponsors and resource access. Review both default and partner-specific trust, including accepted MFA/device claims. Inspect dormant identities, access packages and review decisions; reconcile shared-channel participants separately.",
+    "criterion": "External access is sponsored, scoped, reviewed and removed when no longer needed; trusted claims have a documented partner rationale.",
+    "falsification": "Select an expired contractor with access via a partner override or shared channel.",
+    "remediation": "Expire stale access and narrow trust; preserve necessary collaboration through explicit partner settings.",
+    "sources": [
+      "S16",
+      "S30",
+      "S12"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-08",
+    "domain": "Identity and privileged access",
+    "title": "Authentication recovery and legacy access",
+    "objective": "Prevent weak fallback paths from defeating strong access controls.",
+    "applicability": "Human identities, recovery processes and legacy clients.",
+    "owner": "Identity lead",
+    "priority": "P1",
+    "evidence": "Allowed authentication methods; recovery/helpdesk procedures; registration controls; legacy sign-ins; exception inventory.",
+    "procedure": "Review helpdesk identity verification, recovery credentials and method registration. Check legacy protocols and app dependencies. Test one recovery workflow with an authorized account; confirm the result does not create an undocumented bypass.",
+    "criterion": "Recovery assurance is proportionate to the account's privilege and legacy access has a documented migration or compensating control.",
+    "falsification": "Attempt recovery using only information broadly visible in the directory.",
+    "remediation": "Improve identity verification, restrict weak methods where appropriate and migrate legacy dependencies.",
+    "sources": [
+      "S11",
+      "S63",
+      "S70"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "APP-01",
+    "domain": "Applications and automation",
+    "title": "Application and service principal inventory",
+    "objective": "Expose persistent non-human access and abandoned applications.",
+    "applicability": "All enterprise apps, app registrations and automation identities.",
+    "owner": "Application security lead",
+    "priority": "P0",
+    "evidence": "App/service principal exports; owners; credentials metadata; consent grants; sign-in records; app roles.",
+    "procedure": "Reconcile registrations with service principals and business systems. Identify orphaned owners, unused high privilege, multitenant publishers and credentials. Distinguish application permissions from delegated grants and user-assigned access.",
+    "criterion": "Each privileged application has an accountable owner, purpose, reviewed permission set and lifecycle.",
+    "falsification": "Pick an app with no recent human use but active application-only access.",
+    "remediation": "Retire or narrow unused applications after dependency review; assign accountable owners.",
+    "sources": [
+      "S54",
+      "S13",
+      "S14"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "APP-02",
+    "domain": "Applications and automation",
+    "title": "Consent and existing grants",
+    "objective": "Prevent inappropriate app authorization and inherited excessive consent.",
+    "applicability": "All tenants permitting integrations.",
+    "owner": "Application security lead",
+    "priority": "P0",
+    "evidence": "User consent policy; admin consent workflow; delegated grants; application role assignments; approvals.",
+    "procedure": "Review new-consent rules and enumerate existing grants separately. Examine permissions exposing mail, files, directory roles or write capabilities. Sample approval decisions and publisher verification without equating publisher verification to trust.",
+    "criterion": "Granted access matches business need and approved scope; changing consent settings does not substitute for reviewing old grants.",
+    "falsification": "Find a historical broad grant that still operates after user consent is disabled.",
+    "remediation": "Revoke unnecessary grants through a tested dependency plan and improve approval criteria.",
+    "sources": [
+      "S13",
+      "S14",
+      "S54"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "APP-03",
+    "domain": "Applications and automation",
+    "title": "Workload identity credentials and trust",
+    "objective": "Reduce credential and federation abuse in unattended access.",
+    "applicability": "Service principals, managed identities and federated CI/CD.",
+    "owner": "Platform and application owners",
+    "priority": "P0",
+    "evidence": "Credential types and expiry; federation issuer/subject/audience; secret custody; rotation evidence; app permissions.",
+    "procedure": "Inspect metadata without collecting secret values. Review owner changes, credential addition alerts and federation restrictions. Evaluate managed identities on their actual resources; workload Conditional Access coverage is not universal.",
+    "criterion": "Credentials are scoped, protected, monitored and replaceable; trust subjects cannot be satisfied by unintended workloads.",
+    "falsification": "Inspect a federation subject accepting an overly broad repository or branch set.",
+    "remediation": "Prefer appropriate secretless patterns; narrow trust and rotate exposed or unowned credentials.",
+    "sources": [
+      "S10",
+      "S54",
+      "S14"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "APP-04",
+    "domain": "Applications and automation",
+    "title": "Application resource boundaries",
+    "objective": "Prove applications reach only approved data and actions.",
+    "applicability": "Apps with mailbox, site, directory or agent tool access.",
+    "owner": "Application owner",
+    "priority": "P1",
+    "evidence": "Effective API permissions; service RBAC; selected-resource grants; app access design; positive/negative test results.",
+    "procedure": "Map app permissions through both API and workload authorization. With a controlled identity, test an allowed resource and one outside its intended scope. Review owner and credential administrators as privilege paths.",
+    "criterion": "Allowed operations succeed and prohibited resource/action combinations fail; permission names alone do not establish isolation.",
+    "falsification": "Use an application credential against a mailbox or site outside the approved population.",
+    "remediation": "Replace broad grants with supported resource-scoped authorization and retest dependent features.",
+    "sources": [
+      "S54",
+      "S14"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "APP-05",
+    "domain": "Applications and automation",
+    "title": "Automation and partner administration",
+    "objective": "Audit external administrators and administrative pipelines.",
+    "applicability": "MSPs, delegated administration, deployment pipelines and scheduled jobs.",
+    "owner": "Service owner",
+    "priority": "P1",
+    "evidence": "Partner relationships; scoped roles; pipeline identities; approvals; job history; protected configuration.",
+    "procedure": "Trace a partner or pipeline action to a named authorization. Review expiration, offboarding, repository permissions and secret custody. Confirm automated output and logs do not expose tenant evidence publicly.",
+    "criterion": "Delegated access is bounded to current need and changes are attributable; pipelines cannot silently grant themselves new authority.",
+    "falsification": "Trace an expired support contract to surviving administrative access.",
+    "remediation": "Expire old delegations and separate deployment authority from code approval where feasible.",
+    "sources": [
+      "S64",
+      "S54",
+      "S06"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "HYB-01",
+    "domain": "Hybrid infrastructure",
+    "title": "Identity synchronization and federation",
+    "objective": "Protect infrastructure that can influence cloud identity.",
+    "applicability": "Entra Connect, Cloud Sync, federation, PTA and password writeback where used.",
+    "owner": "Hybrid identity lead",
+    "priority": "P0",
+    "evidence": "Topology; source-of-authority settings; server versions; admin access; connector accounts; trust certificates.",
+    "procedure": "Identify every server, agent and trust path. Review hardening, patch support, service accounts and remote administration. Verify staging/recovery arrangements and monitor unexpected synchronization or federation changes.",
+    "criterion": "Cloud identity authority is understood, supported, access-controlled and monitored, with tested recovery.",
+    "falsification": "Find an unmanaged server or old agent still able to write identity changes.",
+    "remediation": "Remediate source infrastructure and credentials; validate synchronization behavior before cutover.",
+    "sources": [
+      "S65",
+      "S15",
+      "S07"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "HYB-02",
+    "domain": "Hybrid infrastructure",
+    "title": "Hybrid messaging and application connectors",
+    "objective": "Prevent unmanaged relay and integration paths.",
+    "applicability": "Hybrid Exchange, mail gateways, application proxy and on-premises connectors.",
+    "owner": "Messaging and infrastructure leads",
+    "priority": "P1",
+    "evidence": "Connector inventory; certificates; relay restrictions; accepted domains; mail flow diagram; logs.",
+    "procedure": "Walk inbound and outbound paths, including bypass routes around filtering. Verify trust by endpoint and credential, renewal ownership and legacy dependencies. Test approved representative messages and application access.",
+    "criterion": "Every connector has a business owner, bounded trust and observed expected routing.",
+    "falsification": "Check a route that skips the normal gateway or allows a broader sender population than intended.",
+    "remediation": "Narrow relay and connector trust; remove obsolete paths after dependency validation.",
+    "sources": [
+      "S22",
+      "S24",
+      "S70"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "HYB-03",
+    "domain": "Hybrid infrastructure",
+    "title": "Source-of-authority and outage exercise",
+    "objective": "Prove identity continuity and emergency changes work across systems.",
+    "applicability": "Hybrid and federated tenants.",
+    "owner": "Identity operations",
+    "priority": "P1",
+    "evidence": "Disaster recovery plan; authority map; outage exercise; synchronization timing; emergency contacts.",
+    "procedure": "Tabletop loss of federation or sync and urgent termination during that outage. Identify which system accepts each change, what is cached and how reconciliations occur. Observe a non-disruptive recovery rehearsal.",
+    "criterion": "The organization can maintain essential access and revoke dangerous access within approved objectives during dependency failure.",
+    "falsification": "Ask staff to disable a synchronized test identity while the source change path is unavailable.",
+    "remediation": "Document alternate paths and reconcile conflicting state; retest timing.",
+    "sources": [
+      "S15",
+      "S65",
+      "S07"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-01",
+    "domain": "Exchange and email security",
+    "title": "Sender authentication and domain ownership",
+    "objective": "Prevent unauthorized domain use while preserving legitimate sending.",
+    "applicability": "All accepted, sending, parked and third-party mail domains.",
+    "owner": "Messaging and DNS owners",
+    "priority": "P0",
+    "evidence": "Domain inventory; SPF/DKIM/DMARC records; third-party senders; aggregate reports; message headers.",
+    "procedure": "Reconcile senders with business owners. Check SPF structure and lookup constraints, DKIM signing and tenant-provided selectors, and DMARC alignment. Sample each sending platform; inspect parked domains separately. Stage enforcement based on legitimate traffic evidence.",
+    "criterion": "Approved senders authenticate and align; unauthorized use is addressed by the adopted policy. A published record without successful headers is insufficient.",
+    "falsification": "Send an approved test from a forgotten marketing platform and inspect authentication results.",
+    "remediation": "Repair sender inventory and alignment, then progress DMARC enforcement with monitored exceptions.",
+    "sources": [
+      "S22",
+      "S23",
+      "S24"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-02",
+    "domain": "Exchange and email security",
+    "title": "Threat policy coverage and precedence",
+    "objective": "Verify intended email protection actually applies to recipients.",
+    "applicability": "Exchange Online; feature checks depend on Defender entitlement.",
+    "owner": "Messaging security lead",
+    "priority": "P0",
+    "evidence": "Preset/custom policies; recipients and exceptions; anti-phish settings; Safe Links/Attachments; trace evidence.",
+    "procedure": "Map ordinary, executive and exception recipients to effective policy. Review impersonation targets, protections and quarantine handling. Resolve precedence before judging custom settings; use approved benign tests and policy evaluation evidence.",
+    "criterion": "Required recipient populations receive the adopted protection profile; unavailable premium features are disclosed.",
+    "falsification": "Choose a recipient assigned to both Standard and a custom policy and verify which settings win.",
+    "remediation": "Correct assignment and precedence; pilot changes against legitimate business mail.",
+    "sources": [
+      "S21",
+      "S59"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-03",
+    "domain": "Exchange and email security",
+    "title": "Forwarding, inbox rules and delegation",
+    "objective": "Identify unauthorized mailbox persistence or data transfer.",
+    "applicability": "User, shared, resource and privileged mailboxes.",
+    "owner": "Messaging security lead",
+    "priority": "P0",
+    "evidence": "Mailbox forwarding; inbox rules including hidden where supported; delegates; SendAs/SendOnBehalf; forwarding reports.",
+    "procedure": "Review all high-risk mailboxes and a justified remaining sample. Correlate forwarding and delegates with approvals and sign-in events. Inspect outbound policies, remote domains and transport rules together; verify actual forwarding behavior.",
+    "criterion": "External forwarding and delegation are authorized, constrained and monitored; suspicious rules are escalated promptly.",
+    "falsification": "Inspect an explicit mailbox forward or rule despite a claimed tenant-wide block.",
+    "remediation": "Remove unauthorized persistence under incident procedures; constrain approved exceptions and retest.",
+    "sources": [
+      "S25",
+      "S20",
+      "S76"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-04",
+    "domain": "Exchange and email security",
+    "title": "SMTP AUTH and legacy dependencies",
+    "objective": "Eliminate avoidable password-based messaging access.",
+    "applicability": "Mail-sending devices, applications and SMTP clients.",
+    "owner": "Messaging and application owners",
+    "priority": "P1",
+    "evidence": "Organization/mailbox SMTP settings; authentication policies; SMTP usage; migration inventory.",
+    "procedure": "Distinguish the SMTP AUTH protocol from Basic authentication. Check organization settings, mailbox overrides and actual client authentication. Recheck Microsoft's live retirement notice; identify owners and modern-authentication migration tests.",
+    "criterion": "Legacy access is either removed or explicitly risk-managed with a tested transition plan; the audit does not assume an obsolete retirement date has removed it.",
+    "falsification": "Locate a mailbox override used by a printer or application after a broad disablement claim.",
+    "remediation": "Move supported clients to OAuth or an approved alternative; test delivery before disabling dependencies.",
+    "sources": [
+      "S26",
+      "S70"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-05",
+    "domain": "Exchange and email security",
+    "title": "Mail-flow bypass and quarantine",
+    "objective": "Prevent broad exceptions from neutralizing filtering.",
+    "applicability": "All mail gateways, transport rules and allow lists.",
+    "owner": "Messaging security lead",
+    "priority": "P1",
+    "evidence": "Transport rules; connector restrictions; allow/block entries; expiry; quarantine roles and releases.",
+    "procedure": "Trace messages through third-party gateways and Exchange. Investigate broad allow rules, filtering bypass, unauthenticated relay and user release permissions. Sample exception creation and suspicious release events.",
+    "criterion": "Bypasses have narrow business scope, accountable owners and periodic review; suspicious content is handled through an assigned process.",
+    "falsification": "Find a domain-wide allow rule justified by one application or sender.",
+    "remediation": "Replace broad exceptions with precise supported controls and expiration; validate false-positive impact.",
+    "sources": [
+      "S21",
+      "S22",
+      "S76"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "MAIL-06",
+    "domain": "Exchange and email security",
+    "title": "Mailbox auditing and administrative exposure",
+    "objective": "Establish reliable evidence for sensitive mailbox access.",
+    "applicability": "Exchange Online mailboxes and administrative roles.",
+    "owner": "Messaging and audit leads",
+    "priority": "P0",
+    "evidence": "Organization AuditDisabled; mailbox actions; bypass associations; audit events; administrative access.",
+    "procedure": "Check organization-level auditing before interpreting per-mailbox flags. Review bypasses and action coverage, including licensed events. Trace a permitted test action through the audit pipeline and review mailbox-level privileged access.",
+    "criterion": "Required access is auditable and least-privileged, or limitations are explicit; a single boolean does not establish full event coverage.",
+    "falsification": "Choose an authorized delegate action and demonstrate whether its record is retrievable.",
+    "remediation": "Repair action coverage or collection gaps; document licensing and workload-specific limitations.",
+    "sources": [
+      "S20",
+      "S19",
+      "S60"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "COL-01",
+    "domain": "SharePoint and OneDrive",
+    "title": "External sharing boundaries",
+    "objective": "Control external collaboration at tenant, site and item levels.",
+    "applicability": "SharePoint, OneDrive and Teams-connected sites.",
+    "owner": "Collaboration lead",
+    "priority": "P0",
+    "evidence": "Organization/site sharing settings; link inventory; external identities; sensitivity labels; access tests.",
+    "procedure": "Inventory permissive sites and sensitive content. Review link types, expiration, guests and direct grants. Evaluate tenant limits alongside site settings and item permissions. Test anonymous, approved guest and unrelated user access to synthetic content.",
+    "criterion": "Access matches approved collaboration requirements and sensitive data is not publicly exposed without authorization.",
+    "falsification": "Test a pre-existing direct grant or link after a claimed sharing restriction.",
+    "remediation": "Remove unintended access and constrain future sharing through supported settings; retest old and new links.",
+    "sources": [
+      "S27",
+      "S36"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "COL-02",
+    "domain": "SharePoint and OneDrive",
+    "title": "Effective permissions and broad access",
+    "objective": "Find oversharing hidden behind group membership and inheritance.",
+    "applicability": "Sensitive sites, OneDrive accounts and channel sites.",
+    "owner": "Data owner",
+    "priority": "P0",
+    "evidence": "Site membership; nested groups; item inheritance; broad principals; access reviews; content inventory.",
+    "procedure": "Trace permissions from broad groups to sampled sensitive items, including broken inheritance. Review owner and administrator rights, inactive memberships and all-company access. Compare discovered access with the data owner's intended audience.",
+    "criterion": "The actual audience is approved and reviewed; a private site name or label is not proof.",
+    "falsification": "Use a low-privilege test user to request a synthetic sensitive item through its direct URL.",
+    "remediation": "Correct ACLs and group membership, then verify search and direct access separately.",
+    "sources": [
+      "S27",
+      "S28",
+      "S47"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "COL-03",
+    "domain": "SharePoint and OneDrive",
+    "title": "Site lifecycle and owner accountability",
+    "objective": "Prevent abandoned collaboration spaces from retaining uncontrolled access.",
+    "applicability": "Active, inactive, archived and acquired sites.",
+    "owner": "Collaboration service owner",
+    "priority": "P1",
+    "evidence": "Site inventory; owners; activity; classification; storage; review and archive decisions.",
+    "procedure": "Reconcile site creation, guest access and ownership with projects and business units. Sample inactive and orphaned sites; inspect Teams private/shared-channel sites independently. Determine archive, retention and deletion dependencies.",
+    "criterion": "Each site has an accountable owner, classification and lifecycle decision; no unmanaged high-risk space remains unexplained.",
+    "falsification": "Select a completed project whose guest access was never reassessed.",
+    "remediation": "Assign ownership, review access and archive or dispose under approved retention rules.",
+    "sources": [
+      "S27",
+      "S30",
+      "S38"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "COL-04",
+    "domain": "SharePoint and OneDrive",
+    "title": "Unmanaged-device and sync access",
+    "objective": "Limit data transfer to devices outside approved management.",
+    "applicability": "Browser access, synchronization clients and personal devices.",
+    "owner": "Endpoint and collaboration leads",
+    "priority": "P1",
+    "evidence": "Conditional Access; site access settings; sync restrictions; app policies; test results.",
+    "procedure": "Test approved device/browser combinations with synthetic content. Verify download, sync and session restrictions rather than judging only sign-in success. Consider app protection and permitted business exceptions.",
+    "criterion": "Data handling on unmanaged devices matches the agreed control design across tested clients.",
+    "falsification": "Attempt a download or synchronization from an unapproved test device after browser access is permitted.",
+    "remediation": "Align access and app controls; pilot restrictions to avoid blocking legitimate collaboration.",
+    "sources": [
+      "S09",
+      "S33",
+      "S27"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "COL-05",
+    "domain": "SharePoint and OneDrive",
+    "title": "Leaver content, versioning and restoration",
+    "objective": "Preserve business content while retiring access.",
+    "applicability": "OneDrive and SharePoint ownership changes and deletions.",
+    "owner": "Collaboration and records owners",
+    "priority": "P1",
+    "evidence": "Leaver handover; retention and holds; version settings; recycle/restore records; ownership transfer.",
+    "procedure": "Sample departed owners and deleted content. Confirm approved transfer, removal of sharing and preservation obligations. Perform recovery testing on synthetic items; document what version or recycle mechanisms cannot restore.",
+    "criterion": "Content remains available to authorized successors for the required period and recovery outcomes are demonstrated.",
+    "falsification": "Pick a leaver whose data remains shared externally or whose required content cannot be recovered.",
+    "remediation": "Fix handover and preservation sequencing; add appropriate backup or export coverage.",
+    "sources": [
+      "S38",
+      "S41",
+      "S42"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "TEAM-01",
+    "domain": "Teams",
+    "title": "External, guest and shared-channel paths",
+    "objective": "Assess every distinct route for external collaboration.",
+    "applicability": "All Teams tenants.",
+    "owner": "Teams and identity leads",
+    "priority": "P1",
+    "evidence": "External-access settings; guest settings; channel policies; B2B direct connect; team/channel membership.",
+    "procedure": "Review federation, guest membership and shared channels as separate mechanisms. Reconcile shared-channel users with partner trust and channel sites. Test allowed and disallowed partner scenarios using controlled identities.",
+    "criterion": "Each collaboration path matches approved partner relationships; closing one path does not leave another unexplained.",
+    "falsification": "A guest-free team still has external shared-channel participants; inspect whether they were considered.",
+    "remediation": "Narrow policies and trust while documenting legitimate partner use.",
+    "sources": [
+      "S29",
+      "S30",
+      "S16"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "TEAM-02",
+    "domain": "Teams",
+    "title": "Meeting, recording and transcript exposure",
+    "objective": "Protect sensitive meetings and their persistent artifacts.",
+    "applicability": "Meetings, webinars, town halls and calling where applicable.",
+    "owner": "Teams and data owners",
+    "priority": "P1",
+    "evidence": "Meeting policies/templates; labels; lobby/presenter settings; recordings/transcripts permissions; retention.",
+    "procedure": "Define meeting tiers and test organizer/attendee behavior. Inspect who can join, present, record, transcribe and retrieve artifacts afterward. Reconcile retention with recording expiration; verify actual license support.",
+    "criterion": "Sensitive meetings and artifacts have the intended audience and lifecycle; recommended defaults are tailored to business use.",
+    "falsification": "Join a controlled sensitive meeting as an uninvited identity or access its recording URL afterward.",
+    "remediation": "Correct organizer assignments, meeting controls and artifact permissions; train owners.",
+    "sources": [
+      "S31",
+      "S38",
+      "S36"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "TEAM-03",
+    "domain": "Teams",
+    "title": "Applications, bots and integrations",
+    "objective": "Control third-party and custom extensions in collaboration.",
+    "applicability": "Teams applications, bots, tabs, webhooks and agents.",
+    "owner": "Teams and application security leads",
+    "priority": "P1",
+    "evidence": "App catalog; allowed users; permissions; publisher review; app owners; activity.",
+    "procedure": "Review app approval and availability, actual grants and data transfer. Sample custom apps and bots that act across channels. Check whether removal from Teams also resolves relevant backend access and credentials.",
+    "criterion": "Every enabled integration has reviewed permissions, accountable ownership and an offboarding path.",
+    "falsification": "Remove an app from a test team's interface and check whether its service principal still has data access.",
+    "remediation": "Align catalog governance with app permission lifecycle and vendor review.",
+    "sources": [
+      "S13",
+      "S54",
+      "S14"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "TEAM-04",
+    "domain": "Teams",
+    "title": "Team ownership, channel sites and telephony",
+    "objective": "Capture operational dependencies beyond chat settings.",
+    "applicability": "Teams; telephony and meeting rooms when deployed.",
+    "owner": "Teams service owner",
+    "priority": "P2",
+    "evidence": "Owners; lifecycle decisions; private/shared channel sites; room accounts; voice routing and support plans.",
+    "procedure": "Review owner redundancy and project closure. Reconcile channel sites with retention and backup scope. For voice, examine number ownership, emergency-calling design, carrier dependencies and authorized toll usage with telecom specialists.",
+    "criterion": "Teams-related resources and voice dependencies are owned and included in appropriate operational and recovery plans.",
+    "falsification": "Ask who can restore a room account or recover an orphaned shared-channel artifact during an outage.",
+    "remediation": "Assign ownership and add workload-specific operational tests; qualify any unaudited telephony features.",
+    "sources": [
+      "S30",
+      "S31",
+      "S44",
+      "S41"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-01",
+    "domain": "Endpoints and applications",
+    "title": "Device population and management coverage",
+    "objective": "Establish the real denominator for endpoint assurance.",
+    "applicability": "Corporate, BYOD, privileged, shared and virtual devices.",
+    "owner": "Endpoint lead",
+    "priority": "P0",
+    "evidence": "Asset/HR roster; Entra devices; Intune inventory; Defender inventory; last-seen times.",
+    "procedure": "Join inventories by stable identifiers and investigate unmatched assets. Separate registered, enrolled, compliant and protected states. Include macOS, mobile and Linux where deployed; identify duplicate/stale records and unsupported systems.",
+    "criterion": "All business devices are accounted for with an approved management model; unmanaged assets remain in the risk denominator.",
+    "falsification": "Compare a recent sign-in device against the inventory marked fully managed.",
+    "remediation": "Enroll or otherwise protect missing assets; correct discovery and inventory ownership.",
+    "sources": [
+      "S32",
+      "S35",
+      "S74"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-02",
+    "domain": "Endpoints and applications",
+    "title": "Compliance and access enforcement",
+    "objective": "Ensure device health meaningfully affects access.",
+    "applicability": "Tenants using compliance-based access controls.",
+    "owner": "Endpoint and identity leads",
+    "priority": "P0",
+    "evidence": "Compliance policies; assignment/filter results; no-policy setting; grace periods; last check-in; access logs.",
+    "procedure": "Inspect tenant-wide treatment of devices without assigned policies, platform-specific assignments and stale-state handling. Test compliant, noncompliant, unassigned and grace-period devices against protected resources.",
+    "criterion": "Observed access follows the approved device trust policy; enrollment or a policy object alone does not establish protection.",
+    "falsification": "Use an unassigned or stale device that appears compliant in an aggregate dashboard.",
+    "remediation": "Correct default treatment, assignments and access integration; test supported platform behavior.",
+    "sources": [
+      "S32",
+      "S09"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-03",
+    "domain": "Endpoints and applications",
+    "title": "Security baseline and local privilege",
+    "objective": "Verify effective hardening on representative endpoints.",
+    "applicability": "Managed endpoints and privileged workstations.",
+    "owner": "Endpoint security lead",
+    "priority": "P1",
+    "evidence": "Baseline versions; settings catalog; assignment conflicts; local administrators; firewall; encryption status; recovery-key access.",
+    "procedure": "Sample platform and build cohorts. Reconcile baseline and other management sources; inspect effective settings on devices. Check encryption, local admin control, recovery-key custody, firewall and attack-surface rules against adopted platform requirements.",
+    "criterion": "Required settings are effective, exceptions are approved and recovery access is controlled.",
+    "falsification": "Select a device with conflicting policy sources or an old baseline version.",
+    "remediation": "Resolve conflicts and stale profiles; deploy in rings with application compatibility and recovery testing.",
+    "sources": [
+      "S34",
+      "S74"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-04",
+    "domain": "Endpoints and applications",
+    "title": "Endpoint detection and response health",
+    "objective": "Confirm sensors and response workflows work beyond onboarding.",
+    "applicability": "Defender for Endpoint/Business or equivalent endpoint protection.",
+    "owner": "SOC and endpoint leads",
+    "priority": "P0",
+    "evidence": "Sensor health; last telemetry; antivirus/tamper state; exclusions; alert history; response records.",
+    "procedure": "Reconcile protection inventory with devices. Inspect unhealthy sensors, broad exclusions and response access. Use an approved vendor benign validation procedure on a test endpoint and trace the alert to the assigned responder.",
+    "criterion": "Coverage and sensor health are measured against the real fleet; the response team receives and handles test telemetry.",
+    "falsification": "A device is onboarded but stops transmitting or has an exclusion covering its user profile.",
+    "remediation": "Repair telemetry, exclusions and response routing; investigate unexplained protection changes.",
+    "sources": [
+      "S35",
+      "S74",
+      "S43"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-05",
+    "domain": "Endpoints and applications",
+    "title": "Patch, application and browser lifecycle",
+    "objective": "Reduce exposure from unsupported software and unsafe client configuration.",
+    "applicability": "Operating systems, Office clients, browsers and add-ins.",
+    "owner": "Endpoint operations",
+    "priority": "P1",
+    "evidence": "Version inventory; update rings; deployment errors; vulnerability backlog; macro/add-in controls; exceptions.",
+    "procedure": "Compare deployed versions with currently supported vendor releases. Sample failed updates and long-lived exceptions. Review Office/browser extensions and document handling against the adopted baseline, including business macros.",
+    "criterion": "Update and application controls meet approved SLAs with validated exceptions and accountable remediation.",
+    "falsification": "Find a device reporting successful policy assignment but repeatedly failing installation.",
+    "remediation": "Repair deployment failures and unsupported dependencies; validate business applications in pilot rings.",
+    "sources": [
+      "S34",
+      "S74"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "END-06",
+    "domain": "Endpoints and applications",
+    "title": "BYOD and application data protection",
+    "objective": "Protect organizational data in permitted unmanaged-device scenarios.",
+    "applicability": "Intune app protection or equivalent mobile/application controls.",
+    "owner": "Endpoint and privacy leads",
+    "priority": "P1",
+    "evidence": "App protection assignments; managed-app inventory; copy/save restrictions; conditional launch; wipe procedure.",
+    "procedure": "Test supported apps and platforms using synthetic data, including personal-account transfer and offline conditions. Confirm restrictions attach to the correct user and app, and assess selective removal without affecting personal content.",
+    "criterion": "Approved app data remains within intended boundaries and a controlled selective-wipe exercise succeeds.",
+    "falsification": "Try moving a test document to a personal app on an unenrolled device.",
+    "remediation": "Correct app/user targeting and unsupported-client paths; document privacy and support procedures.",
+    "sources": [
+      "S33",
+      "S09"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-01",
+    "domain": "Information protection and compliance",
+    "title": "Data discovery and classification",
+    "objective": "Locate sensitive information and assign protection requirements.",
+    "applicability": "All enabled workloads and connected repositories.",
+    "owner": "Data governance lead",
+    "priority": "P1",
+    "evidence": "Data inventory; classification standard; discovery results; owner validation; external repositories.",
+    "procedure": "Reconcile automated discovery with business interviews and sampled content. Cover mail, files, chats, recordings, Power Platform and analytics. Use synthetic or minimized data to test classifiers and document uninspectable/encrypted formats.",
+    "criterion": "Sensitive data classes, locations and owners are known; blind spots are recorded and prioritized.",
+    "falsification": "Select a business-critical repository omitted from discovery or a representative format the classifier misses.",
+    "remediation": "Expand inventory and classifier validation; assign owners and appropriate compensating controls.",
+    "sources": [
+      "S37",
+      "S36",
+      "S51"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-02",
+    "domain": "Information protection and compliance",
+    "title": "Sensitivity labels and encryption",
+    "objective": "Verify classification causes the intended protection.",
+    "applicability": "Purview labeling where licensed; equivalent controls elsewhere.",
+    "owner": "Information protection lead",
+    "priority": "P1",
+    "evidence": "Label definitions; published policies; assignments; encryption settings; downgrade logs; test documents.",
+    "procedure": "Distinguish labels on files/emails from group/site labels. Test allowed and denied recipients, offline use, supported clients and external collaboration. Check downgrade justification and access recovery procedures.",
+    "criterion": "Required information has effective protection with demonstrated recipient behavior; a labeled container does not prove files are encrypted.",
+    "falsification": "Copy a document from a labeled site and inspect its own protection and accessibility.",
+    "remediation": "Correct label scope and publication; pilot encryption against real collaboration dependencies.",
+    "sources": [
+      "S36"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-03",
+    "domain": "Information protection and compliance",
+    "title": "DLP effectiveness and exception handling",
+    "objective": "Prevent or detect prohibited information transfer as designed.",
+    "applicability": "Each licensed DLP location and adopted data class.",
+    "owner": "DLP owner and SOC",
+    "priority": "P0",
+    "evidence": "Policies/rules; locations; simulation/enforcement state; exclusions; incidents; overrides; test records.",
+    "procedure": "Map scenarios to locations and rules. Use synthetic examples with required context and confidence thresholds; include negative controls. Test actions, notifications, overrides and incident routing. Review excluded identities and endpoints.",
+    "criterion": "The approved prevention/detection objective operates for the tested scenarios; simulation does not satisfy an enforcement requirement.",
+    "falsification": "Trigger the same synthetic transfer from an excluded user or a location not selected in the policy.",
+    "remediation": "Close coverage gaps and tune false positives before enforcement; verify incident ownership.",
+    "sources": [
+      "S37",
+      "S69"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-04",
+    "domain": "Information protection and compliance",
+    "title": "Retention, records and disposition",
+    "objective": "Preserve and delete information according to approved requirements.",
+    "applicability": "All workloads with retention or records obligations.",
+    "owner": "Records manager",
+    "priority": "P1",
+    "evidence": "Approved schedule; retention policies/labels; scope; holds; policy lookup; disposition evidence.",
+    "procedure": "Map each record class and workload to duration and trigger. Inspect overlapping controls, held content, distribution errors and locations not covered. Test a short-lived synthetic lifecycle in an approved environment; assess storage and deletion effects.",
+    "criterion": "Implemented rules match the approved schedule; conflicting holds and irreversible settings are understood and authorized.",
+    "falsification": "Select an item under multiple retention settings and demonstrate its actual disposition outcome.",
+    "remediation": "Correct scope and precedence with legal approval; treat preservation locks and hold releases as separate changes.",
+    "sources": [
+      "S38",
+      "S39"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-05",
+    "domain": "Information protection and compliance",
+    "title": "eDiscovery and investigation readiness",
+    "objective": "Prove authorized investigators can preserve, search and export relevant evidence.",
+    "applicability": "Organizations with litigation, investigation or regulatory needs.",
+    "owner": "Legal and eDiscovery lead",
+    "priority": "P1",
+    "evidence": "Case membership; roles; hold/search status; export logs; chain of custody; encrypted-content limitations.",
+    "procedure": "Run an approved synthetic case from identification to hold, search and export. Record selected custodians and workload locations, failures and export hashes. Verify unauthorized staff cannot enter the case; use the current supported experience.",
+    "criterion": "The workflow is complete, access-controlled and reproducible, with explicit coverage and processing limitations.",
+    "falsification": "Place the test artifact in a location omitted by the search and assess whether the team detects the omission.",
+    "remediation": "Fix case scoping, roles and export procedures; train investigators on current tooling.",
+    "sources": [
+      "S39",
+      "S73"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "DATA-06",
+    "domain": "Information protection and compliance",
+    "title": "Privacy, insider risk and compliance ownership",
+    "objective": "Prevent sensitive monitoring and regulatory work from becoming ungoverned access.",
+    "applicability": "Privacy requests, insider risk, communication compliance and related licensed tools.",
+    "owner": "Privacy and compliance officers",
+    "priority": "P1",
+    "evidence": "Approved purposes; investigator roles; minimization rules; cases; assessments; legal hold exceptions.",
+    "procedure": "Review why data is collected, who can inspect it and how long it remains. Sample a request or investigation from intake to closure. Validate human review of automated indicators and separation of sensitive roles.",
+    "criterion": "Monitoring and requests follow approved purpose, access and review rules; legal exceptions and uncertainty are documented.",
+    "falsification": "Find an investigator who can access unrelated cases or an automated flag treated as a concluded violation.",
+    "remediation": "Narrow case access and strengthen review, minimization and documented legal decisions.",
+    "sources": [
+      "S39",
+      "S40",
+      "S45"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "LOG-01",
+    "domain": "Audit logging and evidence",
+    "title": "Audit ingestion and event visibility",
+    "objective": "Demonstrate required activities are recorded and retrievable.",
+    "applicability": "All tenants, including business subscriptions and trials.",
+    "owner": "Audit platform owner",
+    "priority": "P0",
+    "evidence": "UAL ingestion state; tenant license; event catalog; successful known-event query; errors.",
+    "procedure": "Read ingestion status in the Exchange Online context. Identify required operations by workload. Trace a permitted known action using UTC time, actor and object; record ingestion delay, permissions and missing events separately.",
+    "criterion": "A known required event is searchable with the necessary fields; a default-setting assumption or empty query is insufficient.",
+    "falsification": "A successful query returns no known event, or access denied is incorrectly interpreted as no activity.",
+    "remediation": "Resolve collection, entitlement, time-window or role gaps; preserve the limitation until retested.",
+    "sources": [
+      "S60",
+      "S19",
+      "S20"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "LOG-02",
+    "domain": "Audit logging and evidence",
+    "title": "Retention by source, user and workload",
+    "objective": "Ensure investigation history meets business requirements.",
+    "applicability": "Entra logs, Purview UAL, Defender, SIEM and third-party sources.",
+    "owner": "SOC and records owners",
+    "priority": "P0",
+    "evidence": "Retention matrix; user licenses; custom audit policies; archive settings; oldest retrievable records.",
+    "procedure": "For each source, document required history and actual entitlement/configuration. Review user-specific premium coverage and policy priority. Query historical known records and distinguish source retention from search-job history.",
+    "criterion": "Required history is retrievable from a protected source, or a dated gap is reported; retention is never inferred from a single tenant license.",
+    "falsification": "Try retrieving a guest or non-premium user's older event using a premium retention claim.",
+    "remediation": "Align licensed coverage, policies and export/archive; do not imply an upgrade restores expired logs.",
+    "sources": [
+      "S17",
+      "S18",
+      "S19"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "LOG-03",
+    "domain": "Audit logging and evidence",
+    "title": "Collection completeness and pipeline health",
+    "objective": "Detect silently incomplete exports and logging interruptions.",
+    "applicability": "API, PowerShell, SIEM and scheduled audit collection.",
+    "owner": "Security engineering",
+    "priority": "P0",
+    "evidence": "Query parameters; next links; counts; cap indicators; retries; collector health; source/destination timestamps.",
+    "procedure": "Reconcile population and event counts. Follow all pages, partition capped windows and de-duplicate stable event IDs. Check throttling, connector failures, ingestion latency, authentication expiry and alerting on collector outage.",
+    "criterion": "Exports have documented completeness bounds and pipeline outages are detectable; unknown portions remain unassessed.",
+    "falsification": "Use a window larger than one page or a deliberately interrupted test collector.",
+    "remediation": "Add completion accounting, bounded retries and outage alerts; rerun incomplete intervals.",
+    "sources": [
+      "S53",
+      "S56",
+      "S61"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "LOG-04",
+    "domain": "Audit logging and evidence",
+    "title": "Evidence integrity and privileged access",
+    "objective": "Keep collected evidence authentic, restricted and usable.",
+    "applicability": "Audit exports, incident data and investigation records.",
+    "owner": "Evidence custodian",
+    "priority": "P1",
+    "evidence": "Evidence register; hashes; collection context; access logs; retention; encryption and disposal records.",
+    "procedure": "Inspect raw-versus-working copies and storage permissions. Recompute a sample hash; trace transfers and modifications. Confirm collected data is proportionate and never stored in a public methodology repository.",
+    "criterion": "Another authorized reviewer can reproduce provenance and detect changed evidence; access and disposal are controlled.",
+    "falsification": "Modify a working copy and verify it is distinguishable from the preserved original.",
+    "remediation": "Use protected originals, immutable records where required and documented handling procedures.",
+    "sources": [
+      "S06",
+      "S39",
+      "S61"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "LOG-05",
+    "domain": "Audit logging and evidence",
+    "title": "Alerts for sensitive configuration changes",
+    "objective": "Detect changes that weaken controls or evidence.",
+    "applicability": "Identity, apps, mail, sharing, logging and backup.",
+    "owner": "SOC lead",
+    "priority": "P0",
+    "evidence": "Detection rules; required source events; test alerts; tickets; response ownership.",
+    "procedure": "Select high-impact changes: role grant, credential addition, forwarding, consent, logging disablement and backup changes. Trace approved benign events through detection, routing, acknowledgement and escalation.",
+    "criterion": "Selected changes generate actionable alerts within approved timing or have an explicit monitored alternative.",
+    "falsification": "Make an authorized test configuration change whose audit event exists but alert does not.",
+    "remediation": "Repair detection logic and source dependencies; verify response ownership and repeat.",
+    "sources": [
+      "S43",
+      "S14",
+      "S20",
+      "S41"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "SOC-01",
+    "domain": "Detection and incident response",
+    "title": "Cross-workload detection coverage",
+    "objective": "Validate visibility for realistic compromise sequences.",
+    "applicability": "Defender XDR, Sentinel or equivalent SOC tooling.",
+    "owner": "SOC lead",
+    "priority": "P0",
+    "evidence": "Detection matrix; connectors; telemetry; incidents; case ownership; suppression rules.",
+    "procedure": "Map identity compromise, malicious consent, mailbox abuse and data access to available telemetry. Sample cases across identity, email and endpoint. Review suppressions and integration failures, including outsourced SOC responsibilities.",
+    "criterion": "The SOC can correlate material events and explain uncovered stages; licenses or installed tools alone are insufficient.",
+    "falsification": "Trace a consent-related incident that has no linked mailbox or file access investigation.",
+    "remediation": "Close telemetry and workflow gaps; document uncovered scenarios and compensating monitoring.",
+    "sources": [
+      "S43",
+      "S14",
+      "S76"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "SOC-02",
+    "domain": "Detection and incident response",
+    "title": "Account and token compromise exercise",
+    "objective": "Verify containment and evidence preservation are timely.",
+    "applicability": "All tenants.",
+    "owner": "Incident commander",
+    "priority": "P0",
+    "evidence": "Response runbook; emergency contacts; timing records; affected account/app/device evidence.",
+    "procedure": "Tabletop or rehearse with test identities: detect compromise, preserve evidence, isolate relevant access, remove persistence and verify restoration. Include application sessions and malicious grants so password reset is not the only action.",
+    "criterion": "The team can execute authorized containment and confirm remaining access paths within its approved objectives.",
+    "falsification": "An existing application session or grant survives the assumed complete reset.",
+    "remediation": "Update containment paths, authority and verification steps; retest dependencies.",
+    "sources": [
+      "S15",
+      "S14",
+      "S76"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "SOC-03",
+    "domain": "Detection and incident response",
+    "title": "Phishing and malicious app response",
+    "objective": "Test intake, scoping, containment and communication.",
+    "applicability": "Email and OAuth-enabled collaboration.",
+    "owner": "SOC and messaging leads",
+    "priority": "P1",
+    "evidence": "User reporting path; message traces; consent inventory; investigation tickets; response approvals.",
+    "procedure": "Use a synthetic report or historical sanitized incident. Identify recipients, interaction, account activity, grants and affected data. Verify escalation to identity/app owners and documented closure evidence; separate real incidents from audit observations.",
+    "criterion": "Responders can scope and close the scenario with evidence and appropriate business communication.",
+    "falsification": "The email is removed but a malicious consent grant remains active.",
+    "remediation": "Integrate mail and app investigation steps; verify persistence removal and recurrence monitoring.",
+    "sources": [
+      "S76",
+      "S14",
+      "S43"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "SOC-04",
+    "domain": "Detection and incident response",
+    "title": "Response authority and evidence readiness",
+    "objective": "Keep response possible during compromise of ordinary communication.",
+    "applicability": "Every organization, including managed service arrangements.",
+    "owner": "Business continuity and SOC leads",
+    "priority": "P1",
+    "evidence": "Incident contacts; decision rights; alternate communications; legal/privacy escalation; evidence access.",
+    "procedure": "Test contact availability and who can authorize disruptive containment. Check support-provider SLAs and evidence access during tenant outage. Review notification decisions with the responsible legal team rather than inventing deadlines.",
+    "criterion": "Authority, alternate communications and evidence access are executable and documented.",
+    "falsification": "Assume Teams and the primary admin account are unavailable; initiate the response process.",
+    "remediation": "Establish independent communication and emergency access; rehearse the chain of command.",
+    "sources": [
+      "S43",
+      "S07",
+      "S44"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "REC-01",
+    "domain": "Resilience and recovery",
+    "title": "Business recovery requirements and coverage",
+    "objective": "Identify exactly what must be recoverable and by when.",
+    "applicability": "Every workload and critical integration.",
+    "owner": "Business continuity owner",
+    "priority": "P0",
+    "evidence": "Business impact analysis; RTO/RPO; data inventory; backup/service coverage; exclusions.",
+    "procedure": "Define recovery units and dependencies for mail, files, sites, chats, configurations, apps and keys. Reconcile protection scope against the inventory. Distinguish provider availability from customer data restoration and tenant reconstruction.",
+    "criterion": "Each critical service has approved objectives, an accountable recovery method and explicit uncovered objects.",
+    "falsification": "Ask how to recover an app configuration or chat object when the selected backup covers only mail and files.",
+    "remediation": "Add recovery methods for uncovered objects or obtain an explicit risk decision.",
+    "sources": [
+      "S41",
+      "S42",
+      "S44"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "REC-02",
+    "domain": "Resilience and recovery",
+    "title": "Timed restore and integrity exercise",
+    "objective": "Measure actual recovery capability.",
+    "applicability": "Protected mailboxes, sites, files and other required assets.",
+    "owner": "Recovery operator and business owner",
+    "priority": "P0",
+    "evidence": "Backup health; restore points; exercise timings; hashes/item counts; permissions; owner acceptance.",
+    "procedure": "Restore representative synthetic content to an approved isolated destination. Measure from declared recovery start to business acceptance; record data age, errors, permissions and prerequisites. Include one bulk or dependency-rich scenario where required.",
+    "criterion": "Measured RTO/RPO and integrity meet approved requirements for the tested scope; configuration alone is not operational proof.",
+    "falsification": "Restore succeeds technically but essential permissions or the latest required data are missing.",
+    "remediation": "Repair coverage/procedure and repeat the failed scenario; qualify untested scale.",
+    "sources": [
+      "S41",
+      "S42"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "REC-03",
+    "domain": "Resilience and recovery",
+    "title": "Backup administration and destructive change",
+    "objective": "Protect recovery capability from the same compromise as production.",
+    "applicability": "Native or third-party backup platforms.",
+    "owner": "Recovery security owner",
+    "priority": "P0",
+    "evidence": "Backup roles; credential separation; deletion/offboarding controls; notifications; change logs.",
+    "procedure": "Review who can alter coverage, retention or recovery data. Inspect destructive-change safeguards and monitoring. Tabletop a compromised production admin and a lost backup credential; examine retention/deletion behavior for the actual platform.",
+    "criterion": "Recovery remains governed and observable during administrator compromise; architecture-specific limitations are acknowledged.",
+    "falsification": "Trace whether the same unmanaged identity can destroy production and every usable recovery path.",
+    "remediation": "Separate authority where supported and strengthen notifications, custody and recovery procedures.",
+    "sources": [
+      "S41",
+      "S42",
+      "S64"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "REC-04",
+    "domain": "Resilience and recovery",
+    "title": "Tenant configuration and service outage recovery",
+    "objective": "Restore service dependencies beyond content.",
+    "applicability": "Identity, DNS, connectors, policy configuration and external vendors.",
+    "owner": "Platform and continuity owners",
+    "priority": "P1",
+    "evidence": "Configuration exports; architecture; dependencies; certificates; support plans; outage exercise.",
+    "procedure": "Identify rebuild sequence, credential access and trusted recovery copies. Rehearse a service or dependency outage without destructive production testing. Confirm staff can access runbooks and support channels outside the affected tenant.",
+    "criterion": "The organization has a tested dependency-aware recovery sequence and accessible recovery information.",
+    "falsification": "Make the primary tenant unavailable in the exercise and request its emergency runbook.",
+    "remediation": "Store controlled recovery material independently and test reconstruction in a suitable lab.",
+    "sources": [
+      "S44",
+      "S07",
+      "S65"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "AI-01",
+    "domain": "Copilot and agent governance",
+    "title": "AI inventory and approved data flows",
+    "objective": "Identify AI experiences and their distinct permissions and data handling.",
+    "applicability": "Copilot, Copilot Chat, custom agents, extensions and third-party AI.",
+    "owner": "AI governance lead",
+    "priority": "P1",
+    "evidence": "AI inventory; licensing; owners; connectors; models/providers; data-flow diagrams; approved use cases.",
+    "procedure": "Distinguish enterprise experiences from consumer services and extensions. Record grounding sources, actions, identities, external endpoints, retention and feature availability. Review material changes against the actual service documentation.",
+    "criterion": "Each AI use case has a defined owner, data boundary and approved action scope; one product's commitments are not assumed to cover every extension.",
+    "falsification": "Find an agent sending content to an external action absent from the architecture.",
+    "remediation": "Document and constrain data flows; approve extensions against their actual terms and controls.",
+    "sources": [
+      "S47",
+      "S50",
+      "S45"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "AI-02",
+    "domain": "Copilot and agent governance",
+    "title": "Oversharing and discovery restrictions",
+    "objective": "Verify AI cannot expose data beyond approved business access.",
+    "applicability": "AI grounded in Microsoft 365 content.",
+    "owner": "Data and AI governance owners",
+    "priority": "P0",
+    "evidence": "Sensitive-site access; broad memberships; discovery controls; synthetic prompts; direct access results.",
+    "procedure": "Test approved personas with seeded synthetic documents. Compare direct file access, search discovery and AI retrieval separately. Inspect broad permissions and temporary discovery controls; do not infer protection from a single unsuccessful prompt.",
+    "criterion": "Authorization aligns with business intent; discoverability controls have a documented purpose and do not substitute for permission repair.",
+    "falsification": "Use a direct URL to access a restricted-discovery document with an overprivileged test account.",
+    "remediation": "Repair permissions and sharing first; retest representative retrieval and direct access paths.",
+    "sources": [
+      "S47",
+      "S28",
+      "S48"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "AI-03",
+    "domain": "Copilot and agent governance",
+    "title": "Agent tools, identity and adversarial behavior",
+    "objective": "Constrain agent actions under untrusted inputs.",
+    "applicability": "Agents with connectors, actions, MCP servers or write capabilities.",
+    "owner": "Agent/application owner",
+    "priority": "P0",
+    "evidence": "Tool inventory; runtime identity; grants; approved action list; logs; review gates; test transcripts.",
+    "procedure": "In a controlled environment, supply synthetic instructions embedded in untrusted content and ask for an out-of-scope action. Inspect whether the agent's credential can perform it, whether confirmation is enforced and whether actions are logged.",
+    "criterion": "Sensitive actions are bounded by authorization and independently testable safeguards; model refusal alone is insufficient evidence.",
+    "falsification": "The model declines verbally but its tool credential can still execute an unauthorized operation.",
+    "remediation": "Narrow tools and grants, add deterministic checks and human approval for defined consequential actions.",
+    "sources": [
+      "S47",
+      "S54",
+      "S50"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "AI-04",
+    "domain": "Copilot and agent governance",
+    "title": "AI auditability, retention and incident handling",
+    "objective": "Make AI use governable throughout its lifecycle.",
+    "applicability": "Every approved AI experience.",
+    "owner": "AI, records and SOC owners",
+    "priority": "P1",
+    "evidence": "Prompt/response handling; event coverage; retention; investigation procedures; cost/usage and feedback.",
+    "procedure": "Identify which events and artifacts exist for each experience and license. Test synthetic interaction retrieval and permitted investigation access; review external extension logs and output handling. Confirm an owner handles inaccurate or sensitive outputs.",
+    "criterion": "Required AI evidence is discoverable with appropriate privacy controls; documented gaps feed the risk register.",
+    "falsification": "Ask investigators to recover a known agent action whose logs exist only in an unowned external service.",
+    "remediation": "Integrate evidence collection and incident processes; constrain unobservable high-risk actions.",
+    "sources": [
+      "S47",
+      "S18",
+      "S39"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "PP-01",
+    "domain": "Power Platform",
+    "title": "Environment and maker governance",
+    "objective": "Prevent uncontrolled business applications and flows.",
+    "applicability": "Power Apps, Power Automate, Dataverse and Copilot Studio.",
+    "owner": "Power Platform lead",
+    "priority": "P1",
+    "evidence": "Environment inventory; default environment; makers/admins; owners; capacity; production classification.",
+    "procedure": "Reconcile apps, flows and agents to business owners. Inspect who can create environments, use premium features and share applications. Include orphaned resources, personal connections, unmanaged production and acquisition remnants.",
+    "criterion": "Resources have accountable owners, appropriate environment placement and governed creation/sharing.",
+    "falsification": "Identify a business-critical flow owned solely by a departed employee.",
+    "remediation": "Transfer ownership and connections safely; separate production lifecycle and govern maker access.",
+    "sources": [
+      "S49",
+      "S50",
+      "S45"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "PP-02",
+    "domain": "Power Platform",
+    "title": "Connector and data policy effectiveness",
+    "objective": "Control prohibited data movement through low-code applications.",
+    "applicability": "Classic data policies and advanced connector policies where available.",
+    "owner": "Power Platform security owner",
+    "priority": "P0",
+    "evidence": "Policy exports; environment scope; exemptions; connector classifications; modes; test apps/flows.",
+    "procedure": "Identify which policy model actually applies. Review new connector defaults, custom connectors, HTTP/MCP actions and environment exclusions. Test allowed and forbidden connector combinations at design and runtime; verify current limitations.",
+    "criterion": "The chosen model enforces the approved flows for covered environments; unsupported/nonblockable cases are explicit.",
+    "falsification": "A classic policy classifies a connector as non-business but still permits a forbidden business process.",
+    "remediation": "Apply supported controls and scope; consider advanced policies only after feature and impact validation.",
+    "sources": [
+      "S49",
+      "S50",
+      "S75"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "PP-03",
+    "domain": "Power Platform",
+    "title": "Connections, application permissions and release control",
+    "objective": "Prevent low-code automation from becoming an unreviewed privileged service.",
+    "applicability": "Production apps, flows and agent actions.",
+    "owner": "Application and platform owners",
+    "priority": "P0",
+    "evidence": "Connections; service principals; run-only users; sharing; solution releases; secrets metadata; run histories.",
+    "procedure": "Trace the identity and permissions used by sensitive flows. Review who can edit versus invoke, approval steps and source control. Test a forbidden invocation using a controlled low-privilege user.",
+    "criterion": "Runtime permissions and invocation scope match the business need; editable automations cannot bypass approval unnoticed.",
+    "falsification": "A broadly shared flow runs a privileged action using its owner's connection.",
+    "remediation": "Scope invocation and connections; add release review and monitored approval logic.",
+    "sources": [
+      "S54",
+      "S49",
+      "S14"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "PP-04",
+    "domain": "Power Platform",
+    "title": "Operational resilience and data accountability",
+    "objective": "Ensure business automation remains recoverable and observable.",
+    "applicability": "Critical Power Platform solutions and Dataverse data.",
+    "owner": "Power Platform operations",
+    "priority": "P1",
+    "evidence": "Failure alerts; solution inventory; backups/exports; environment recovery plan; capacity/cost; incident records.",
+    "procedure": "Trace a failed critical flow to notification and recovery. Verify solution and data protection separately, connection reauthorization and dependency restoration. Check retention, audit coverage and environment deletion authority.",
+    "criterion": "Critical solutions can be operated and recovered against documented objectives; content backup claims explicitly cover these workloads.",
+    "falsification": "Recover a test solution and discover its connections or external dependencies cannot be restored.",
+    "remediation": "Document and test full recovery, including reauthorization and secrets custody.",
+    "sources": [
+      "S49",
+      "S44",
+      "S06"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "FAB-01",
+    "domain": "Fabric and Power BI",
+    "title": "Public publishing and external sharing",
+    "objective": "Prevent unintended public or cross-tenant disclosure.",
+    "applicability": "Fabric and Power BI tenants.",
+    "owner": "Analytics security owner",
+    "priority": "P0",
+    "evidence": "Tenant settings; scoped groups; Publish to web embed inventory; external sharing; export controls.",
+    "procedure": "Review existing public embeds as well as future publishing permissions. Inspect sensitive reports, underlying models and scoped tenant exceptions. Validate access using an unauthenticated browser on synthetic content only.",
+    "criterion": "Only approved public material is publicly accessible; existing embeds and underlying data are assessed.",
+    "falsification": "A report has no public dashboard link but an old Publish to web embed remains active.",
+    "remediation": "Remove unauthorized embeds and constrain publishing/export paths; assess exposure through incident procedures.",
+    "sources": [
+      "S51",
+      "S52"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "FAB-02",
+    "domain": "Fabric and Power BI",
+    "title": "Workspace and semantic data permissions",
+    "objective": "Verify effective access across report, model and data sources.",
+    "applicability": "Workspaces, semantic models, apps, gateways and service principals.",
+    "owner": "Analytics data owner",
+    "priority": "P1",
+    "evidence": "Workspace roles; sharing; model permissions; row/object-level design; identities; gateway connections.",
+    "procedure": "Map representative personas through report and model access to underlying sources. Test restricted data using the actual assigned role; do not assume viewer controls apply to privileged editors. Review gateway and service identity custody.",
+    "criterion": "Users and service principals can access only the data/actions approved for their role, demonstrated by positive and negative tests.",
+    "falsification": "Test a restricted persona with additional workspace privileges that alter the expected boundary.",
+    "remediation": "Narrow roles and model access; retest at each data boundary.",
+    "sources": [
+      "S51",
+      "S54"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "FAB-03",
+    "domain": "Fabric and Power BI",
+    "title": "Analytics governance and continuity",
+    "objective": "Govern exports, ownership, refresh and recovery of analytics.",
+    "applicability": "Business-critical analytics and Fabric workloads.",
+    "owner": "Analytics operations",
+    "priority": "P1",
+    "evidence": "Owners; classification; source lineage; refresh failures; capacity; labels; deployment/recovery records.",
+    "procedure": "Trace critical reports to data sources, gateway credentials and owners. Review exports and external storage; test refresh failure notification and recovery of definitions/configuration. Assess data retention separately from report artifacts.",
+    "criterion": "Critical analytics has accountable ownership, governed data movement and a tested recovery path.",
+    "falsification": "A dashboard is available but silently stale because its owner's credential expired.",
+    "remediation": "Repair service identity and freshness monitoring; preserve deployment artifacts and test rebuild.",
+    "sources": [
+      "S51",
+      "S36",
+      "S44"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "OPS-01",
+    "domain": "Operations and service management",
+    "title": "Health, change and lifecycle management",
+    "objective": "Keep service changes and outages from creating untracked risk.",
+    "applicability": "All Microsoft 365 services and external dependencies.",
+    "owner": "Service management lead",
+    "priority": "P1",
+    "evidence": "Service health; Message center actions; release tracking; change records; support escalation.",
+    "procedure": "Sample a recent service change, deprecation and outage. Verify impact analysis, assigned actions, communication and closure. Review preview features and automatically enabled services against governance.",
+    "criterion": "Material changes and incidents have accountable review and evidence of action; outdated procedures are revised.",
+    "falsification": "Find a retirement notice affecting an application with no assigned migration owner.",
+    "remediation": "Establish an owned change intake and validate affected procedures before cutover.",
+    "sources": [
+      "S44",
+      "S26",
+      "S48",
+      "S73"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "OPS-02",
+    "domain": "Operations and service management",
+    "title": "Cost, capacity and license hygiene",
+    "objective": "Control waste without compromising preservation or required protection.",
+    "applicability": "Subscriptions, storage, backup, AI and platform consumption.",
+    "owner": "FinOps and licensing owners",
+    "priority": "P2",
+    "evidence": "Assignments; active use; disabled accounts; storage; add-ons; consumption; renewal commitments.",
+    "procedure": "Identify unused allocations and expiring trials, but check holds, shared mailbox requirements, backup and dependencies before reclaiming. Review capacity forecasts and pay-as-you-go owners; validate proposed savings against contract terms.",
+    "criterion": "Costs have owners and reconciled usage; reclaim decisions preserve security, retention and business requirements.",
+    "falsification": "A seemingly unused license is necessary for an investigation or protected workload.",
+    "remediation": "Document justified reclamation and capacity actions with service-owner review.",
+    "sources": [
+      "S45",
+      "S12",
+      "S18",
+      "S41"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "OPS-03",
+    "domain": "Operations and service management",
+    "title": "Supplier and shared-responsibility assurance",
+    "objective": "Separate Microsoft controls from customer and third-party responsibilities.",
+    "applicability": "Microsoft, MSPs, backup providers and connected SaaS.",
+    "owner": "Vendor risk owner",
+    "priority": "P1",
+    "evidence": "Contracts; assurance reports; responsibility matrix; support boundaries; integrations; customer controls.",
+    "procedure": "Review available supplier assurance for the actual service and period. Identify customer responsibilities, exclusions, subservices and integration risks. Map required actions to tenant evidence and service-owner procedures.",
+    "criterion": "Assurance claims identify whose control was assessed, which service and which period; certifications do not substitute for customer configuration review.",
+    "falsification": "A supplier report covers hosting but excludes the application's backup or support path.",
+    "remediation": "Close responsibility gaps and obtain relevant assurance or compensate explicitly.",
+    "sources": [
+      "S45",
+      "S46",
+      "S06"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "OPS-04",
+    "domain": "Operations and service management",
+    "title": "Long-term drift and re-audit",
+    "objective": "Keep audit conclusions current after changes.",
+    "applicability": "All assessed workloads.",
+    "owner": "Control owners and audit lead",
+    "priority": "P1",
+    "evidence": "Baseline snapshots; versioned criteria; scheduled checks; exception expirations; remediation retests.",
+    "procedure": "Identify which controls need continuous monitoring versus periodic interviews/tests. Pin tool versions and preserve baseline changes. Track new services and permissions, and compare like-for-like populations rather than only scores.",
+    "criterion": "Material drift creates owned work and closed findings have new evidence; a rising score does not hide reduced scope.",
+    "falsification": "A scanner update improves the score by skipping unsupported tests.",
+    "remediation": "Review failed/skipped/manual counts and coverage; retest changes and refresh criteria deliberately.",
+    "sources": [
+      "S01",
+      "S57",
+      "S58",
+      "S71"
+    ],
+    "cadence": "At initial audit and after material change; continuous or quarterly review according to risk."
+  },
+  {
+    "id": "IAM-09",
+    "domain": "Identity and privileged access",
+    "title": "Risk-based access and investigation",
+    "objective": "Verify identity risk leads to appropriate control and investigation.",
+    "applicability": "Identity Protection features where licensed; equivalent detection elsewhere.",
+    "owner": "Identity and SOC leads",
+    "priority": "P0",
+    "evidence": "User-risk/sign-in-risk policies; assignments; exclusions; risk detections; remediation tickets.",
+    "procedure": "Review user and sign-in risk separately, feature entitlement and deployed policy experience. Inspect how detected risk is investigated and dismissed. Use permitted simulations or historical sanitized cases rather than provoking real account compromise.",
+    "criterion": "Risk handling matches approved thresholds and evidence supports closure; unavailable premium signals remain a disclosed limitation.",
+    "falsification": "A risky user is marked remediated without evidence or remains excluded from the intended control.",
+    "remediation": "Correct policy scope and investigation workflow; validate fallback procedures.",
+    "sources": [
+      "S83",
+      "S09"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "DATA-07",
+    "domain": "Information protection and compliance",
+    "title": "Customer-managed encryption and support access",
+    "objective": "Evaluate enhanced data-control features against actual requirements.",
+    "applicability": "Customer Key, Customer Lockbox or comparable contractual controls where required.",
+    "owner": "Security architecture and key custodian",
+    "priority": "P1",
+    "evidence": "Key hierarchy; vault permissions; rotation/recovery; data encryption policies; Lockbox roles and request logs.",
+    "procedure": "Determine whether the organization requires these features before assessing deployment. Distinguish service encryption, content encryption and support-access approval. Review supported workloads and recovery dependencies; tabletop key loss without deleting keys.",
+    "criterion": "Required controls are licensed, scoped, operationally owned and recoverable; feature names are not treated as interchangeable.",
+    "falsification": "A support-approval control is presented as customer-controlled encryption or a key cannot be recovered.",
+    "remediation": "Correct the architecture and evidence; test key recovery through a controlled nonproduction procedure.",
+    "sources": [
+      "S81",
+      "S82",
+      "S36"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "APP-06",
+    "domain": "Applications and automation",
+    "title": "Cloud app discovery and session controls",
+    "objective": "Assess connected SaaS and browser session restrictions.",
+    "applicability": "Defender for Cloud Apps or equivalent CASB/session enforcement.",
+    "owner": "Cloud security lead",
+    "priority": "P1",
+    "evidence": "Connected apps; discovery sources; sanctioned apps; session routing; policy exceptions; client test matrix.",
+    "procedure": "Inventory connected and unsanctioned services. Test protected browser sessions and native-client paths, content inspection limits and encrypted/large-file cases. Confirm resource apps are covered and collector credentials remain healthy.",
+    "criterion": "Required sessions and transfer paths are governed with explicit unsupported cases and tested alternatives.",
+    "falsification": "A browser download is blocked but the same test data is available through an uncontrolled native client.",
+    "remediation": "Close alternate paths where supported and record remaining limitations; review business impact.",
+    "sources": [
+      "S79",
+      "S80",
+      "S54"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-01",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Government and sovereign cloud fit",
+    "objective": "Prevent commercial-cloud assumptions from invalidating the audit.",
+    "applicability": "GCC, GCC High, DoD, 21Vianet and sovereign arrangements.",
+    "owner": "Tenant architect",
+    "priority": "P1",
+    "evidence": "Cloud classification; endpoints; service availability; tool support; contract and residency requirements.",
+    "procedure": "Validate each service, API and scanner against the actual cloud. Record unavailable or differently deployed features and data-handling boundaries. Use cloud-appropriate authentication; report untested tool support separately.",
+    "criterion": "Every applied procedure is supported in the target cloud or replaced with documented manual evidence.",
+    "falsification": "A commercial collector succeeds against the wrong tenant or returns unsupported results in the target cloud.",
+    "remediation": "Correct endpoints and adapt controls; qualify assurance until the target-cloud method is verified.",
+    "sources": [
+      "S46",
+      "S72",
+      "S55",
+      "S04"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-02",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Education, frontline and shared-user populations",
+    "objective": "Adapt access and data governance to distinct user populations.",
+    "applicability": "Education, frontline workers, shared devices and seasonal staff.",
+    "owner": "Identity, endpoint and data owners",
+    "priority": "P1",
+    "evidence": "User cohorts; entitlements; student/staff separation; shared-device model; guest and lifecycle policies.",
+    "procedure": "Separate staff, students, minors where applicable, temporary workers and shared devices in sampling. Confirm actual SKU capability and approved privacy obligations. Test rapid turnover, shared-session cleanup and resource access without assuming enterprise defaults.",
+    "criterion": "Population-specific requirements are explicit and supported by evidence; business convenience does not silently exempt a cohort.",
+    "falsification": "A shared workstation retains a previous user's organizational session or a seasonal account survives termination.",
+    "remediation": "Correct shared-session and lifecycle procedures; obtain accountable policy decisions for each population.",
+    "sources": [
+      "S33",
+      "S15",
+      "S45",
+      "S67"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-03",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Multi-Geo and residency verification",
+    "objective": "Test data-location commitments at the relevant service boundary.",
+    "applicability": "Multi-Geo, ADR and regulated residency requirements.",
+    "owner": "Privacy and tenant architecture leads",
+    "priority": "P1",
+    "evidence": "Contractual commitments; data-location reports; user/site geography; migrations; backup and third-party locations.",
+    "procedure": "Map each requirement to the exact workload and data category. Distinguish storage from processing and support access. Verify current versus committed locations, pending moves and external copies.",
+    "criterion": "Evidence supports the particular residency claim; tenant home geography is not used as proof for all data.",
+    "falsification": "A backup, connector or analytics export resides outside the stated workload boundary.",
+    "remediation": "Resolve location gaps or amend the approved architecture and disclosures with responsible owners.",
+    "sources": [
+      "S66",
+      "S67",
+      "S68",
+      "S45"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-04",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Loop and SharePoint Embedded",
+    "objective": "Include content outside ordinary site inventory assumptions.",
+    "applicability": "Loop and applications using SharePoint Embedded containers.",
+    "owner": "Collaboration and application owners",
+    "priority": "P1",
+    "evidence": "Workspace/container inventory; storage location; app permissions; owners; retention/hold capabilities.",
+    "procedure": "Identify actual storage for each content type and creator experience. Verify membership, lifecycle, retention and eDiscovery against current capability tables. Test a synthetic artifact through discovery and authorized access; do not assume all storage variants behave identically.",
+    "criterion": "Containers and workspaces are governed and included in evidence/recovery scope, with current limitations recorded.",
+    "falsification": "A compliance search covers ordinary sites but misses a synthetic item in an application container.",
+    "remediation": "Add container-aware inventory and procedures; restrict unsupported use cases if required.",
+    "sources": [
+      "S77",
+      "S84",
+      "S39"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-05",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Forms and public intake",
+    "objective": "Control information collected and shared through forms.",
+    "applicability": "Microsoft Forms and equivalent externally published intake.",
+    "owner": "Business owner and collaboration lead",
+    "priority": "P1",
+    "evidence": "Form inventory; external response/collaboration settings; response access; owner; data purpose and exports.",
+    "procedure": "Sample public forms, sensitive questions and response exports. Verify ownership transfer, respondent identity needs, anonymous access and collaboration links. Trace stored responses and connected automation to their retention and access controls.",
+    "criterion": "Public intake collects only approved information and response data has an authorized audience and lifecycle.",
+    "falsification": "An external collaborator can read response data through a forgotten sharing path.",
+    "remediation": "Narrow form sharing and response access; assign owners and document disposal.",
+    "sources": [
+      "S78",
+      "S38",
+      "S49"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-06",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Other enabled productivity workloads",
+    "objective": "Avoid silently omitting smaller services.",
+    "applicability": "Planner, Bookings, Viva, Sway, Whiteboard, Stream, Project and additional enabled services.",
+    "owner": "Each workload owner",
+    "priority": "P2",
+    "evidence": "Enabled-service inventory; owners; feature documentation; sharing; data storage; integration and recovery scope.",
+    "procedure": "For every enabled service, complete the workload worksheet: identity, sharing, storage, licensing, retention, audit and recovery. Identify its backing services and verify current product-specific documentation before issuing a result. Escalate unsupported assumptions as scope gaps.",
+    "criterion": "No enabled workload is silently omitted. This generic overlay is a scoping procedure, not a product-specific configuration certification.",
+    "falsification": "Choose a service absent from the main scanner and ask for its stored-data and recovery owner.",
+    "remediation": "Add a tailored assessment module with primary documentation; record Not assessed until sufficient evidence exists.",
+    "sources": [
+      "S02",
+      "S45",
+      "S44"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-07",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Mergers and multiple tenants",
+    "objective": "Assess trust and data movement across organizational boundaries.",
+    "applicability": "Acquisitions, divestitures and multi-tenant organizations.",
+    "owner": "Enterprise architect",
+    "priority": "P1",
+    "evidence": "Tenant inventory; cross-tenant relationships; migrations; dual identities; delegated roles; data ownership.",
+    "procedure": "Review who retains access before, during and after transition. Inspect partner-specific trust, cross-tenant synchronization and migration service accounts. Reconcile retention and evidence obligations before decommissioning.",
+    "criterion": "Trust, data ownership and access removal are planned and evidenced for each transition phase.",
+    "falsification": "An acquired tenant's admin retains a migration credential after cutover.",
+    "remediation": "Expire transitional access and verify source/destination controls before closure.",
+    "sources": [
+      "S16",
+      "S54",
+      "S38"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-08",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Regulated control overlay and formal assurance",
+    "objective": "Translate a framework engagement into defensible testing.",
+    "applicability": "Contractual or regulated audits requiring a specified framework/version.",
+    "owner": "Compliance owner and audit lead",
+    "priority": "P1",
+    "evidence": "Authoritative requirements; formal scope; framework version; mapping; evidence; assessor requirements.",
+    "procedure": "Map each applicable requirement to one or more control tests and identify uncovered clauses. Have qualified owners interpret legal requirements. Validate technical evidence, process operation and provider/customer boundaries separately.",
+    "criterion": "Any conformity claim matches the authorized assessment standard, scope, period and assessor role; this playbook alone confers no certification.",
+    "falsification": "A completed Microsoft recommendation is used to claim satisfaction of an unrelated legal clause.",
+    "remediation": "Complete the missing mapping, interpretation or assessment and qualify interim reporting.",
+    "sources": [
+      "S40",
+      "S45",
+      "S06",
+      "S62"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-09",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Virtual desktops and Cloud PCs",
+    "objective": "Include hosted endpoints in identity and device assurance.",
+    "applicability": "Windows 365, Azure Virtual Desktop and shared virtual endpoints.",
+    "owner": "Endpoint and virtualization leads",
+    "priority": "P1",
+    "evidence": "Hosted desktop inventory; identity model; policies; images; administrator access; recovery dependencies.",
+    "procedure": "Apply endpoint and access tests to hosted desktops, including image lifecycle, local data, redirection and privileged sessions. Validate product-specific configuration against current primary documentation before scoring the deployment.",
+    "criterion": "Hosted endpoints are included in coverage and recovery; omitted product-specific checks remain Not assessed.",
+    "falsification": "A privileged Cloud PC is assumed safe because it is hosted but lacks the intended endpoint controls.",
+    "remediation": "Extend device management and recovery coverage and commission a specific platform review where needed.",
+    "sources": [
+      "S74",
+      "S09",
+      "S81"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-10",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Network and access dependencies",
+    "objective": "Validate DNS, connectivity and secure access dependencies.",
+    "applicability": "All tenants; enhanced review for proxies and remote access.",
+    "owner": "Network and identity leads",
+    "priority": "P1",
+    "evidence": "DNS ownership; proxy/VPN architecture; trusted locations; certificates; availability monitoring.",
+    "procedure": "Trace administrator and user connectivity to authentication and workloads. Review who controls DNS and named locations; identify proxy bypass and authentication dependencies. Test a representative outage or alternate access path under an approved plan.",
+    "criterion": "Critical connectivity has owners and recovery plans; network location alone is not treated as strong identity assurance.",
+    "falsification": "A broad trusted IP range unintentionally includes an untrusted user or partner path.",
+    "remediation": "Narrow assumptions and align network/access design with observed authentication behavior.",
+    "sources": [
+      "S09",
+      "S22",
+      "S44"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  },
+  {
+    "id": "EXT-11",
+    "domain": "Specialized tenant and workload overlays",
+    "title": "Accessibility and control usability",
+    "objective": "Keep required protection usable for the intended workforce.",
+    "applicability": "Authentication, device restrictions and collaboration controls.",
+    "owner": "Service owner and accessibility lead",
+    "priority": "P2",
+    "evidence": "Exception requests; accessible authentication options; helpdesk trends; pilot results; training.",
+    "procedure": "Review whether users with differing devices, connectivity or accessibility needs can use approved controls. Test representative personas and recovery paths. Track repeated support workarounds as evidence of a design gap.",
+    "criterion": "Protection remains effective and usable for legitimate users; workarounds do not create permanent unowned bypasses.",
+    "falsification": "A user can work only after helpdesk repeatedly disables an access control.",
+    "remediation": "Provide supported alternatives and improve rollout/training while preserving the required objective.",
+    "sources": [
+      "S11",
+      "S09",
+      "S33"
+    ],
+    "cadence": "At initial audit and after material change; periodic review based on the approved risk plan."
+  }
+]

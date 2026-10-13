@@ -1,0 +1,14 @@
+# Actual engagement evidence must remain outside this public methodology repository.
+evidence/
+tenant-exports/
+client-reports/
+secrets/
+*.pfx
+*.p12
+*.key
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

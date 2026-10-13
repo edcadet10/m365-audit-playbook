@@ -1,0 +1,761 @@
+{
+  "checked_utc": "2026-10-13T02:40:59.562147+00:00",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score",
+      "bytes": 58815,
+      "sha256": "56afdd49a276a7aa0e801fd653ee8514a35602631c26999a5cb09006e185b931"
+    },
+    {
+      "id": "S02",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/security/zero-trust/microsoft-365-zero-trust?view=o365-worldwide",
+      "bytes": 74344,
+      "sha256": "d4ad2f9ccfa68751110178796e6f347b1d3c2ec8feed94dda495462d13e75565"
+    },
+    {
+      "id": "S03",
+      "url": "https://github.com/cisagov/ScubaGear",
+      "status": 200,
+      "final_url": "https://github.com/cisagov/ScubaGear",
+      "bytes": 403849,
+      "sha256": "cf30af788c37145cff5dc7227462b9ffe4332f49d4c73884ddc57d00ca60aea8"
+    },
+    {
+      "id": "S04",
+      "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/assumptions.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/assumptions.md",
+      "bytes": 1151,
+      "sha256": "98b6e436a37b7ef3338a2d30e17c5b37c3817af9cc823eeab16c6aa91c0ffb8b"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.cisecurity.org/benchmark/microsoft_365",
+      "status": 200,
+      "final_url": "https://www.cisecurity.org/benchmark/microsoft_365",
+      "bytes": 282355,
+      "sha256": "4d9b90122e2dae89ae56dd6b37ecf3bf12042aa803683ad9fed211c7c418b2e8"
+    },
+    {
+      "id": "S06",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final",
+      "status": 200,
+      "final_url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final",
+      "bytes": 47243,
+      "sha256": "5ea4f715e70c1cc18fac8b2bf37fc10734ed0ca0d5cf77c9b855250f3b2227ef"
+    },
+    {
+      "id": "S07",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+      "bytes": 73496,
+      "sha256": "249eaa5bf159af574c50962a376186cc026fc305177647ba87d822ba9fa174ee"
+    },
+    {
+      "id": "S08",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "bytes": 57468,
+      "sha256": "07de30a85fb0b98961ceff0bc8adfab0d5a26dfee2f22e3880b64088a4b2bf23"
+    },
+    {
+      "id": "S09",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "bytes": 57551,
+      "sha256": "a56c08929b3f3be29249d4b1818030cc34ba5eb8c39a877eb19710f599ff1b1e"
+    },
+    {
+      "id": "S10",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
+      "bytes": 57233,
+      "sha256": "55d4643fd555143525859d33fe810fe2f87566d551cf0a9548d40395c48b23e2"
+    },
+    {
+      "id": "S11",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "bytes": 56018,
+      "sha256": "4867cdbf34c3fef255e5b2adf0b92dd3dbe5081974adaad1b13eedc4a4770cf0"
+    },
+    {
+      "id": "S12",
+      "url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "bytes": 106601,
+      "sha256": "3d432c820ba6d5af5f6f5717b2eaf314dc5a39dd0c89e304774181339e2e3c3d"
+    },
+    {
+      "id": "S13",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "bytes": 64695,
+      "sha256": "55a155264ab1f2c843798d5f101db86a2822e5afc10664b3e72d389a33c47b87"
+    },
+    {
+      "id": "S14",
+      "url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "bytes": 92742,
+      "sha256": "e9b4d168d7dbacdda607960ed9a597c074c8914beb694ed8057608238db1a5b7"
+    },
+    {
+      "id": "S15",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "bytes": 61861,
+      "sha256": "02d0730076b86d423a4e7ae072786faed1b433ca7cbf16675ae84a57d62fb45a"
+    },
+    {
+      "id": "S16",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
+      "bytes": 81195,
+      "sha256": "a56c75190fd83f6aadd19676fc884a29700ab48768d8d269b336e5d9f8cab036"
+    },
+    {
+      "id": "S17",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+      "bytes": 53602,
+      "sha256": "ba280df5bfd5058525c50006fe126bd2f25767a91063f5491b1f483bb513ba7b"
+    },
+    {
+      "id": "S18",
+      "url": "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "bytes": 62156,
+      "sha256": "1435b642b490194be277c435bdd96be8f1cd8f8c5cb0e2761ad59d97da7050d0"
+    },
+    {
+      "id": "S19",
+      "url": "https://learn.microsoft.com/en-us/purview/audit-search",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/audit-search",
+      "bytes": 70173,
+      "sha256": "812f311bcb749cbac8a564fef23ee7f827bb1866b91a154047b24d43a19b3c8d"
+    },
+    {
+      "id": "S20",
+      "url": "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "bytes": 78902,
+      "sha256": "2a25a745234200c331bde935dc838cde2cc2dd24b2212aa5739c9b1faeae034c"
+    },
+    {
+      "id": "S21",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
+      "bytes": 114273,
+      "sha256": "77c386977fb9b38ccdfca2c694e90688ad3a1ebf79aabc22216c0831294ddd1f"
+    },
+    {
+      "id": "S22",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "bytes": 71218,
+      "sha256": "0cad34cbcb4f527b53f31e91a2b024f8f8d387b2814ad39080ddab21f6892684"
+    },
+    {
+      "id": "S23",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+      "bytes": 125550,
+      "sha256": "8a1189a1496296be34db32e7c90dff07453fdcf8960a4d4dad07cb5755c8c37e"
+    },
+    {
+      "id": "S24",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+      "bytes": 104644,
+      "sha256": "65c0a61f355add81badf8df19b6e1204815bf5b4907a4ff94eae1d809dab6760"
+    },
+    {
+      "id": "S25",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
+      "bytes": 59752,
+      "sha256": "d0e0512ec728ba31b5ca2586f35854fade8ba371dd6af00ba781aee62464859c"
+    },
+    {
+      "id": "S26",
+      "url": "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+      "status": 200,
+      "final_url": "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+      "bytes": 374550,
+      "sha256": "8a8b7fab07a47a3778858ed1e82fad2ccce449e2a6fac1c04497badce3125cc8"
+    },
+    {
+      "id": "S27",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "bytes": 60034,
+      "sha256": "7f8c9a1f4e127cc31715e4eeaebb1a3a71d83fe613ef73c4d630c824edb94377"
+    },
+    {
+      "id": "S28",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
+      "bytes": 63034,
+      "sha256": "559fe2f3eb3614acbb836111f59a7403a4ef4da9223fb8437ba532b5f8309b28"
+    },
+    {
+      "id": "S29",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
+      "bytes": 57591,
+      "sha256": "f537c97e21386b0fd0179043e4fd67c346750b2b306eceb97abfb861a0587659"
+    },
+    {
+      "id": "S30",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "bytes": 66721,
+      "sha256": "087c1aa3b4387025a377ad562e5ff7281d0909db03c4cb4b9c75841243c9db99"
+    },
+    {
+      "id": "S31",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
+      "bytes": 64708,
+      "sha256": "77bbe2edeffa36821c5951f497dbb53b8e86594cc7905ea6c64821d273afd555"
+    },
+    {
+      "id": "S32",
+      "url": "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "bytes": 65837,
+      "sha256": "5a5910452fc2ec0e7ea437681dbc2f331554b84364e0d50b40d8009b41deafe3"
+    },
+    {
+      "id": "S33",
+      "url": "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+      "bytes": 102236,
+      "sha256": "8aa6b4af94b7a63d91a0df014e3f47b8f01cfde07d142173e00762630b76b398"
+    },
+    {
+      "id": "S34",
+      "url": "https://learn.microsoft.com/en-us/intune/intune-service/protect/security-baselines-configure",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/intune/device-security/security-baselines/configure-baselines",
+      "bytes": 86395,
+      "sha256": "5ba55647666ca807e5985fff80e9871d5b53b2f2f385b6954e03d547532494d1"
+    },
+    {
+      "id": "S35",
+      "url": "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+      "bytes": 51162,
+      "sha256": "88c33190adb4514b0bd9cdcdf9d0eb2e4cab13104be603d1376f337322a45660"
+    },
+    {
+      "id": "S36",
+      "url": "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+      "bytes": 87716,
+      "sha256": "bf67645d3fba143ab301b80853fa463efbf68b5d5bd9e0bebf03340f8f7baef8"
+    },
+    {
+      "id": "S37",
+      "url": "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "bytes": 77738,
+      "sha256": "5ad7dd03a053318253134aca74395ca40752d73b624199f251f005ce6d7995d8"
+    },
+    {
+      "id": "S38",
+      "url": "https://learn.microsoft.com/en-us/purview/retention",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/retention",
+      "bytes": 132376,
+      "sha256": "d77e2db29ba6f3751357b2a8e2ad3d5f360b6abce6b234e9ed22d09d1fc9a37a"
+    },
+    {
+      "id": "S39",
+      "url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+      "bytes": 60579,
+      "sha256": "45daafeb392f9e3c9177a07b9212714d0764bdc37b6a7380d873922264ec5bb0"
+    },
+    {
+      "id": "S40",
+      "url": "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "bytes": 54754,
+      "sha256": "7c456aa6a0af47ea54629d9c31960d698bb5643e1b3798a00ee85761c6a75dac"
+    },
+    {
+      "id": "S41",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "bytes": 67682,
+      "sha256": "9776e71ed91e9d4c97b98eec30b4f0c0172d74e106b5cf2c588e9b13c36bcc74"
+    },
+    {
+      "id": "S42",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
+      "bytes": 58648,
+      "sha256": "a1679d41a0309b649489dee1dbf272a820389497ae0db178db04cedab010d536"
+    },
+    {
+      "id": "S43",
+      "url": "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbooks",
+      "bytes": 50342,
+      "sha256": "c195ace867a80b1db898bc3f05b02e477f76e1827cab23d693a1a730b9c22463"
+    },
+    {
+      "id": "S44",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "bytes": 65885,
+      "sha256": "3a403f30c6e83dc709c2560ca424efadc0f4aa1c5a75ac2098ff53c20db9f9fc"
+    },
+    {
+      "id": "S45",
+      "url": "https://www.microsoft.com/licensing/terms/",
+      "status": 200,
+      "final_url": "https://www.microsoft.com/licensing/terms/",
+      "bytes": 131808,
+      "sha256": "086889f7696c3445f88cb693efd1e7da0523f86caa4176c7bcfc63163b0e517d"
+    },
+    {
+      "id": "S46",
+      "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+      "bytes": 56351,
+      "sha256": "519d02799a1be74bf76646c75b3d7cadb599ce738fd34a199eeabc6a968bc907"
+    },
+    {
+      "id": "S47",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "bytes": 79249,
+      "sha256": "8941bc33c2f9baa87a23b1240bd1b82bfb18e4d8db9d8d6967057c26e3baeeef"
+    },
+    {
+      "id": "S48",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search",
+      "bytes": 63924,
+      "sha256": "a625a0d284a5141c317fe8f3e2b98ecf4f8a38dab7b620fdd4890a4ba53d5190"
+    },
+    {
+      "id": "S49",
+      "url": "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "bytes": 63019,
+      "sha256": "b1091c9da21f50def9fac1fcb0acf89c78f4c1dc60aefc26e553bf705de2f004"
+    },
+    {
+      "id": "S50",
+      "url": "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "bytes": 68291,
+      "sha256": "33a5922ed5cda371338d0c9514a0c73e936f46e7a0c0b05984111169af836521"
+    },
+    {
+      "id": "S51",
+      "url": "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "bytes": 72613,
+      "sha256": "8dabf6bb29e6d3c5836f3a04d8865eda28296fe5a5aa8f2b86d3b94357cbf4a5"
+    },
+    {
+      "id": "S52",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web",
+      "bytes": 69947,
+      "sha256": "bbffb75a59c305af475f849c1a396f7e35b62f05d0e193b6d174d0b25f6a7302"
+    },
+    {
+      "id": "S53",
+      "url": "https://learn.microsoft.com/en-us/graph/paging",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/paging",
+      "bytes": 62051,
+      "sha256": "5f929ef2c3cb82e79ea98ba804561ef753916895b4b01489bf9dc0d3c16bf130"
+    },
+    {
+      "id": "S54",
+      "url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "bytes": 77406,
+      "sha256": "cccc0c989dcc7b343d22a99cf168276cfe92b507f309576574c4b498cdf80b99"
+    },
+    {
+      "id": "S55",
+      "url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "bytes": 67009,
+      "sha256": "43bf935441328b7fd88686a57c7a5e86bde7d08b2b2bd4e421fbbfaca1c35343"
+    },
+    {
+      "id": "S56",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+      "bytes": 88011,
+      "sha256": "7cee9205b68f1aad6331e511403160347b8af1d1a4e57ec616229467b7820edb"
+    },
+    {
+      "id": "S57",
+      "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/tooloutputschema.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/tooloutputschema.md",
+      "bytes": 44755,
+      "sha256": "190d2fc1e65c76003b1c2618c098c8160ec74bf3eea395cc53975d7c88dc2902"
+    },
+    {
+      "id": "S58",
+      "url": "https://maester.dev/docs/installation/",
+      "status": 200,
+      "final_url": "https://maester.dev/docs/installation/",
+      "bytes": 40204,
+      "sha256": "b9471cd5ca3f058ddb173a18eb5535c1e728c994ebd9878666061f5263dacf9c"
+    },
+    {
+      "id": "S59",
+      "url": "https://github.com/cammurray/orca/blob/master/README.md",
+      "status": 200,
+      "final_url": "https://github.com/cammurray/orca/blob/master/README.md",
+      "bytes": 318147,
+      "sha256": "1ba04c9975f284ce2cd1ac6375820303eeff99764fe864d793480757b4b2fed4"
+    },
+    {
+      "id": "S60",
+      "url": "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+      "bytes": 56330,
+      "sha256": "a11110761ddeba5113a1a71f4fb12825590a5e7046e1aa6df130e2b9f9f57d23"
+    },
+    {
+      "id": "S61",
+      "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/execution/reports.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/execution/reports.md",
+      "bytes": 2300,
+      "sha256": "6899608c6c24efd82fa41cd0b7abedfb6d39e8a812eb5e55e74980c4cc3f80a6"
+    },
+    {
+      "id": "S62",
+      "url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/PowerShell/ScubaGear/baselines/aad.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/PowerShell/ScubaGear/baselines/aad.md",
+      "bytes": 63212,
+      "sha256": "080e670d321e80ceb5f010673e07934c01cb75eab2ae57b2a546f4248ae77cd1"
+    },
+    {
+      "id": "S63",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+      "bytes": 70125,
+      "sha256": "ba8809291db709f05e2a489c3508d9d6b059091f231b7e6f61e074d094d2dec4"
+    },
+    {
+      "id": "S64",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "bytes": 566815,
+      "sha256": "9c35d8b5f8f206fb9951075d94c5be897a99208e5254bfa2573dce4877b48ad2"
+    },
+    {
+      "id": "S65",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
+      "bytes": 82210,
+      "sha256": "7be40f9662d83f3f2e36048a9b47c5376dc9a0b6c9d089d358e5bccc917a74e4"
+    },
+    {
+      "id": "S66",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-what-is-data-residency?view=o365-worldwide",
+      "bytes": 62513,
+      "sha256": "c7cf57af3dd9e2ecfeef29719dc127b5f813e9481726905274c35a50eed1a842"
+    },
+    {
+      "id": "S67",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/moving-data-to-new-datacenter-geos?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-compare-offerings?view=o365-worldwide#how-customer-data-can-move-between-geographies",
+      "bytes": 73729,
+      "sha256": "9ec856d17c28ad1e7d692555a9b5798dc686a5a2bf7c111f78c30a69cdbc8c59"
+    },
+    {
+      "id": "S68",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-multi-geo",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide",
+      "bytes": 62482,
+      "sha256": "6de271be7ed6b97cdea1b8fc64238da733f8ac857ec82b860b822bb3259b48f8"
+    },
+    {
+      "id": "S69",
+      "url": "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn",
+      "bytes": 52068,
+      "sha256": "af7f78dc8460b565dfd99b138e421b0cdb5a23168caf2c2f752d2b2264f5f7a9"
+    },
+    {
+      "id": "S70",
+      "url": "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission",
+      "bytes": 47192,
+      "sha256": "5ad2d3b25f415a3e089f4571f1381f1a49414c3b0586557052bea3300f8417b9"
+    },
+    {
+      "id": "S71",
+      "url": "https://maester.dev/blog/maester-3-0/",
+      "status": 200,
+      "final_url": "https://maester.dev/blog/maester-3-0/",
+      "bytes": 79742,
+      "sha256": "d21e0c1f89b51aab2b2c472948ba685d6d4b58c4ca0f994f3eca8e9d3806cd34"
+    },
+    {
+      "id": "S72",
+      "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
+      "bytes": 58324,
+      "sha256": "701a2324cf1e0a912547d0ff927cf2427aed851950725c39b9dc5b9f732b56e4"
+    },
+    {
+      "id": "S73",
+      "url": "https://learn.microsoft.com/en-us/purview/ediscovery",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/ediscovery",
+      "bytes": 71310,
+      "sha256": "fee55f2f806496bf04f11a633fcff5ffef65d15b3b73f31818588dc8ac5f198b"
+    },
+    {
+      "id": "S74",
+      "url": "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
+      "bytes": 76328,
+      "sha256": "65c01ec546b42ac4786b1f82578942c6811b114a188686aac59b8aee2ba2e5a4"
+    },
+    {
+      "id": "S75",
+      "url": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification",
+      "bytes": 64814,
+      "sha256": "be9ebf64a922a59799f82ec46ca535606fecde04be49082b3ec432ad0541a2e4"
+    },
+    {
+      "id": "S76",
+      "url": "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
+      "bytes": 54998,
+      "sha256": "f3b90cea45d1fb650059849fe86c620867b4a01d9ba38a5e8c13cc8e7b102519"
+    },
+    {
+      "id": "S77",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide",
+      "bytes": 64756,
+      "sha256": "bdaa617f327fde685cb1c4a084bbeb6604d2ef9d7dcbe5bc0beeec2203a1a231"
+    },
+    {
+      "id": "S78",
+      "url": "https://learn.microsoft.com/en-us/microsoft-forms/set-up-microsoft-forms",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/microsoft-forms/set-up-microsoft-forms",
+      "bytes": 47707,
+      "sha256": "9472798c16248718da8e81567071c2d13d1db0da2cf342fed45ba7b13e024cda"
+    },
+    {
+      "id": "S79",
+      "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/caac-known-issues",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/caac-known-issues",
+      "bytes": 59469,
+      "sha256": "c2ef446875714aeef70ff5e7e9f8fe7426bf2a76adaf3cd0fb13122f75c0166c"
+    },
+    {
+      "id": "S80",
+      "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad",
+      "bytes": 58975,
+      "sha256": "33c97ce75346a7c12e1b28f741a4724c41a3f799f2cb7911de4b06a5707cae74"
+    },
+    {
+      "id": "S81",
+      "url": "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption",
+      "bytes": 51057,
+      "sha256": "37ba38ec902751e78736bc3d3980d296749c3968a671ff48d686a3d444bcee19"
+    },
+    {
+      "id": "S82",
+      "url": "https://learn.microsoft.com/en-us/purview/customer-lockbox-requests",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/purview/customer-lockbox-requests",
+      "bytes": 77237,
+      "sha256": "12f0a1af91c6700d9f1de2838e13078502d7a0fb6fd7a02447276732426d320c"
+    },
+    {
+      "id": "S83",
+      "url": "https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies",
+      "bytes": 65883,
+      "sha256": "f32b371ec9dee59871b42c1aa7faa598d47198689eca297d9dd014695258ffa0"
+    },
+    {
+      "id": "S84",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview",
+      "bytes": 45981,
+      "sha256": "b1fefbe2215237397898a25bece8092cb6e33e5a285cfb06a10178c21c7994ae"
+    },
+    {
+      "id": "S85",
+      "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0",
+      "bytes": 65300,
+      "sha256": "244ad69152eef65b45158b5c46fe2ae1840b283b6e7ebd42664621a64f2cd856"
+    },
+    {
+      "id": "S86",
+      "url": "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps",
+      "bytes": 76263,
+      "sha256": "a5f2a7384d19b32c9b0bb130f6af9a0bbf768d16bd04e0853a87dd7159637edd"
+    },
+    {
+      "id": "S87",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+      "bytes": 70890,
+      "sha256": "ec1385d99792af2cc52aebdc487e51892c85b07054685803d036afc5580d8d06"
+    },
+    {
+      "id": "S88",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/get-sposite?view=sharepoint-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/get-sposite?view=sharepoint-ps",
+      "bytes": 80246,
+      "sha256": "8dc6eaa85f7c8640d69256f1713c19adb15fd8f0f0b38289b3fbe07b598bf64a"
+    }
+  ],
+  "documentary_probes": [
+    {
+      "id": "D01",
+      "claim": "Secure Score substitutes for audit assurance",
+      "source": "S01",
+      "test": "All selected documentary counterexample terms present; claim-level kill criteria were preregistered",
+      "required_matches": 2,
+      "observed_matches": 2,
+      "result": "Claim rejected",
+      "limitation": "Text matching confirms a located counterexample; it does not validate live tenant controls."
+    },
+    {
+      "id": "D02",
+      "claim": "Report-only policy establishes enforcement",
+      "source": "S08",
+      "test": "All selected documentary counterexample terms present; claim-level kill criteria were preregistered",
+      "required_matches": 2,
+      "observed_matches": 2,
+      "result": "Claim rejected",
+      "limitation": "Text matching confirms a located counterexample; it does not validate live tenant controls."
+    },
+    {
+      "id": "D03",
+      "claim": "Audit history has one universal retention period",
+      "source": "S17",
+      "test": "All selected documentary counterexample terms present; claim-level kill criteria were preregistered",
+      "required_matches": 3,
+      "observed_matches": 3,
+      "result": "Claim rejected",
+      "limitation": "Text matching confirms a located counterexample; it does not validate live tenant controls."
+    },
+    {
+      "id": "D04",
+      "claim": "A scanner completes every audit check",
+      "source": "S57",
+      "test": "All selected documentary counterexample terms present; claim-level kill criteria were preregistered",
+      "required_matches": 2,
+      "observed_matches": 2,
+      "result": "Claim rejected",
+      "limitation": "Text matching confirms a located counterexample; it does not validate live tenant controls."
+    },
+    {
+      "id": "D05",
+      "claim": "Legal holds establish mass restore capability",
+      "source": "S42",
+      "test": "All selected documentary counterexample terms present; claim-level kill criteria were preregistered",
+      "required_matches": 2,
+      "observed_matches": 2,
+      "result": "Claim rejected",
+      "limitation": "Text matching confirms a located counterexample; it does not validate live tenant controls."
+    }
+  ]
+}

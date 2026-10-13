@@ -1,0 +1,13 @@
+{
+  "checked_date_local": "2026-10-12",
+  "document": "docs/COLLECTION-GUIDE.md",
+  "powershell_snippets": 5,
+  "syntax_errors": 0,
+  "method": "PowerShell language parser only; no snippet commands executed",
+  "local_module_metadata_checked": {
+    "module": "Microsoft.Graph.Authentication",
+    "version": "2.39.0",
+    "Invoke-MgGraphRequest_OutputType_HashTable_available": true
+  },
+  "limitation": "Syntax and local parameter-type checks do not establish Microsoft 365 runtime correctness or successful tenant collection."
+}

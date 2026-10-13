@@ -1,0 +1,1 @@
+test_id,control_ids,claim,kill_criterion,expected_result,authorization,tenant_and_cloud,license,identity,resource,client,preconditions,start_utc,end_utc,actual_result,evidence_ids,interpretation,coverage_limit,cleanup,reviewer,microsoft_reference
