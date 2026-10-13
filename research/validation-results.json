@@ -1,11 +1,11 @@
 {
-  "checked_utc": "2026-10-13T02:41:00.613242+00:00",
+  "checked_utc": "2026-10-13T03:56:27.008986+00:00",
   "controls": 90,
   "domains": 17,
-  "sources": 88,
-  "microsoft_sources": 78,
-  "markdown_files": 12,
-  "local_links_checked": 81,
+  "sources": 185,
+  "microsoft_sources": 175,
+  "markdown_files": 17,
+  "local_links_checked": 1153,
   "synthetic_cases_passed": 8,
   "synthetic_cases": [
     {

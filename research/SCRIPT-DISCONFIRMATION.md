@@ -1,0 +1,32 @@
+# Read-only script disconfirmation report
+
+Version 1.1; prepared 12 October 2026 local time. Runtime/source reports contain their actual UTC timestamps. [Preregistered claim and kill criteria](SCRIPT-PREREGISTRATION.md).
+
+## Result and revised claim
+
+The initial assertion that every step could be completed entirely through remote reads was narrowed: a read-only script can collect configuration and existing operational evidence, but cannot perform a new restore, create synthetic data, conduct an interview or issue a business approval. The implementation gives every control, numbered fieldwork step and main playbook phase a specific executable evidence path, with missing requirements reported explicitly. It does **not** claim fully automated audit opinions or complete live integration coverage. Microsoft's [Backup API separates listing from restore operations](https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0), and [report-only Conditional Access does not enforce the policy](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only).
+
+The user subsequently required module installation and authentication before commands. The preregistration was amended: an explicit setup stage checks modules, installs missing supported modules for CurrentUser, imports them, authenticates, verifies context, then permits read-only acquisition. Plan and Offline skip setup; existing-session mode rejects missing prerequisites without installing or signing in. Local package installation and interactive authentication are disclosed separately from the audit's read-only operations. [Install-PSResource](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.psresourceget/install-psresource?view=powershellget-3.x), [Graph authentication](https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0).
+
+## Findings that changed the implementation
+
+1. The first runtime test rejected a valid local recovery record. Inspection identified a filesystem-object type assumption while checking evidence path ancestry. The implementation now distinguishes DirectoryInfo from FileInfo; the existing recovery case validates and hashes both the package and receipt.
+2. Reference review corrected the consent-grant reader permission to `Directory.Read.All` and federation reader permission to `Domain-InternalFederation.Read.All`. [Consent grant list](https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0), [domain federation list](https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0).
+3. Teams installed-app reads now distinguish the delegated `TeamsAppInstallation.ReadForTeam` permission from application alternatives and resource-specific consent. [Installed apps permissions](https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0).
+4. The site-wide discovery API is application-only. A delegated run cannot silently claim its output; the permission restriction is explicit in the operation plan and guide. [getAllSites](https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0).
+5. Power BI workspace expansion cannot establish complete workspace user access: Microsoft documents the users property limitation. A separate selected-workspace user operation was added. [Workspace inventory](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin), [workspace users](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin).
+6. Public-embed paging uses the documented continuation token on the original fixed endpoint. It does not follow an arbitrary returned continuation URI. The hostile-URI synthetic case retains both expected pages without contacting the hostile destination. [Publish-to-web inventory](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web).
+
+## Measured verification
+
+The [runtime report](script-test-results.json) records **25 passing offline tests and zero failures** after repairs. Coverage includes PowerShell parsing, 151 recipe/script/help mappings, successful two-page Graph collection, 403, interrupted pagination, page caps, repeated/hostile URLs, malformed responses, tenant/cloud mismatch, forbidden commands, workload continuation tokens, duplicate UAL records, missing/traversing evidence, recovery calculations, full 90-control offline execution, public-repository output protection, blank templates, setup ordering, existing-session behavior and the setup failure gate.
+
+The recovery fixture measured **7,200 seconds** against a **3,600-second RTO**, correctly marking the RTO exceeded; its **7,200-second data age** remained within a **10,800-second RPO**. These are synthetic measurements, not customer recovery results. The offline full-control run reported **all 90 controls incomplete**, with no live reads marked Collected and no control marked Pass.
+
+All **100 operation references** returned HTTP 200 and contained the expected documented API path or command during the [source check](script-source-checks.json). Accessibility and syntax matching do not prove permission correctness, effective population visibility or successful invocation in a real tenant. The targeted permission and behavior reviews above are separate from URL checking.
+
+## Practical limits
+
+No live tenant was accessed; no modules were installed and no real sign-in was initiated during authoring. Transport, setup and authentication tests use local mocks. Module/platform versions, Exchange session-module binding, Graph roles/scopes, licensing, application permissions, service throttles, preview availability and sovereign-cloud coverage need a scoped pilot. A module parse or passing synthetic test is not evidence that a Microsoft 365 control works.
+
+The scripts deliberately preserve Partial/Failed/MissingTarget/NotCollected states and require review of source visibility, sampling and history. All control opinions remain Not assessed. An existing JSON workpaper with fields and hashes is evidence to review, not proof that its statements are true. Owner-assisted exports remain required for interfaces the 100 collectors do not cover. The [coverage register](../docs/SCRIPT-COVERAGE.md) identifies these requirements rather than concealing them.

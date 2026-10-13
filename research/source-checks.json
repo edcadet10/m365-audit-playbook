@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-13T02:40:59.562147+00:00",
+  "checked_utc": "2026-10-13T03:54:34.023128+00:00",
   "sources": [
     {
       "id": "S01",
@@ -7,7 +7,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score",
       "bytes": 58815,
-      "sha256": "56afdd49a276a7aa0e801fd653ee8514a35602631c26999a5cb09006e185b931"
+      "sha256": "41e285c7b4dbc9a9e1ed40fe3fdfa340696bd7e1f093d489dda53734e660e615"
     },
     {
       "id": "S02",
@@ -15,15 +15,15 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/security/zero-trust/microsoft-365-zero-trust?view=o365-worldwide",
       "bytes": 74344,
-      "sha256": "d4ad2f9ccfa68751110178796e6f347b1d3c2ec8feed94dda495462d13e75565"
+      "sha256": "b262cfebf755d7c0fed3fd93a959488f34af841276d54751de580ed720a462a8"
     },
     {
       "id": "S03",
       "url": "https://github.com/cisagov/ScubaGear",
       "status": 200,
       "final_url": "https://github.com/cisagov/ScubaGear",
-      "bytes": 403849,
-      "sha256": "cf30af788c37145cff5dc7227462b9ffe4332f49d4c73884ddc57d00ca60aea8"
+      "bytes": 403844,
+      "sha256": "f4aa3a7357a3c55ddbad051a502bf46cde76915b739ad5566703264742746f5b"
     },
     {
       "id": "S04",
@@ -47,7 +47,7 @@
       "status": 200,
       "final_url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final",
       "bytes": 47243,
-      "sha256": "5ea4f715e70c1cc18fac8b2bf37fc10734ed0ca0d5cf77c9b855250f3b2227ef"
+      "sha256": "7219946741953ad583bf1be562f3335f03d8e3ea52c8a6c4f1173807d8711434"
     },
     {
       "id": "S07",
@@ -55,7 +55,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
       "bytes": 73496,
-      "sha256": "249eaa5bf159af574c50962a376186cc026fc305177647ba87d822ba9fa174ee"
+      "sha256": "d358c71b325f308eeff63dec654580f82c24fec4ae8e54671f3ec4fcc141f643"
     },
     {
       "id": "S08",
@@ -63,7 +63,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
       "bytes": 57468,
-      "sha256": "07de30a85fb0b98961ceff0bc8adfab0d5a26dfee2f22e3880b64088a4b2bf23"
+      "sha256": "393f603196493ae96cadeb961072dba9372b56c249b5607961ef194e3ed6c8bc"
     },
     {
       "id": "S09",
@@ -71,7 +71,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
       "bytes": 57551,
-      "sha256": "a56c08929b3f3be29249d4b1818030cc34ba5eb8c39a877eb19710f599ff1b1e"
+      "sha256": "371a2e41edb9796cf2996d34a6f1069b0ec031516ad8d7be86787bcaee7a4de7"
     },
     {
       "id": "S10",
@@ -79,7 +79,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
       "bytes": 57233,
-      "sha256": "55d4643fd555143525859d33fe810fe2f87566d551cf0a9548d40395c48b23e2"
+      "sha256": "2881337337ab5ef42fc3e1170f66d935dae78607381c88a9fbdca15d4a5a5a58"
     },
     {
       "id": "S11",
@@ -87,7 +87,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
       "bytes": 56018,
-      "sha256": "4867cdbf34c3fef255e5b2adf0b92dd3dbe5081974adaad1b13eedc4a4770cf0"
+      "sha256": "bb7bf8d6c3be90a3fd886a55420ff121f5cdf765d69bab2c66d8e56a896c1ff7"
     },
     {
       "id": "S12",
@@ -95,7 +95,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
       "bytes": 106601,
-      "sha256": "3d432c820ba6d5af5f6f5717b2eaf314dc5a39dd0c89e304774181339e2e3c3d"
+      "sha256": "676ffc28962b024fc38f807c208e4a6cd0478d5e7b11e25861017377932f33b3"
     },
     {
       "id": "S13",
@@ -103,7 +103,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
       "bytes": 64695,
-      "sha256": "55a155264ab1f2c843798d5f101db86a2822e5afc10664b3e72d389a33c47b87"
+      "sha256": "a88943b47f7d4937779f09d5a6986475e90b04df71e0c6a627c86035dc739a66"
     },
     {
       "id": "S14",
@@ -111,7 +111,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
       "bytes": 92742,
-      "sha256": "e9b4d168d7dbacdda607960ed9a597c074c8914beb694ed8057608238db1a5b7"
+      "sha256": "6e5fb5a2f6781bed61b3bcde1e732d2219cbe8ada4a7fffa459e66e269e40eff"
     },
     {
       "id": "S15",
@@ -119,7 +119,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
       "bytes": 61861,
-      "sha256": "02d0730076b86d423a4e7ae072786faed1b433ca7cbf16675ae84a57d62fb45a"
+      "sha256": "9f33bebb40b95bdccfeb9d9868604105c0d40b4697c0f2a2cc246481a443ebe8"
     },
     {
       "id": "S16",
@@ -127,7 +127,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
       "bytes": 81195,
-      "sha256": "a56c75190fd83f6aadd19676fc884a29700ab48768d8d269b336e5d9f8cab036"
+      "sha256": "c186bfa56d0df1c12f343d005974ff5eac9d176dc07498362930dabb7a19764d"
     },
     {
       "id": "S17",
@@ -135,7 +135,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
       "bytes": 53602,
-      "sha256": "ba280df5bfd5058525c50006fe126bd2f25767a91063f5491b1f483bb513ba7b"
+      "sha256": "7bfa02ada0ac5d2f43fec1b1c46fdeb9c33e0c0f3254c8afeb11354ba1acd010"
     },
     {
       "id": "S18",
@@ -143,7 +143,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
       "bytes": 62156,
-      "sha256": "1435b642b490194be277c435bdd96be8f1cd8f8c5cb0e2761ad59d97da7050d0"
+      "sha256": "bdd5e09adc8505443840c6661edd4aa5eac98f06c098625ac7335aae0fffe46e"
     },
     {
       "id": "S19",
@@ -151,7 +151,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/audit-search",
       "bytes": 70173,
-      "sha256": "812f311bcb749cbac8a564fef23ee7f827bb1866b91a154047b24d43a19b3c8d"
+      "sha256": "eb3a002d11947ae3ad935f18eabe9183bb978afafdd19ca0a13d170ccbec299e"
     },
     {
       "id": "S20",
@@ -159,7 +159,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
       "bytes": 78902,
-      "sha256": "2a25a745234200c331bde935dc838cde2cc2dd24b2212aa5739c9b1faeae034c"
+      "sha256": "d29061f9837830d5c9ce89bcfbfcc67b19f4bebfcd54a2d2457bdee50da60494"
     },
     {
       "id": "S21",
@@ -167,7 +167,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
       "bytes": 114273,
-      "sha256": "77c386977fb9b38ccdfca2c694e90688ad3a1ebf79aabc22216c0831294ddd1f"
+      "sha256": "eea44593a4a64e12f22e1135bca42bfddbc96d05a19b3d768065f9c6ce871d9e"
     },
     {
       "id": "S22",
@@ -175,7 +175,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
       "bytes": 71218,
-      "sha256": "0cad34cbcb4f527b53f31e91a2b024f8f8d387b2814ad39080ddab21f6892684"
+      "sha256": "84f7780a4c0178c049991be7a8aa59faa973dbfc712db3b9ece027fff0e9f9c1"
     },
     {
       "id": "S23",
@@ -183,7 +183,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
       "bytes": 125550,
-      "sha256": "8a1189a1496296be34db32e7c90dff07453fdcf8960a4d4dad07cb5755c8c37e"
+      "sha256": "ec863fc68fae1d526e25a9a0c3e1577ef256278cc605b318305b52ddb420b09c"
     },
     {
       "id": "S24",
@@ -191,7 +191,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
       "bytes": 104644,
-      "sha256": "65c0a61f355add81badf8df19b6e1204815bf5b4907a4ff94eae1d809dab6760"
+      "sha256": "a34500f146f02780cba189739524099f9f5130fef6f00a8c7966a19e8c0ae656"
     },
     {
       "id": "S25",
@@ -199,7 +199,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
       "bytes": 59752,
-      "sha256": "d0e0512ec728ba31b5ca2586f35854fade8ba371dd6af00ba781aee62464859c"
+      "sha256": "81093fee0b32bb09b2d0bbcc7b75c6f67218765212ded0b0ae481d9015020b35"
     },
     {
       "id": "S26",
@@ -207,7 +207,7 @@
       "status": 200,
       "final_url": "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
       "bytes": 374550,
-      "sha256": "8a8b7fab07a47a3778858ed1e82fad2ccce449e2a6fac1c04497badce3125cc8"
+      "sha256": "b3418778e3b6c078a576e70b726bcc070960889d6d415b6288a2ed604628384f"
     },
     {
       "id": "S27",
@@ -215,7 +215,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
       "bytes": 60034,
-      "sha256": "7f8c9a1f4e127cc31715e4eeaebb1a3a71d83fe613ef73c4d630c824edb94377"
+      "sha256": "8c73d447913277804e07749c18ee63c01a51dcff6d8f8a7c11f1e8dc46970ea3"
     },
     {
       "id": "S28",
@@ -223,7 +223,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
       "bytes": 63034,
-      "sha256": "559fe2f3eb3614acbb836111f59a7403a4ef4da9223fb8437ba532b5f8309b28"
+      "sha256": "e529beb90e95796fb24390b7d6ce78d488b7bfd5cca248ca03f2d1a682ad9c93"
     },
     {
       "id": "S29",
@@ -231,7 +231,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
       "bytes": 57591,
-      "sha256": "f537c97e21386b0fd0179043e4fd67c346750b2b306eceb97abfb861a0587659"
+      "sha256": "04a7ddbfa2c74f691715de981ef312e52b1d52cdd3c0d909ddc3cedde00b4db4"
     },
     {
       "id": "S30",
@@ -239,7 +239,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
       "bytes": 66721,
-      "sha256": "087c1aa3b4387025a377ad562e5ff7281d0909db03c4cb4b9c75841243c9db99"
+      "sha256": "9ddb9bd23e5cc0359262fea5a904c22254486ead709a608ad0fcfdf880979749"
     },
     {
       "id": "S31",
@@ -247,7 +247,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
       "bytes": 64708,
-      "sha256": "77bbe2edeffa36821c5951f497dbb53b8e86594cc7905ea6c64821d273afd555"
+      "sha256": "2695064269dd222d28fbe25ba5b6aaf7b87c2e2bd373a9c4a4cae09ddf6417b9"
     },
     {
       "id": "S32",
@@ -255,7 +255,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
       "bytes": 65837,
-      "sha256": "5a5910452fc2ec0e7ea437681dbc2f331554b84364e0d50b40d8009b41deafe3"
+      "sha256": "40056978edeba61c4ac5eb90b82ffb8735b685e506240a4a7024a3821b4dd6e3"
     },
     {
       "id": "S33",
@@ -263,7 +263,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
       "bytes": 102236,
-      "sha256": "8aa6b4af94b7a63d91a0df014e3f47b8f01cfde07d142173e00762630b76b398"
+      "sha256": "ae918edee1bbb07a052c0a342567a1bb150f89e434f2a9c797a9d0a950e4c276"
     },
     {
       "id": "S34",
@@ -271,7 +271,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/intune/device-security/security-baselines/configure-baselines",
       "bytes": 86395,
-      "sha256": "5ba55647666ca807e5985fff80e9871d5b53b2f2f385b6954e03d547532494d1"
+      "sha256": "f4959311f220f8da724f4676c9e2a6a46a6059d8524a20fbcd74adf0e082a366"
     },
     {
       "id": "S35",
@@ -279,7 +279,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
       "bytes": 51162,
-      "sha256": "88c33190adb4514b0bd9cdcdf9d0eb2e4cab13104be603d1376f337322a45660"
+      "sha256": "dd1dc9a4c89673c3174ec7d4547f18add06df2a98f53fcdfac107e4560cb14ff"
     },
     {
       "id": "S36",
@@ -287,7 +287,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
       "bytes": 87716,
-      "sha256": "bf67645d3fba143ab301b80853fa463efbf68b5d5bd9e0bebf03340f8f7baef8"
+      "sha256": "9499ca27966e0b59be1abd74871f7788040ceb4672519aa0f3a633d6c5571d0f"
     },
     {
       "id": "S37",
@@ -295,7 +295,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
       "bytes": 77738,
-      "sha256": "5ad7dd03a053318253134aca74395ca40752d73b624199f251f005ce6d7995d8"
+      "sha256": "30b92c1491b066bb8be5f980d59f154ad855c018181234f507869e73c2bc8877"
     },
     {
       "id": "S38",
@@ -303,7 +303,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/retention",
       "bytes": 132376,
-      "sha256": "d77e2db29ba6f3751357b2a8e2ad3d5f360b6abce6b234e9ed22d09d1fc9a37a"
+      "sha256": "49c0de27532495edcb65311371a0f5455a7401f0d5dd7ec0d5bc960e2dc7be9b"
     },
     {
       "id": "S39",
@@ -311,7 +311,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
       "bytes": 60579,
-      "sha256": "45daafeb392f9e3c9177a07b9212714d0764bdc37b6a7380d873922264ec5bb0"
+      "sha256": "7eac8e9c5633b09b07260ee7f3a4007994d4e320ed8fee1c70a641cbcb3afcdc"
     },
     {
       "id": "S40",
@@ -319,7 +319,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/compliance-manager",
       "bytes": 54754,
-      "sha256": "7c456aa6a0af47ea54629d9c31960d698bb5643e1b3798a00ee85761c6a75dac"
+      "sha256": "34f88aa69178e8c3da29e53fa4a4084dd265503c9d7a9cc3c7fcf4a156fdd132"
     },
     {
       "id": "S41",
@@ -327,15 +327,15 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
       "bytes": 67682,
-      "sha256": "9776e71ed91e9d4c97b98eec30b4f0c0172d74e106b5cf2c588e9b13c36bcc74"
+      "sha256": "60acbce8a0157f74dbf0a1f0bff956f867c4708f0c860fa869947a9729e97e75"
     },
     {
       "id": "S42",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
-      "bytes": 58648,
-      "sha256": "a1679d41a0309b649489dee1dbf272a820389497ae0db178db04cedab010d536"
+      "bytes": 58924,
+      "sha256": "86a665d1942316229c22be8748bce77084a2395a56d96efea7ee7ea5a580a294"
     },
     {
       "id": "S43",
@@ -343,7 +343,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbooks",
       "bytes": 50342,
-      "sha256": "c195ace867a80b1db898bc3f05b02e477f76e1827cab23d693a1a730b9c22463"
+      "sha256": "582d48e02a2bc5debac3a8f96a069821b57392678fd7f53080abee681d56ac6f"
     },
     {
       "id": "S44",
@@ -351,7 +351,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
       "bytes": 65885,
-      "sha256": "3a403f30c6e83dc709c2560ca424efadc0f4aa1c5a75ac2098ff53c20db9f9fc"
+      "sha256": "f6b83308433166f6f5f2113d31f626ac9bb5f4dbf4033f0487c02c2287c920a0"
     },
     {
       "id": "S45",
@@ -367,7 +367,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
       "bytes": 56351,
-      "sha256": "519d02799a1be74bf76646c75b3d7cadb599ce738fd34a199eeabc6a968bc907"
+      "sha256": "c3a133f896a78b443247d98fc4f06a7030ea2bd3193879e42aa13b87d52e55e6"
     },
     {
       "id": "S47",
@@ -375,7 +375,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
       "bytes": 79249,
-      "sha256": "8941bc33c2f9baa87a23b1240bd1b82bfb18e4d8db9d8d6967057c26e3baeeef"
+      "sha256": "2c19f118d62b630fc5fa16e78186ab5c1ee149509ea885bed44860476e06adc2"
     },
     {
       "id": "S48",
@@ -383,7 +383,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search",
       "bytes": 63924,
-      "sha256": "a625a0d284a5141c317fe8f3e2b98ecf4f8a38dab7b620fdd4890a4ba53d5190"
+      "sha256": "6a667a373b13228cd020cccfbd5a73bb6ec709e0f7d38a40ae411256105ce9da"
     },
     {
       "id": "S49",
@@ -391,7 +391,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
       "bytes": 63019,
-      "sha256": "b1091c9da21f50def9fac1fcb0acf89c78f4c1dc60aefc26e553bf705de2f004"
+      "sha256": "81fbe5f2fd377bf4fb325a4cd007a46b77bcea75f62e113abbfa765a90382878"
     },
     {
       "id": "S50",
@@ -399,7 +399,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
       "bytes": 68291,
-      "sha256": "33a5922ed5cda371338d0c9514a0c73e936f46e7a0c0b05984111169af836521"
+      "sha256": "a638048d54110f616dfc905067805548e26c5a0088896d6d4ad78fe4ba4047da"
     },
     {
       "id": "S51",
@@ -407,7 +407,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
       "bytes": 72613,
-      "sha256": "8dabf6bb29e6d3c5836f3a04d8865eda28296fe5a5aa8f2b86d3b94357cbf4a5"
+      "sha256": "e512cddd35644029e0cb57494c435e24bfff6007b0d13be6d087b001ec9f31f8"
     },
     {
       "id": "S52",
@@ -415,7 +415,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web",
       "bytes": 69947,
-      "sha256": "bbffb75a59c305af475f849c1a396f7e35b62f05d0e193b6d174d0b25f6a7302"
+      "sha256": "a16d2eec6a2ff14a7ed62f30f2d0faf3f2ab9ff6ecde73b9cf768b334f31474e"
     },
     {
       "id": "S53",
@@ -423,7 +423,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/graph/paging",
       "bytes": 62051,
-      "sha256": "5f929ef2c3cb82e79ea98ba804561ef753916895b4b01489bf9dc0d3c16bf130"
+      "sha256": "5bf860ac6b0e215331b08c73c68d949dbab919e80d633967f456401c15174072"
     },
     {
       "id": "S54",
@@ -431,7 +431,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
       "bytes": 77406,
-      "sha256": "cccc0c989dcc7b343d22a99cf168276cfe92b507f309576574c4b498cdf80b99"
+      "sha256": "c4e549dcd2f4a29a07676d32b78a77494ee110a438c58ec7ef043b406191516f"
     },
     {
       "id": "S55",
@@ -470,8 +470,8 @@
       "url": "https://github.com/cammurray/orca/blob/master/README.md",
       "status": 200,
       "final_url": "https://github.com/cammurray/orca/blob/master/README.md",
-      "bytes": 318147,
-      "sha256": "1ba04c9975f284ce2cd1ac6375820303eeff99764fe864d793480757b4b2fed4"
+      "bytes": 318165,
+      "sha256": "aaa6f100761a72a65374c77cd4cca089d8da5679ae1578d09e036fba20178ee8"
     },
     {
       "id": "S60",
@@ -479,7 +479,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
       "bytes": 56330,
-      "sha256": "a11110761ddeba5113a1a71f4fb12825590a5e7046e1aa6df130e2b9f9f57d23"
+      "sha256": "ab9b3c1638c385c75d021eb118a01ac028b1234fb70659038b105dc4d85f6456"
     },
     {
       "id": "S61",
@@ -503,7 +503,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
       "bytes": 70125,
-      "sha256": "ba8809291db709f05e2a489c3508d9d6b059091f231b7e6f61e074d094d2dec4"
+      "sha256": "29a634b1289b23c8627227199c1255c97b63813706ec9fc8051e319dec02d873"
     },
     {
       "id": "S64",
@@ -511,7 +511,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
       "bytes": 566815,
-      "sha256": "9c35d8b5f8f206fb9951075d94c5be897a99208e5254bfa2573dce4877b48ad2"
+      "sha256": "718bb52b116e191bc7192e0c6bdc81c09c4012097ddad3207abaf452e81811cb"
     },
     {
       "id": "S65",
@@ -519,7 +519,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
       "bytes": 82210,
-      "sha256": "7be40f9662d83f3f2e36048a9b47c5376dc9a0b6c9d089d358e5bccc917a74e4"
+      "sha256": "2ed5d0ee59300ac6c5652fea0925a58e955a412773e915bc45121fff02194a89"
     },
     {
       "id": "S66",
@@ -527,7 +527,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-what-is-data-residency?view=o365-worldwide",
       "bytes": 62513,
-      "sha256": "c7cf57af3dd9e2ecfeef29719dc127b5f813e9481726905274c35a50eed1a842"
+      "sha256": "1b608d9b943a2443c93fd14072844c71cbf2fa7666f5223b0abfbd92bac5447e"
     },
     {
       "id": "S67",
@@ -535,7 +535,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-compare-offerings?view=o365-worldwide#how-customer-data-can-move-between-geographies",
       "bytes": 73729,
-      "sha256": "9ec856d17c28ad1e7d692555a9b5798dc686a5a2bf7c111f78c30a69cdbc8c59"
+      "sha256": "140ead2ca675bcda7f624cce25db4114f3ccb3423e4c769cf82842bbdd8bb87f"
     },
     {
       "id": "S68",
@@ -543,7 +543,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide",
       "bytes": 62482,
-      "sha256": "6de271be7ed6b97cdea1b8fc64238da733f8ac857ec82b860b822bb3259b48f8"
+      "sha256": "9f40ed3d06c3caf10776ca65426828e04a94f300f930a191dbda4d1fbdbb34e6"
     },
     {
       "id": "S69",
@@ -551,7 +551,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn",
       "bytes": 52068,
-      "sha256": "af7f78dc8460b565dfd99b138e421b0cdb5a23168caf2c2f752d2b2264f5f7a9"
+      "sha256": "61089b2b806c05ab43bf3f430206d837d92ad41f804a5985836f0a9c3af0ea28"
     },
     {
       "id": "S70",
@@ -559,7 +559,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission",
       "bytes": 47192,
-      "sha256": "5ad2d3b25f415a3e089f4571f1381f1a49414c3b0586557052bea3300f8417b9"
+      "sha256": "4dd44323bb6c459a01f402b198793f6488d9510bcec011980deecc3af0aa5f86"
     },
     {
       "id": "S71",
@@ -575,7 +575,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
       "bytes": 58324,
-      "sha256": "701a2324cf1e0a912547d0ff927cf2427aed851950725c39b9dc5b9f732b56e4"
+      "sha256": "470fcf78f2bd989ef60b7214c7237af21a19eebe4f49071a3087df4a2062a71e"
     },
     {
       "id": "S73",
@@ -583,7 +583,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/ediscovery",
       "bytes": 71310,
-      "sha256": "fee55f2f806496bf04f11a633fcff5ffef65d15b3b73f31818588dc8ac5f198b"
+      "sha256": "226d14b801dddcf8c7b0a77ba6ffbdebf99a0e1bd78af448fe5c9802a4bd9271"
     },
     {
       "id": "S74",
@@ -591,7 +591,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
       "bytes": 76328,
-      "sha256": "65c01ec546b42ac4786b1f82578942c6811b114a188686aac59b8aee2ba2e5a4"
+      "sha256": "d19a6641ea11c2e6910efd9356cc746bfa822b229c18ef4eead3c5f12a22dee1"
     },
     {
       "id": "S75",
@@ -599,7 +599,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification",
       "bytes": 64814,
-      "sha256": "be9ebf64a922a59799f82ec46ca535606fecde04be49082b3ec432ad0541a2e4"
+      "sha256": "c612160b57a40e8449eb8b8c5fb59c93870c0d8207e1cf888bba1d3dcb5af94c"
     },
     {
       "id": "S76",
@@ -607,7 +607,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
       "bytes": 54998,
-      "sha256": "f3b90cea45d1fb650059849fe86c620867b4a01d9ba38a5e8c13cc8e7b102519"
+      "sha256": "30868ef0392518ad3e60e4b3fa0b7ab5b243cdac93e404a0f04d336deec1368e"
     },
     {
       "id": "S77",
@@ -615,7 +615,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide",
       "bytes": 64756,
-      "sha256": "bdaa617f327fde685cb1c4a084bbeb6604d2ef9d7dcbe5bc0beeec2203a1a231"
+      "sha256": "ccdcca6afa0d55b7361a84e3b8a886b315a51e0750c55aa27b60e5aa733fb300"
     },
     {
       "id": "S78",
@@ -623,7 +623,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/microsoft-forms/set-up-microsoft-forms",
       "bytes": 47707,
-      "sha256": "9472798c16248718da8e81567071c2d13d1db0da2cf342fed45ba7b13e024cda"
+      "sha256": "5288bf55b1fbc2e98d3685c6e5f9909ca485165b82a31fca137ce21f1164e223"
     },
     {
       "id": "S79",
@@ -631,7 +631,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/caac-known-issues",
       "bytes": 59469,
-      "sha256": "c2ef446875714aeef70ff5e7e9f8fe7426bf2a76adaf3cd0fb13122f75c0166c"
+      "sha256": "da7eff41561b50275d3ded93f9895597c10a368d2920a3ee17c505a91343aed2"
     },
     {
       "id": "S80",
@@ -639,7 +639,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad",
       "bytes": 58975,
-      "sha256": "33c97ce75346a7c12e1b28f741a4724c41a3f799f2cb7911de4b06a5707cae74"
+      "sha256": "8a4448ce69f337f152e84e9d3990ea074fa60d5cf94b1a0c82a6a87b8415203c"
     },
     {
       "id": "S81",
@@ -647,7 +647,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption",
       "bytes": 51057,
-      "sha256": "37ba38ec902751e78736bc3d3980d296749c3968a671ff48d686a3d444bcee19"
+      "sha256": "7e2e834249c0cbf6ec2de0613436be29d96009e90813ed5e0f3daa5e0b409ef1"
     },
     {
       "id": "S82",
@@ -655,7 +655,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/purview/customer-lockbox-requests",
       "bytes": 77237,
-      "sha256": "12f0a1af91c6700d9f1de2838e13078502d7a0fb6fd7a02447276732426d320c"
+      "sha256": "2e385036605a29ce7ed603362fe7946f0b9f61829254b95a3d9117b5aacef668"
     },
     {
       "id": "S83",
@@ -663,7 +663,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies",
       "bytes": 65883,
-      "sha256": "f32b371ec9dee59871b42c1aa7faa598d47198689eca297d9dd014695258ffa0"
+      "sha256": "023d3531ac1f67376ba5fa31aa51476d717750f4a1b55fd041ec182ec34b354c"
     },
     {
       "id": "S84",
@@ -671,7 +671,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview",
       "bytes": 45981,
-      "sha256": "b1fefbe2215237397898a25bece8092cb6e33e5a285cfb06a10178c21c7994ae"
+      "sha256": "eea0101e69f22c8e25f73de08e96f0c9b86cd13c3bac3722612eb4ec330d4f46"
     },
     {
       "id": "S85",
@@ -679,7 +679,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0",
       "bytes": 65300,
-      "sha256": "244ad69152eef65b45158b5c46fe2ae1840b283b6e7ebd42664621a64f2cd856"
+      "sha256": "d5dfcb88be426aaa72c77a0e9aa6857b87b49762fe0638efe08577d02d9416a5"
     },
     {
       "id": "S86",
@@ -687,7 +687,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps",
       "bytes": 76263,
-      "sha256": "a5f2a7384d19b32c9b0bb130f6af9a0bbf768d16bd04e0853a87dd7159637edd"
+      "sha256": "11057e1fd87b57c6065978e431a700a38033667e0dc7dac6e72bead671eb82e7"
     },
     {
       "id": "S87",
@@ -695,7 +695,7 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
       "bytes": 70890,
-      "sha256": "ec1385d99792af2cc52aebdc487e51892c85b07054685803d036afc5580d8d06"
+      "sha256": "071883821db4ae8386e12a4fedad1a892ba317431c13bf67706b7c46a6ea845e"
     },
     {
       "id": "S88",
@@ -703,7 +703,783 @@
       "status": 200,
       "final_url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/get-sposite?view=sharepoint-ps",
       "bytes": 80246,
-      "sha256": "8dc6eaa85f7c8640d69256f1713c19adb15fd8f0f0b38289b3fbe07b598bf64a"
+      "sha256": "d5035863ff54ae08f46b4f4b09d5d6c56cd30547ea2343414d8748bf4c82dd76"
+    },
+    {
+      "id": "S89",
+      "url": "https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0",
+      "bytes": 63882,
+      "sha256": "59714197fcaac41da3b47899f304be1d41cb24d9cefd062e6661aa1349dd0862"
+    },
+    {
+      "id": "S90",
+      "url": "https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0",
+      "bytes": 62330,
+      "sha256": "31e4b6a5918d5f2c317b67be17a6b7c88e355584656f768893c0ed81cf86c533"
+    },
+    {
+      "id": "S91",
+      "url": "https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0",
+      "bytes": 60363,
+      "sha256": "1f76418c2ec653192352f474eecc07644902e475e9c75715001173541d030b0f"
+    },
+    {
+      "id": "S92",
+      "url": "https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0",
+      "bytes": 176506,
+      "sha256": "b4f439295569fa0a4c6b242c8df79449ee6a925bb5f4e65d3f832e7095989421"
+    },
+    {
+      "id": "S93",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0",
+      "bytes": 126885,
+      "sha256": "688df16d3e4e3384a98a646a89571379a74a9136d2207aee241aae1bc59b81b6"
+    },
+    {
+      "id": "S94",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0",
+      "bytes": 98891,
+      "sha256": "d028da9b7fb76e0faa75438c59167a8a78db4782a2a9dc59cc798347ae3196b7"
+    },
+    {
+      "id": "S95",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0",
+      "bytes": 62634,
+      "sha256": "53b9884c732ab2dcce25d3ca587e8de38536759993a2cfdf2d4c9ce2f8f46bbd"
+    },
+    {
+      "id": "S96",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0",
+      "bytes": 87523,
+      "sha256": "e7f1a6891215b038d6b206ed153e63b76ab059dc2c06b26a697eefffddfa4573"
+    },
+    {
+      "id": "S97",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0",
+      "bytes": 76425,
+      "sha256": "a392f47bc970a5df8ad803a227a4810b9df9eaf71b6c8dc78a4fce8caf951831"
+    },
+    {
+      "id": "S98",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0",
+      "bytes": 60130,
+      "sha256": "ce7e6f83f9474dbf95f8b52f91d6b504dc21284f2ada15d9d071fb63f88cdaf3"
+    },
+    {
+      "id": "S99",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0",
+      "bytes": 61595,
+      "sha256": "be026ebc8c4a1a049d09bbe93a198bc765bd00c840ae037e82a2e69961557e5b"
+    },
+    {
+      "id": "S100",
+      "url": "https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0",
+      "bytes": 78648,
+      "sha256": "17c41cc7b9771e162395caeeeb7d6a408aa885bc87bc042bbbc077db672ba0a2"
+    },
+    {
+      "id": "S101",
+      "url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0",
+      "bytes": 95389,
+      "sha256": "9d46a3c174fb3bb24d55c29e2053a48d5fbd9ba874f6ca9dbbb708fec89110b2"
+    },
+    {
+      "id": "S102",
+      "url": "https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0",
+      "bytes": 59331,
+      "sha256": "8e358aafa17757de35aee915a633482a59b894ab0e79f603b6e81f286e8c2102"
+    },
+    {
+      "id": "S103",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0",
+      "bytes": 72242,
+      "sha256": "e01f1b458cd2bacf8946d7a93226a0a3e7b935f40a66f8736a663ba0d663409c"
+    },
+    {
+      "id": "S104",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0",
+      "bytes": 61942,
+      "sha256": "cd51a500b729e957d1976c9249f911d76138eb5215b393924dac607207676415"
+    },
+    {
+      "id": "S105",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+      "bytes": 64738,
+      "sha256": "ce4fd88f15721af167609827b3b80b51a466ae297756b60cdd471a451f6bb2d7"
+    },
+    {
+      "id": "S106",
+      "url": "https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0",
+      "bytes": 76395,
+      "sha256": "4696aa5ddb15147299815b0b83b4d2b775b6882cb488a2a6dd2f334c8214027c"
+    },
+    {
+      "id": "S107",
+      "url": "https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0",
+      "bytes": 73399,
+      "sha256": "ba7a244f6598960b02768fe0775e60c1b0fc999a72dd6d619832088f81341655"
+    },
+    {
+      "id": "S108",
+      "url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0",
+      "bytes": 62403,
+      "sha256": "bd6ff08d9cfb48c5cfc44bda2381e1d13128a7881976bf5a4f5be44b653b966d"
+    },
+    {
+      "id": "S109",
+      "url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0",
+      "bytes": 72223,
+      "sha256": "e031b90f2a6295d1a703089960c21823c6d0bf7925dce3362f752db23765ca79"
+    },
+    {
+      "id": "S110",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0",
+      "bytes": 58791,
+      "sha256": "8be4a4f7f2f3f361e0ebee6a664cb22d0b78b760392d6ee46ada46206a7788bc"
+    },
+    {
+      "id": "S111",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0",
+      "bytes": 121188,
+      "sha256": "7e37309a81c1b6289dd3a51b99c5dc4cd5ea85826bfe0808837d5e02cb76ade6"
+    },
+    {
+      "id": "S112",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0",
+      "bytes": 109028,
+      "sha256": "9a943fcb37a55ec4ae6aaf1b2ac928e360c1f0ba0712fb8b2804d246aa0e029c"
+    },
+    {
+      "id": "S113",
+      "url": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
+      "bytes": 61517,
+      "sha256": "eafb5f18ca99117c0aa7affecbb9ba566cc2f88b498f26290f490a917e4042fc"
+    },
+    {
+      "id": "S114",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0",
+      "bytes": 62110,
+      "sha256": "48635d9a3cf42cd8622532bc870be45d7927085bb555ec9d2b6b520b8116be9c"
+    },
+    {
+      "id": "S115",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0",
+      "bytes": 62081,
+      "sha256": "67cac69ee5711d4f1a5a91a2dc3850e891cdf3d13fdfce271c3a148cc4a96e37"
+    },
+    {
+      "id": "S116",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/federatedidentitycredential-list?view=graph-rest-1.0",
+      "bytes": 61343,
+      "sha256": "9a4407c42e58fb65eb4260b861856bc8c3d75ed1838393970ed61b85a15c46c2"
+    },
+    {
+      "id": "S117",
+      "url": "https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0",
+      "bytes": 60954,
+      "sha256": "3051c76a6bbb076e0e3768de3836cd8ea276663c014974e4fb2236e10cc632f8"
+    },
+    {
+      "id": "S118",
+      "url": "https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0",
+      "bytes": 62758,
+      "sha256": "66e51192ad0b57751dc47d6583d354955cd8bea6c6b94f885eb307191ea542aa"
+    },
+    {
+      "id": "S119",
+      "url": "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+      "bytes": 58846,
+      "sha256": "d469f91b7b109177630bd9ee228b2e03ada23f6f6a2e270893f3dae0db5d6823"
+    },
+    {
+      "id": "S120",
+      "url": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+      "bytes": 59612,
+      "sha256": "683216f0e6d84b714e4a8bcf45245edb0d93b0ca9c1cc4949b40ee459f508727"
+    },
+    {
+      "id": "S121",
+      "url": "https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0",
+      "bytes": 108285,
+      "sha256": "44fcf5247b11406eade1d4cea5845467335ef725a002f9c5ed1eca9038d4e1c0"
+    },
+    {
+      "id": "S122",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0",
+      "bytes": 55239,
+      "sha256": "5112abe22919cb7ecedfcf954c6ca76593e15c7d951ce5b90722010600b78eff"
+    },
+    {
+      "id": "S123",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0",
+      "bytes": 50273,
+      "sha256": "94728ca74cf1b392de1366520ae0a3f3dabbefdc91c81c9361ad7dab42277dfb"
+    },
+    {
+      "id": "S124",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0",
+      "bytes": 50511,
+      "sha256": "a754ed3206fb27619715b0a8bfd253bd6746a234b52c91d978d7e5d383d946d5"
+    },
+    {
+      "id": "S125",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0",
+      "bytes": 50195,
+      "sha256": "2a68d9080e6b9b0001d0233138f19356f6cd25789e3f76eb2a51833acf38bd21"
+    },
+    {
+      "id": "S126",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0",
+      "bytes": 50181,
+      "sha256": "314ae1d281becf49f2198953714074bb0ef70178ef8e9b0e38cbcbd157c19922"
+    },
+    {
+      "id": "S127",
+      "url": "https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0",
+      "bytes": 69901,
+      "sha256": "3b004736f52de06fc7221c3787046827ec03cee043ed377b39bb17e709a54f56"
+    },
+    {
+      "id": "S128",
+      "url": "https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0",
+      "bytes": 68899,
+      "sha256": "9646fb976a08a1b3488e1e2daf4fa1f57a9d5ce544b22cfb28e58445efad5a10"
+    },
+    {
+      "id": "S129",
+      "url": "https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0",
+      "bytes": 60669,
+      "sha256": "a1e78d999b2580610470d63e859c8389736fd137129820e689516d7dc85e3841"
+    },
+    {
+      "id": "S130",
+      "url": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0",
+      "bytes": 63056,
+      "sha256": "aca62fcf48f86f02745167fc71e4873b88d6be229b19606555fa0646ddf1bc7b"
+    },
+    {
+      "id": "S131",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0",
+      "bytes": 59939,
+      "sha256": "50697bbf65c73731794fb9701e1f11abe1fbaa19ec0ba249f6f63e8b15ab4f6d"
+    },
+    {
+      "id": "S132",
+      "url": "https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0",
+      "bytes": 82116,
+      "sha256": "62acd14f06d0b28ee7456de399ed960ff3fb4e18ca9363d91c0ae8ba6b5721f6"
+    },
+    {
+      "id": "S133",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0",
+      "bytes": 83884,
+      "sha256": "f071d4d79f4e23de486a5242e12f33762e8b7366731ca5619579217fde2f40ee"
+    },
+    {
+      "id": "S134",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0",
+      "bytes": 98120,
+      "sha256": "4d63b2e67d3470247f484ca5ba49995dade6c9757b89292087f7d9dfca9caa16"
+    },
+    {
+      "id": "S135",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0",
+      "bytes": 85274,
+      "sha256": "f31c6ec822c0d15f6d17d808cd82243dd44dec8038d0f17a42f1e6b8e06880b6"
+    },
+    {
+      "id": "S136",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+      "bytes": 78689,
+      "sha256": "843dc5507ff35699187c2f28b0de78e6fa4e1d3212c82e391c3b2cdcad3ef054"
+    },
+    {
+      "id": "S137",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0",
+      "bytes": 60988,
+      "sha256": "06fd14984c90a263fe36c04bf9cab6a192c2507b09e6c80cbf5bc3bb0184d1c2"
+    },
+    {
+      "id": "S138",
+      "url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0",
+      "bytes": 61918,
+      "sha256": "16f55c5d431d68490e5d2fa052e4d95059abe97d555ed95169992b3ee434826e"
+    },
+    {
+      "id": "S139",
+      "url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0",
+      "bytes": 62563,
+      "sha256": "7341ac1ba0a95a5d899856f8f2a95420588436ccb24e66bd365d6af86436008f"
+    },
+    {
+      "id": "S140",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0",
+      "bytes": 70229,
+      "sha256": "86bb7d51753362f91e508c066579494da9a750c5df59cefae56f55c5fc46a32b"
+    },
+    {
+      "id": "S141",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0",
+      "bytes": 59712,
+      "sha256": "256d0825da5428ded0a02b75f76d91ddf4b263ed4c007f726fd0daa878bd40e7"
+    },
+    {
+      "id": "S142",
+      "url": "https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0",
+      "bytes": 71130,
+      "sha256": "5d0456319c778c508e2876f95069635ce3f990a94e40dd63b4b81072e7be7899"
+    },
+    {
+      "id": "S143",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user",
+      "bytes": 51908,
+      "sha256": "3ab8566bdf5372105d123e084b3658a7bc1c2451a76ddddaf5356b3460b1e929"
+    },
+    {
+      "id": "S144",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin",
+      "bytes": 110574,
+      "sha256": "7525f16182462d54b23d05e0d653770f772b76191880e11839313e07d67f47f6"
+    },
+    {
+      "id": "S145",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin",
+      "bytes": 43889,
+      "sha256": "168057c228f99bde7825919678ce68c13e0ee9b239e66befbc03c27a26d99352"
+    },
+    {
+      "id": "S146",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web",
+      "bytes": 45782,
+      "sha256": "58506eb240cdd7ee8526624e5244bf46ebfb91790631a2e3427a9831c5fbd6dd"
+    },
+    {
+      "id": "S147",
+      "url": "https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings",
+      "bytes": 52086,
+      "sha256": "670c85abe46032f707c02010d7cd19cf59b2a08ad3efe376430fc20c00312b44"
+    },
+    {
+      "id": "S148",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps",
+      "bytes": 52602,
+      "sha256": "a933ca4f8ccab8163d6e2dceb55ff5e7476a870d6a1125653aef932421ce68f1"
+    },
+    {
+      "id": "S149",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps",
+      "bytes": 52603,
+      "sha256": "6f44b78006f9b5f37ca98987e0cea5f383d555a4d8117069e1795fb8209f06a5"
+    },
+    {
+      "id": "S150",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps",
+      "bytes": 54661,
+      "sha256": "da28f1384737f4f960f6946b9550e67ea7ebf41839904ecbaf04e03dab6867c1"
+    },
+    {
+      "id": "S151",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps",
+      "bytes": 51660,
+      "sha256": "810b7462f2259175cb776000564d4c875ea37b5124b2a46b764dc599b5e12d83"
+    },
+    {
+      "id": "S152",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps",
+      "bytes": 55410,
+      "sha256": "e383e47ff3178d3a1a7d56a5d3016b1a1f13629eb16849a21d1a7d5778370cae"
+    },
+    {
+      "id": "S153",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps",
+      "bytes": 55890,
+      "sha256": "0729927f48c25e87b29cd8a8a9e6c1033e988d8af6f22861838f68d704ffc5e9"
+    },
+    {
+      "id": "S154",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps",
+      "bytes": 53386,
+      "sha256": "1487552551a93a76815f9a8dcf8c80b77110a39bc3f0306ddf73118fa20ac244"
+    },
+    {
+      "id": "S155",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps",
+      "bytes": 57577,
+      "sha256": "100c34041b4efe331f2e677b298ccfa1a2e131c8c2142d696b3158eb2d78a3e9"
+    },
+    {
+      "id": "S156",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps",
+      "bytes": 65463,
+      "sha256": "646cb8d11548a5d25feab646246eeb31b0779f231312f93157f2c631d6465274"
+    },
+    {
+      "id": "S157",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps",
+      "bytes": 56328,
+      "sha256": "8e9f5bb4c87f87b907cf5f38604cbad506cc344a504e46bdaff9db4308eb4f58"
+    },
+    {
+      "id": "S158",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps",
+      "bytes": 51786,
+      "sha256": "45e811a63bea31079a716606fec67a8c4efc013b9fab5e70b122322078cd5114"
+    },
+    {
+      "id": "S159",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps",
+      "bytes": 52248,
+      "sha256": "7c2c9c7be94e1dd7b0e659347cd777653897b97ed5f8b34eb3385c6ed3743c41"
+    },
+    {
+      "id": "S160",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps",
+      "bytes": 54987,
+      "sha256": "e834c0dd3fd121e19e0f5bb9d8ce7228ba7c7d1b464a57c132a2b1aa3266189f"
+    },
+    {
+      "id": "S161",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps",
+      "bytes": 51700,
+      "sha256": "4bb6061f740b01c295346da397c49ccf2f086df63b4cbbcbd3f32709cfbbf008"
+    },
+    {
+      "id": "S162",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps",
+      "bytes": 52215,
+      "sha256": "f243060a5221030c2f9d8a8ace8dad9786a39c62bb409cd91f3de735cd7e9129"
+    },
+    {
+      "id": "S163",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps",
+      "bytes": 54109,
+      "sha256": "027bde8d737fbb16645c749c6b37ff9d0cc3666100b57949f5e9df673c3290b6"
+    },
+    {
+      "id": "S164",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps",
+      "bytes": 55157,
+      "sha256": "d1649022515e1634a635755653f9fdf021a7c639421c13c8373d62f6a8ff6540"
+    },
+    {
+      "id": "S165",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps",
+      "bytes": 51366,
+      "sha256": "3b63dd007c3f6fbef1cb07328471dc9126baff231313a9d6d1fb4f3a1be4d7b7"
+    },
+    {
+      "id": "S166",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps",
+      "bytes": 52840,
+      "sha256": "35dbcf3d4be212fdcf09e7f40133a652d718c60671dbe4810e5b4e04c97244cc"
+    },
+    {
+      "id": "S167",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps",
+      "bytes": 51088,
+      "sha256": "57e46495f308f3c4225a892933595eac58974927d99db18c0911f48733df067a"
+    },
+    {
+      "id": "S168",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps",
+      "bytes": 52542,
+      "sha256": "adbad7c362abe022862ccf310caf4a08dcc34b81301bae2a4c6026bf6d0ab5a3"
+    },
+    {
+      "id": "S169",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps",
+      "bytes": 52967,
+      "sha256": "e617be489facfa9a158e572db6d0eae1e7c6677c5dce60bd6a9584f7ff2d88e3"
+    },
+    {
+      "id": "S170",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps",
+      "bytes": 52782,
+      "sha256": "fa78a30dc1c1a173cac601609bbd331aeeb83ecc1f284c55e135461d36b534a9"
+    },
+    {
+      "id": "S171",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps",
+      "bytes": 53736,
+      "sha256": "1434b64c0847f4a76f7e3b80246d2fc016ebfd1e5fb8b814221724ece3d0cc8b"
+    },
+    {
+      "id": "S172",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps",
+      "bytes": 54300,
+      "sha256": "e9adea8e10ae35d0884c9ab09f072e61533c5b84e80f1e8f231a1c7c2d4a94d2"
+    },
+    {
+      "id": "S173",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps",
+      "bytes": 156802,
+      "sha256": "62ae341ee0d3f38f7a0476bc13485624ca93f381ed4cf6c75420b6b0a5db9e44"
+    },
+    {
+      "id": "S174",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps",
+      "bytes": 88928,
+      "sha256": "57a071459801181ec1b1990dbd5aa5a2e925651b82dfd920124cb5fe591d5d4c"
+    },
+    {
+      "id": "S175",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps",
+      "bytes": 83754,
+      "sha256": "c47b26030df403d8eee26f8711190d97635e7bf989132920845a8bd50f6d2762"
+    },
+    {
+      "id": "S176",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps",
+      "bytes": 63201,
+      "sha256": "8162c25aa52c1682589f92f6af6275ed98bbc0cb493d010382aba85a08ec04e5"
+    },
+    {
+      "id": "S177",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps",
+      "bytes": 57867,
+      "sha256": "eb53666f154f08d0d20318efe082e20b97c3ab246fa4660e5dc3e57054e3786f"
+    },
+    {
+      "id": "S178",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps",
+      "bytes": 51197,
+      "sha256": "1c1520adc3c7a0f0fc4984630a112f0a8a2e7034cbb5d58e1ee835c2c52a2321"
+    },
+    {
+      "id": "S179",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+      "bytes": 63870,
+      "sha256": "d24aadb1dfaabb8464207cd35bcf5559cc57343bf2f539eb73878caa577faa3f"
+    },
+    {
+      "id": "S180",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+      "bytes": 55202,
+      "sha256": "abc797dab37cfb6c9e582d7c3f29ab4dfcd8001df8fe837bba60a486f85da323"
+    },
+    {
+      "id": "S181",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps",
+      "bytes": 64693,
+      "sha256": "7f51c4d97b38dbea3857066809bb590119d48afcebed67a7f843013ab7173afe"
+    },
+    {
+      "id": "S182",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps",
+      "bytes": 54095,
+      "sha256": "19e12fc79aece35d0892a7aade714cc332cd67a4485d657776cb4b3319996a17"
+    },
+    {
+      "id": "S183",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps",
+      "bytes": 53008,
+      "sha256": "50a846a1b6ce5f0393b7fa698feb54833690e292264c9467df8402edecd74562"
+    },
+    {
+      "id": "S184",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps",
+      "bytes": 59296,
+      "sha256": "8e39eb2b11bcf0b13c9518e8a657a7af52b34e0ce3e669ad5d192a974da2e67c"
+    },
+    {
+      "id": "S185",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps",
+      "bytes": 57349,
+      "sha256": "670ad4bd295760a63c97c97b01645c65bef71e2f9fcd618b56058207ae9a69f3"
     }
   ],
   "documentary_probes": [

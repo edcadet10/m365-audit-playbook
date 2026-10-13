@@ -1,0 +1,861 @@
+{
+  "checkedUtc": "2026-10-13T03:43:40.679989+00:00",
+  "operations": [
+    {
+      "id": "organization",
+      "url": "https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0",
+      "sha256": "59714197fcaac41da3b47899f304be1d41cb24d9cefd062e6661aa1349dd0862",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "User.Read, Organization.Read.All, Directory.Read.All, Organization.ReadWrite.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application Organiz"
+    },
+    {
+      "id": "licenses",
+      "url": "https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0",
+      "sha256": "31e4b6a5918d5f2c317b67be17a6b7c88e355584656f768893c0ed81cf86c533",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "LicenseAssignment.Read.All Directory.Read.All, Directory.ReadWrite.All, Organization.Read.All, Organization.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not"
+    },
+    {
+      "id": "domains",
+      "url": "https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0",
+      "sha256": "1f76418c2ec653192352f474eecc07644902e475e9c75715001173541d030b0f",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Domain.Read.All Domain.ReadWrite.All, Directory.Read.All Delegated (personal Microsoft account) Not supported. Not supported. Application Domain.Read.All Domain.ReadWrite.All, Dir"
+    },
+    {
+      "id": "users",
+      "url": "https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0",
+      "sha256": "b4f439295569fa0a4c6b242c8df79449ee6a925bb5f4e65d3f832e7095989421",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "User.ReadBasic.All, User.Read.All, User.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application User.Read.All,"
+    },
+    {
+      "id": "groups",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0",
+      "sha256": "688df16d3e4e3384a98a646a89571379a74a9136d2207aee241aae1bc59b81b6",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Group-NestingSupport.ReadWrite.All Group.ReadBasic.All, Directory.Read.All, Directory.ReadWrite.All, Group-PreferredDataLocation.ReadWrite.All, Group.ManageProtection.All, Group.R"
+    },
+    {
+      "id": "groupMembers",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0",
+      "sha256": "d028da9b7fb76e0faa75438c59167a8a78db4782a2a9dc59cc798347ae3196b7",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "GroupMember.ReadBasic.All Directory.Read.All, Group.Read.All, Group.ReadBasic.All, Group.ReadWrite.All, GroupMember.Read.All, GroupMember.ReadWrite.All Delegated (personal Microso"
+    },
+    {
+      "id": "groupOwners",
+      "url": "https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0",
+      "sha256": "53b9884c732ab2dcce25d3ca587e8de38536759993a2cfdf2d4c9ce2f8f46bbd",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "GroupMember.Read.All Group.ReadWrite.All, Directory.Read.All, Group.Read.All, GroupMember.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Applic"
+    },
+    {
+      "id": "roles",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0",
+      "sha256": "e7f1a6891215b038d6b206ed153e63b76ab059dc2c06b26a697eefffddfa4573",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "RoleManagement.Read.Directory, RoleManagement.Read.All, Directory.Read.All, RoleManagement.ReadWrite.Directory, Directory.ReadWrite.All Delegated (personal Microsoft account) Not"
+    },
+    {
+      "id": "roleDefinitions",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0",
+      "sha256": "a392f47bc970a5df8ad803a227a4810b9df9eaf71b6c8dc78a4fce8caf951831",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "RoleManagement.Read.Directory, Directory.Read.All, RoleManagement.ReadWrite.Directory, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application Ro"
+    },
+    {
+      "id": "pimEligible",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0",
+      "sha256": "ce7e6f83f9474dbf95f8b52f91d6b504dc21284f2ada15d9d071fb63f88cdaf3",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "RoleEligibilitySchedule.Read.Directory RoleEligibilitySchedule.ReadWrite.Directory, RoleManagement.Read.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory Dele"
+    },
+    {
+      "id": "pimActive",
+      "url": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0",
+      "sha256": "be026ebc8c4a1a049d09bbe93a198bc765bd00c840ae037e82a2e69961557e5b",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "RoleAssignmentSchedule.Read.Directory RoleAssignmentSchedule.ReadWrite.Directory, RoleManagement.Read.All, RoleManagement.Read.Directory, RoleManagement.ReadWrite.Directory Delega"
+    },
+    {
+      "id": "accessReviews",
+      "url": "https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0",
+      "sha256": "17c41cc7b9771e162395caeeeb7d6a408aa885bc87bc042bbbc077db672ba0a2",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "AccessReview.Read.All AccessReview.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application AccessReview.Read.All AccessReview.ReadWrite.All"
+    },
+    {
+      "id": "ca",
+      "url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "sha256": "43bf935441328b7fd88686a57c7a5e86bde7d08b2b2bd4e421fbbfaca1c35343",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Not available. Important For delegated access using"
+    },
+    {
+      "id": "namedLocations",
+      "url": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0",
+      "sha256": "9d46a3c174fb3bb24d55c29e2053a48d5fbd9ba874f6ca9dbbb708fec89110b2",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Not available. Important For delegated access using"
+    },
+    {
+      "id": "defaults",
+      "url": "https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0",
+      "sha256": "8e358aafa17757de35aee915a633482a59b894ab0e79f603b6e81f286e8c2102",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Not available. HTTP request GET /policies/identityS"
+    },
+    {
+      "id": "authPolicy",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0",
+      "sha256": "e01f1b458cd2bacf8946d7a93226a0a3e7b935f40a66f8736a663ba0d663409c",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.AuthenticationMethod Policy.ReadWrite.AuthenticationMethod, Policy.Read.All Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Rea"
+    },
+    {
+      "id": "authMethods",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0",
+      "sha256": "cd51a500b729e957d1976c9249f911d76138eb5215b393924dac607207676415",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "UserAuthenticationMethod.Read UserAuthenticationMethod.Read.All, UserAuthenticationMethod.ReadWrite, UserAuthenticationMethod.ReadWrite.All Delegated (personal Microsoft account)"
+    },
+    {
+      "id": "registration",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+      "sha256": "ce4fd88f15721af167609827b3b80b51a466ae297756b60cdd471a451f6bb2d7",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "AuditLog.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application AuditLog.Read.All Not available. Important For delegated access u"
+    },
+    {
+      "id": "signIns",
+      "url": "https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0",
+      "sha256": "4696aa5ddb15147299815b0b83b4d2b775b6882cb488a2a6dd2f334c8214027c",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "AuditLog.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application AuditLog.Read.All Not available. Important For delegated access u"
+    },
+    {
+      "id": "directoryAudit",
+      "url": "https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0",
+      "sha256": "ba7a244f6598960b02768fe0775e60c1b0fc999a72dd6d619832088f81341655",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "AuditLog.Read.All Directory.Read.All Delegated (personal Microsoft account) Not supported. Not supported. Application AuditLog.Read.All Directory.Read.All Important For delegated"
+    },
+    {
+      "id": "crossDefault",
+      "url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0",
+      "sha256": "bd6ff08d9cfb48c5cfc44bda2381e1d13128a7881976bf5a4f5be44b653b966d",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Policy.ReadWrite.CrossTenantAccess Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Policy.ReadWrite.CrossTenantAcc"
+    },
+    {
+      "id": "crossPartners",
+      "url": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0",
+      "sha256": "e031b90f2a6295d1a703089960c21823c6d0bf7925dce3362f752db23765ca79",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Policy.ReadWrite.CrossTenantAccess Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Policy.ReadWrite.CrossTenantAcc"
+    },
+    {
+      "id": "authorization",
+      "url": "https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0",
+      "sha256": "8be4a4f7f2f3f361e0ebee6a664cb22d0b78b760392d6ee46ada46206a7788bc",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Policy.Read.All Policy.ReadWrite.Authorization Delegated (personal Microsoft account) Not supported. Not supported. Application Policy.Read.All Policy.ReadWrite.Authorization HTTP"
+    },
+    {
+      "id": "apps",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0",
+      "sha256": "7e37309a81c1b6289dd3a51b99c5dc4cd5ea85826bfe0808837d5e02cb76ade6",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Application.Read.All Application.ReadWrite.All, Directory.ReadWrite.All, Directory.Read.All Delegated (personal Microsoft account) Application.Read.All and User.Read Application.R"
+    },
+    {
+      "id": "principals",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0",
+      "sha256": "9a943fcb37a55ec4ae6aaf1b2ac928e360c1f0ba0712fb8b2804d246aa0e029c",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Application.Read.All Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Applic"
+    },
+    {
+      "id": "grants",
+      "url": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
+      "sha256": "eafb5f18ca99117c0aa7affecbb9ba566cc2f88b498f26290f490a917e4042fc",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Directory.Read.All DelegatedPermissionGrant.ReadWrite.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Directory.Read."
+    },
+    {
+      "id": "appRoles",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0",
+      "sha256": "48635d9a3cf42cd8622532bc870be45d7927085bb555ec9d2b6b520b8116be9c",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Application.Read.All Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Applic"
+    },
+    {
+      "id": "appOwners",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0",
+      "sha256": "67cac69ee5711d4f1a5a91a2dc3850e891cdf3d13fdfce271c3a148cc4a96e37",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Application.Read.All Application.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Applic"
+    },
+    {
+      "id": "federatedCredentials",
+      "url": "https://learn.microsoft.com/en-us/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/federatedidentitycredential-list?view=graph-rest-1.0",
+      "sha256": "9a4407c42e58fb65eb4260b861856bc8c3d75ed1838393970ed61b85a15c46c2",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Application.Read.All Application.ReadWrite.All Delegated (personal Microsoft account) Application.ReadWrite.All Not available. Application Application.Read.All Application.ReadWri"
+    },
+    {
+      "id": "federation",
+      "url": "https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0",
+      "sha256": "3051c76a6bbb076e0e3768de3836cd8ea276663c014974e4fb2236e10cc632f8",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Domain-InternalFederation.Read.All Domain-InternalFederation.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Domain-InternalFederati"
+    },
+    {
+      "id": "delegatedAdmin",
+      "url": "https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0",
+      "sha256": "66e51192ad0b57751dc47d6583d354955cd8bea6c6b94f885eb307191ea542aa",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DelegatedAdminRelationship.Read.All DelegatedAdminRelationship.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application DelegatedAdminRelatio"
+    },
+    {
+      "id": "riskyUsers",
+      "url": "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+      "sha256": "d469f91b7b109177630bd9ee228b2e03ada23f6f6a2e270893f3dae0db5d6823",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "IdentityRiskyUser.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application IdentityRiskyUser.Read.All Not available. Important For"
+    },
+    {
+      "id": "riskDetections",
+      "url": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+      "sha256": "683216f0e6d84b714e4a8bcf45245edb0d93b0ca9c1cc4949b40ee459f508727",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "IdentityRiskEvent.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application IdentityRiskEvent.Read.All Not available. Important For"
+    },
+    {
+      "id": "devices",
+      "url": "https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0",
+      "sha256": "44fcf5247b11406eade1d4cea5845467335ef725a002f9c5ed1eca9038d4e1c0",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Device.Read.All Directory.Read.All, Directory.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Device.Read.All Device.ReadWrite.All,"
+    },
+    {
+      "id": "managedDevices",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0",
+      "sha256": "5112abe22919cb7ecedfcf954c6ca76593e15c7d951ce5b90722010600b78eff",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application DeviceManagementManagedDevi"
+    },
+    {
+      "id": "compliance",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0",
+      "sha256": "94728ca74cf1b392de1366520ae0a3f3dabbefdc91c81c9361ad7dab42277dfb",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application DeviceManagementConfiguration"
+    },
+    {
+      "id": "complianceAssignments",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0",
+      "sha256": "a754ed3206fb27619715b0a8bfd253bd6746a234b52c91d978d7e5d383d946d5",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application DeviceManagementConfiguration"
+    },
+    {
+      "id": "deviceConfigs",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0",
+      "sha256": "2a68d9080e6b9b0001d0233138f19356f6cd25789e3f76eb2a51833acf38bd21",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application DeviceManagementConfiguration"
+    },
+    {
+      "id": "appProtection",
+      "url": "https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0",
+      "sha256": "314ae1d281becf49f2198953714074bb0ef70178ef8e9b0e38cbcbd157c19922",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All Delegated (personal Microsoft account) Not supported. Application DeviceManagementApps.Read.All, DeviceManagement"
+    },
+    {
+      "id": "sites",
+      "url": "https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0",
+      "sha256": "3b004736f52de06fc7221c3787046827ec03cee043ed377b39bb17e709a54f56",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Not supported. Not supported. Delegated (personal Microsoft account) Not supported. Not supported. Application Sites.Read.All Sites.ReadWrite.All HTTP request GET /sites/getAllSit"
+    },
+    {
+      "id": "site",
+      "url": "https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0",
+      "sha256": "9646fb976a08a1b3488e1e2daf4fa1f57a9d5ce544b22cfb28e58445efad5a10",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Sites.Read.All Sites.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application Sites.Read.All Sites.ReadWrite.All Note When a user from one ge"
+    },
+    {
+      "id": "drives",
+      "url": "https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0",
+      "sha256": "a1e78d999b2580610470d63e859c8389736fd137129820e689516d7dc85e3841",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Files.Read Files.Read.All, Files.ReadWrite, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All Delegated (personal Microsoft account) Files.Read Files.Read.All, Files.ReadWr"
+    },
+    {
+      "id": "itemPermissions",
+      "url": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0",
+      "sha256": "aca62fcf48f86f02745167fc71e4873b88d6be229b19606555fa0646ddf1bc7b",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Files.Read Files.Read.All, Files.ReadWrite, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All Delegated (personal Microsoft account) Files.Read Files.Read.All, Files.ReadWr"
+    },
+    {
+      "id": "team",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0",
+      "sha256": "50697bbf65c73731794fb9701e1f11abe1fbaa19ec0ba249f6f63e8b15ab4f6d",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Team.ReadBasic.All TeamSettings.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, TeamSettings.Read.All Delegated (personal Microsof"
+    },
+    {
+      "id": "channels",
+      "url": "https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0",
+      "sha256": "62acd14f06d0b28ee7456de399ed960ff3fb4e18ca9363d91c0ae8ba6b5721f6",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "Channel.ReadBasic.All ChannelSettings.Read.All, ChannelSettings.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All Delegated (personal"
+    },
+    {
+      "id": "teamMembers",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0",
+      "sha256": "f071d4d79f4e23de486a5242e12f33762e8b7366731ca5619579217fde2f40ee",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "TeamMember.Read.All TeamMember.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application TeamMember.Read.Group TeamMember.ReadWrite.All, TeamM"
+    },
+    {
+      "id": "teamApps",
+      "url": "https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0",
+      "sha256": "4d63b2e67d3470247f484ca5ba49995dade6c9757b89292087f7d9dfca9caa16",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "TeamsAppInstallation.ReadForTeam TeamsAppInstallation.ReadWriteSelfForTeam, Directory.Read.All, Directory.ReadWrite.All, Group.Read.All, Group.ReadWrite.All, TeamsAppInstallation."
+    },
+    {
+      "id": "incidents",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0",
+      "sha256": "f31c6ec822c0d15f6d17d808cd82243dd44dec8038d0f17a42f1e6b8e06880b6",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "SecurityIncident.Read.All SecurityIncident.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application SecurityIncident.Read.All SecurityInciden"
+    },
+    {
+      "id": "alerts",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+      "sha256": "843dc5507ff35699187c2f28b0de78e6fa4e1d3212c82e391c3b2cdcad3ef054",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "SecurityAlert.Read.All SecurityAlert.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application SecurityAlert.Read.All SecurityAlert.ReadWrite."
+    },
+    {
+      "id": "secureScores",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0",
+      "sha256": "06fd14984c90a263fe36c04bf9cab6a192c2507b09e6c80cbf5bc3bb0184d1c2",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "SecurityEvents.Read.All SecurityEvents.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application SecurityEvents.Read.All SecurityEvents.ReadWr"
+    },
+    {
+      "id": "backupPolicies",
+      "url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0",
+      "sha256": "16f55c5d431d68490e5d2fa052e4d95059abe97d555ed95169992b3ee434826e",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "BackupRestore-Configuration.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application BackupRestore-Configuration.Read.All Not avail"
+    },
+    {
+      "id": "restoreSessions",
+      "url": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0",
+      "sha256": "7341ac1ba0a95a5d899856f8f2a95420588436ccb24e66bd365d6af86436008f",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "BackupRestore-Restore.Read.All BackupRestore-Restore.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application BackupRestore-Restore.Read.All"
+    },
+    {
+      "id": "health",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0",
+      "sha256": "86bb7d51753362f91e508c066579494da9a750c5df59cefae56f55c5fc46a32b",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "ServiceHealth.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application ServiceHealth.Read.All Not available. HTTP request GET /admi"
+    },
+    {
+      "id": "messages",
+      "url": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0",
+      "sha256": "256d0825da5428ded0a02b75f76d91ddf4b263ed4c007f726fd0daa878bd40e7",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "ServiceMessage.Read.All Not available. Delegated (personal Microsoft account) Not supported. Not supported. Application ServiceMessage.Read.All Not available. HTTP request GET /ad"
+    },
+    {
+      "id": "cloudPCs",
+      "url": "https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0",
+      "sha256": "5d0456319c778c508e2876f95069635ce3f990a94e40dd63b4b81072e7be7899",
+      "documentedPathMatch": true,
+      "delegatedPermissionExcerpt": "CloudPC.Read.All CloudPC.ReadWrite.All Delegated (personal Microsoft account) Not supported. Not supported. Application CloudPC.Read.All CloudPC.ReadWrite.All HTTP request GET /de"
+    },
+    {
+      "id": "ppEnvironments",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user",
+      "sha256": "3ab8566bdf5372105d123e084b3658a7bc1c2451a76ddddaf5356b3460b1e929",
+      "documentedPathMatch": true
+    },
+    {
+      "id": "fabricWorkspaces",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin",
+      "sha256": "7525f16182462d54b23d05e0d653770f772b76191880e11839313e07d67f47f6",
+      "documentedPathMatch": true
+    },
+    {
+      "id": "fabricWorkspaceUsers",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin",
+      "sha256": "168057c228f99bde7825919678ce68c13e0ee9b239e66befbc03c27a26d99352",
+      "documentedPathMatch": true
+    },
+    {
+      "id": "publicEmbeds",
+      "url": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web",
+      "sha256": "58506eb240cdd7ee8526624e5244bf46ebfb91790631a2e3427a9831c5fbd6dd",
+      "documentedPathMatch": true
+    },
+    {
+      "id": "fabricSettings",
+      "url": "https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings",
+      "sha256": "670c85abe46032f707c02010d7cd19cf59b2a08ad3efe376430fc20c00312b44",
+      "documentedPathMatch": true
+    },
+    {
+      "id": "exoOrg",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps",
+      "sha256": "a933ca4f8ccab8163d6e2dceb55ff5e7476a870d6a1125653aef932421ce68f1",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "auditConfig",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps",
+      "sha256": "6f44b78006f9b5f37ca98987e0cea5f383d555a4d8117069e1795fb8209f06a5",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "transport",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps",
+      "sha256": "da28f1384737f4f960f6946b9550e67ea7ebf41839904ecbaf04e03dab6867c1",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "dkim",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps",
+      "sha256": "810b7462f2259175cb776000564d4c875ea37b5124b2a46b764dc599b5e12d83",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "acceptedDomains",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps",
+      "sha256": "e383e47ff3178d3a1a7d56a5d3016b1a1f13629eb16849a21d1a7d5778370cae",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "remoteDomains",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps",
+      "sha256": "0729927f48c25e87b29cd8a8a9e6c1033e988d8af6f22861838f68d704ffc5e9",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "inboundConnectors",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps",
+      "sha256": "1487552551a93a76815f9a8dcf8c80b77110a39bc3f0306ddf73118fa20ac244",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "outboundConnectors",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps",
+      "sha256": "100c34041b4efe331f2e677b298ccfa1a2e131c8c2142d696b3158eb2d78a3e9",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "transportRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps",
+      "sha256": "646cb8d11548a5d25feab646246eeb31b0779f231312f93157f2c631d6465274",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "antiPhish",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps",
+      "sha256": "8e9f5bb4c87f87b907cf5f38604cbad506cc344a504e46bdaff9db4308eb4f58",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "antiPhishRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps",
+      "sha256": "45e811a63bea31079a716606fec67a8c4efc013b9fab5e70b122322078cd5114",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "spam",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps",
+      "sha256": "7c2c9c7be94e1dd7b0e659347cd777653897b97ed5f8b34eb3385c6ed3743c41",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "spamRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps",
+      "sha256": "e834c0dd3fd121e19e0f5bb9d8ce7228ba7c7d1b464a57c132a2b1aa3266189f",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "outboundSpam",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps",
+      "sha256": "4bb6061f740b01c295346da397c49ccf2f086df63b4cbbcbd3f32709cfbbf008",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "outboundSpamRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps",
+      "sha256": "f243060a5221030c2f9d8a8ace8dad9786a39c62bb409cd91f3de735cd7e9129",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "malware",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps",
+      "sha256": "027bde8d737fbb16645c749c6b37ff9d0cc3666100b57949f5e9df673c3290b6",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "malwareRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps",
+      "sha256": "d1649022515e1634a635755653f9fdf021a7c639421c13c8373d62f6a8ff6540",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "safeLinks",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps",
+      "sha256": "3b63dd007c3f6fbef1cb07328471dc9126baff231313a9d6d1fb4f3a1be4d7b7",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "safeLinksRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps",
+      "sha256": "35dbcf3d4be212fdcf09e7f40133a652d718c60671dbe4810e5b4e04c97244cc",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "safeAttachments",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps",
+      "sha256": "57e46495f308f3c4225a892933595eac58974927d99db18c0911f48733df067a",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "safeAttachmentsRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps",
+      "sha256": "adbad7c362abe022862ccf310caf4a08dcc34b81301bae2a4c6026bf6d0ab5a3",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "presetEop",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps",
+      "sha256": "e617be489facfa9a158e572db6d0eae1e7c6677c5dce60bd6a9584f7ff2d88e3",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "presetDefender",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps",
+      "sha256": "fa78a30dc1c1a173cac601609bbd331aeeb83ecc1f284c55e135461d36b534a9",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "quarantine",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps",
+      "sha256": "1434b64c0847f4a76f7e3b80246d2fc016ebfd1e5fb8b814221724ece3d0cc8b",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "authPolicies",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps",
+      "sha256": "e9adea8e10ae35d0884c9ab09f072e61533c5b84e80f1e8f231a1c7c2d4a94d2",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "mailboxes",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps",
+      "sha256": "62ae341ee0d3f38f7a0476bc13485624ca93f381ed4cf6c75420b6b0a5db9e44",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "casMailboxes",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps",
+      "sha256": "57a071459801181ec1b1990dbd5aa5a2e925651b82dfd920124cb5fe591d5d4c",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "inboxRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+      "sha256": "071883821db4ae8386e12a4fedad1a892ba317431c13bf67706b7c46a6ea845e",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "mailboxPermissions",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps",
+      "sha256": "c47b26030df403d8eee26f8711190d97635e7bf989132920845a8bd50f6d2762",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "recipientPermissions",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps",
+      "sha256": "8162c25aa52c1682589f92f6af6275ed98bbc0cb493d010382aba85a08ec04e5",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "ual",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+      "sha256": "7cee9205b68f1aad6331e511403160347b8af1d1a4e57ec616229467b7820edb",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "labels",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps",
+      "sha256": "eb53666f154f08d0d20318efe082e20b97c3ab246fa4660e5dc3e57054e3786f",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "labelPolicies",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps",
+      "sha256": "1c1520adc3c7a0f0fc4984630a112f0a8a2e7034cbb5d58e1ee835c2c52a2321",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "dlp",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+      "sha256": "d24aadb1dfaabb8464207cd35bcf5559cc57343bf2f539eb73878caa577faa3f",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "dlpRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+      "sha256": "abc797dab37cfb6c9e582d7c3f29ab4dfcd8001df8fe837bba60a486f85da323",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "retention",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps",
+      "sha256": "7f51c4d97b38dbea3857066809bb590119d48afcebed67a7f843013ab7173afe",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "retentionRules",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps",
+      "sha256": "19e12fc79aece35d0892a7aade714cc332cd67a4485d657776cb4b3319996a17",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "recordLabels",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps",
+      "sha256": "50a846a1b6ce5f0393b7fa698feb54833690e292264c9467df8402edecd74562",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "ediscovery",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps",
+      "sha256": "8e39eb2b11bcf0b13c9518e8a657a7af52b34e0ce3e669ad5d192a974da2e67c",
+      "documentedCommandMatch": true
+    },
+    {
+      "id": "auditRetention",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps",
+      "status": 200,
+      "finalUrl": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps",
+      "sha256": "670ad4bd295760a63c97c97b01645c65bef71e2f9fcd618b56058207ae9a69f3",
+      "documentedCommandMatch": true
+    }
+  ],
+  "liveTenantTested": false
+}

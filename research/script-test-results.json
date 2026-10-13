@@ -1,0 +1,111 @@
+{
+  "moduleInstallationTested": "Mocked only; no packages installed during authoring",
+  "passed": 25,
+  "tests": [
+    {
+      "passed": true,
+      "name": "Every generated PowerShell file parses"
+    },
+    {
+      "passed": true,
+      "name": "Every recipe has script, evidence fields and Microsoft references"
+    },
+    {
+      "passed": true,
+      "name": "Plan does not require session or write output"
+    },
+    {
+      "passed": true,
+      "name": "Two Graph pages retain all records and report collected"
+    },
+    {
+      "passed": true,
+      "name": "403 cannot be mistaken for an empty successful export"
+    },
+    {
+      "passed": true,
+      "name": "Later page error preserves evidence and reports partial"
+    },
+    {
+      "passed": true,
+      "name": "External nextLink is rejected before second request"
+    },
+    {
+      "passed": true,
+      "name": "Pagination cap reports partial"
+    },
+    {
+      "passed": true,
+      "name": "Repeated pagination URL is rejected"
+    },
+    {
+      "passed": true,
+      "name": "Malformed collection body is rejected"
+    },
+    {
+      "passed": true,
+      "name": "Wrong tenant and cloud fail before Graph transport"
+    },
+    {
+      "passed": true,
+      "name": "Unsupported remote command cannot execute"
+    },
+    {
+      "passed": true,
+      "name": "Unsafe Graph schemes, ports and versions are rejected"
+    },
+    {
+      "passed": true,
+      "name": "Workload pagination cannot change host or operation path"
+    },
+    {
+      "passed": true,
+      "name": "REST continuation token collects both public-embed pages without following returned URI"
+    },
+    {
+      "passed": true,
+      "name": "UAL duplicate records cannot produce a successful export"
+    },
+    {
+      "passed": true,
+      "name": "Missing local evidence is incomplete"
+    },
+    {
+      "passed": true,
+      "name": "Local evidence traversal is rejected"
+    },
+    {
+      "passed": true,
+      "name": "Existing recovery record is hashed and RTO breach measured"
+    },
+    {
+      "passed": true,
+      "name": "End-to-end offline execution never reports live reads collected or controls passed"
+    },
+    {
+      "passed": true,
+      "name": "Public repository cannot be used as evidence output"
+    },
+    {
+      "passed": true,
+      "name": "Blank local template fails evidence review and existing template cannot be overwritten"
+    },
+    {
+      "passed": true,
+      "name": "Setup checks, installs, imports, authenticates and verifies in order"
+    },
+    {
+      "passed": true,
+      "name": "Existing-session mode never installs a missing module or authenticates"
+    },
+    {
+      "passed": true,
+      "name": "Setup failure stops the runner before any audit transport"
+    }
+  ],
+  "authenticationTested": "Mocked only; no tenant sign-in",
+  "liveTenantTested": false,
+  "checkedUtc": "2026-10-13T03:56:34.0354031+00:00",
+  "testArtifactsRetainedLocally": true,
+  "failed": 0
+}

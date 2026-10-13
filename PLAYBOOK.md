@@ -1,6 +1,6 @@
 # Microsoft 365 Audit Playbook
 
-**Version 1.0 · Research reviewed 12 October 2026 · Prepared for Jeff Cadet**
+**Version 1.1 · Research reviewed 12 October 2026 · Prepared for Jeff Cadet**
 
 A practical methodology for auditing Microsoft 365 security, governance, compliance readiness, resilience and operations. This is an original consultant-authored playbook grounded in Microsoft documentation, supplemented by CISA, CIS, NIST and the maintainers of assessment tools. It is **not a completed tenant audit, a Microsoft-issued standard, or a certification**. No customer tenant was accessed while preparing it.
 
@@ -25,6 +25,10 @@ A practical methodology for auditing Microsoft 365 security, governance, complia
 Companion materials: [90-control catalog](controls/CONTROL-CATALOG.md), [fieldwork runbooks](docs/FIELDWORK-RUNBOOKS.md), [collection guide](docs/COLLECTION-GUIDE.md), [templates](templates/README.md), [research and counterexamples](research/DISCONFIRMATION.md), [source register](references/SOURCES.md).
 
 ## 1. Engagement model
+
+**Phase evidence script:** [P01.ps1](scripts/steps/P01.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p01).
+
+
 
 ### 1.1 Define the question before collecting settings
 
@@ -55,6 +59,10 @@ The public CIS catalog was reviewed; the full Microsoft 365 Foundations benchmar
 **Exit gate — consultant method:** every in-scope control is assessed or explicitly limited; high-risk observations have been communicated through the agreed engagement process; facts are reviewed with owners; remediation and exception decisions have accountable owners; evidence custody is transferred; temporary access is removed; retest criteria are recorded. Closure requires evidence appropriate to the control, not merely a changed setting or closed ticket. [S15: Revoke user access in an emergency](https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access); [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks); [S39: eDiscovery features and components](https://learn.microsoft.com/en-us/purview/edisc-features-components)
 
 ## 2. Scope and discovery
+
+**Phase evidence script:** [P02.ps1](scripts/steps/P02.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p02).
+
+
 
 ### 2.1 Inventory the environment
 
@@ -94,6 +102,10 @@ Ask each owner: what would materially interrupt the business; what information m
 
 ## 3. Delivery plan and responsibilities
 
+**Phase evidence script:** [P03.ps1](scripts/steps/P03.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p03).
+
+
+
 ### 3.1 Suggested work plan
 
 The following is a **planning estimate**, not a Microsoft duration or a promised completion time. A single well-documented tenant may fit several weeks; multi-tenant, hybrid or regulated environments can require substantially more time. Confirm effort after discovery. The underlying need to adapt scope follows the different service and cloud capabilities. [S02: Zero Trust deployment plan with Microsoft 365](https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide); [S46: Office 365 GCC High and DoD](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
@@ -125,6 +137,10 @@ The following is a **planning estimate**, not a Microsoft duration or a promised
 This table assigns engagement responsibilities as **consultant method**. Microsoft role names and service permissions are separate from organizational job titles. A person called an “auditor” does not automatically hold the permissions needed to inspect every workload. [S64: Microsoft Entra built-in roles](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview); [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search)
 
 ## 4. Access and licensing
+
+**Phase evidence script:** [P04.ps1](scripts/steps/P04.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p04).
+
+
 
 ### 4.1 Use the least access that can produce adequate evidence
 
@@ -167,6 +183,10 @@ Do not classify every control as “requires E5.” Record the actual feature, b
 
 ## 5. Evidence and collection quality
 
+**Phase evidence script:** [P05.ps1](scripts/steps/P05.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p05).
+
+
+
 ### 5.1 Evidence request package
 
 Use [evidence-request.csv](templates/evidence-request.csv) and [evidence-register.csv](templates/evidence-register.csv). Request metadata and configuration before message/document contents. Define the tenant, period, workload, required properties and population for each request. Record missing data and restricted scope rather than quietly substituting a smaller export. This is **consultant evidence method** informed by the scope and permissions of Microsoft's interfaces. [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview); [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search); [S53: Microsoft Graph paging](https://learn.microsoft.com/en-us/graph/paging)
@@ -195,6 +215,10 @@ Microsoft documents ordinary Entra audit/sign-in retention of seven days for Fre
 
 ## 6. Sampling and operating effectiveness
 
+**Phase evidence script:** [P06.ps1](scripts/steps/P06.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p06).
+
+
+
 ### 6.1 Define the population first
 
 **Consultant method:** inspect 100% of feasible tenant-wide policies and high-impact configuration objects. Prefer full population analysis for privileged roles, application grants, external forwarding, backup coverage and explicit exclusions. When transaction or content volume requires sampling, document why full examination is impractical and what the sample can establish. Available data may be constrained by query limits, scope and retention. [S53: Microsoft Graph paging](https://learn.microsoft.com/en-us/graph/paging); [S56: Search-UnifiedAuditLog](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps); [S17: Microsoft Entra data retention](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention)
@@ -212,6 +236,10 @@ Use a reproducible selection method: retain the full sorted population, selected
 For a period-based engagement, include early, middle and recent activity, control changes and staff turnover. Compare policy history with the state in effect at each event. If only current settings or a short log window are available, qualify the opinion accordingly. A current fix does not prove the prior period was controlled. **Consultant assessment rule.** [S17: Microsoft Entra data retention](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention); [S18: Manage audit log retention policies](https://learn.microsoft.com/en-us/purview/audit-log-retention-policies); [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search)
 
 ## 7. Control assessment rules
+
+**Phase evidence script:** [P07.ps1](scripts/steps/P07.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p07).
+
+
 
 ### 7.1 Required control record
 
@@ -241,6 +269,10 @@ Use High confidence for reconciled evidence with corroborated operation; Medium 
 
 ## 8. Risk and prioritization
 
+**Phase evidence script:** [P08.ps1](scripts/steps/P08.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p08).
+
+
+
 ### 8.1 Assess the scenario, not the setting name
 
 For each finding state: exposed asset, actor or failure scenario, preconditions, reachable population, demonstrated effect, business impact and control dependencies. A weak setting on an unused test service differs from an exploitable administrative path in production. Connect supporting evidence to the specific scenario and avoid claiming a breach from configuration evidence alone. **Consultant risk method.** [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks); [S14: App consent grant investigation](https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent); [S01: Microsoft Secure Score](https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score)
@@ -262,6 +294,10 @@ Impact should consider confidentiality, integrity, availability, privacy, contra
 These are **consultant planning defaults**. They are not Microsoft SLAs, legal notification deadlines or permission for disruptive changes. The sponsor adopts deadlines based on business exposure and dependencies. Actual incidents follow the organization's incident authority and Microsoft response guidance. [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks); [S76: Microsoft phishing investigation playbook](https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing)
 
 ## 9. Fieldwork sequence
+
+**Phase evidence script:** [P09.ps1](scripts/steps/P09.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p09).
+
+
 
 ### 9.1 Establish the baseline, then try to break it
 
@@ -286,6 +322,10 @@ Then execute [fieldwork runbooks](docs/FIELDWORK-RUNBOOKS.md) for effective acce
 **Consultant procedure:** if evidence suggests an active incident, preserve relevant evidence, contact the engagement's designated incident lead and follow the approved response authority. Do not continue treating active compromise as an ordinary remediation backlog item. Separate unverified indicators from established facts in all communications. [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks); [S76: Microsoft phishing investigation playbook](https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing); [S14: App consent grant investigation](https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent)
 
 ## 10. Reporting and remediation
+
+**Phase evidence script:** [P10.ps1](scripts/steps/P10.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p10).
+
+
 
 ### 10.1 Executive report
 
@@ -313,6 +353,10 @@ Use [remediation-plan.csv](templates/remediation-plan.csv) to document target ou
 
 ## 11. Tenant and industry overlays
 
+**Phase evidence script:** [P11.ps1](scripts/steps/P11.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p11).
+
+
+
 ### 11.1 Business and enterprise subscriptions
 
 For smaller tenants, apply the same business objectives with evidence proportionate to size. Security defaults and manual reviews may be relevant alternatives, while custom Conditional Access and advanced governance depend on entitlement. Verify audit ingestion explicitly; Microsoft's documentation identifies business-subscription cases where auditing is not enabled by default. [S63: Security defaults in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults); [S09: Conditional Access overview](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview); [S12: Microsoft Entra ID Governance licensing fundamentals](https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals); [S60: Turn auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable)
@@ -337,6 +381,10 @@ Include Forms, Loop, SharePoint Embedded and any other enabled productivity serv
 
 ## 12. Continuous assurance
 
+**Phase evidence script:** [P12.ps1](scripts/steps/P12.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p12).
+
+
+
 **Consultant cadence:** monitor material security alerts and evidence-pipeline health continuously where supported; review drift and expired exceptions monthly; perform owner/access and control reviews quarterly; rehearse recovery and response at an agreed risk-based frequency; refresh the full audit after major architectural changes. These are suggested governance intervals, not universal Microsoft mandates. Follow product-specific explicit guidance where applicable, including emergency-access validation. [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks); [S07: Manage emergency access accounts](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access); [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
 
 Version-control the methodology and sanitized desired configuration. Keep customer exports, credentials and reports in controlled storage. Pin scanner engines and test definitions; review changes before upgrading. Maester's October 2026 preview transition illustrates why “latest” and “preview” must not be treated as stable audit criteria. [S58: Maester installation guide](https://maester.dev/docs/installation/); [S71: Maester 3.0 preview transition](https://maester.dev/blog/maester-3-0/); [S57: ScubaGear v1.8.0 output schema](https://raw.githubusercontent.com/cisagov/ScubaGear/v1.8.0/docs/misc/tooloutputschema.md)
@@ -344,6 +392,10 @@ Version-control the methodology and sanitized desired configuration. Keep custom
 Revisit live references before each engagement and before relying on a retirement deadline, preview feature or licensing assumption. Record a source access date and the material conclusion taken from it. A roadmap or announced availability is not proof that a particular tenant has received a feature. [S26: Updated SMTP AUTH Basic Authentication deprecation timeline](https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835); [S48: Restricted SharePoint Search](https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search); [S77: Loop governance and compliance](https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide); [S45: Microsoft Product Terms](https://www.microsoft.com/licensing/terms/)
 
 ## 13. Limitations and handoff
+
+**Phase evidence script:** [P13.ps1](scripts/steps/P13.ps1) checks this phase's workpapers and collects mapped evidence. [Title, description, evidence requirements and Microsoft references](docs/SCRIPT-COVERAGE.md#p13).
+
+
 
 This repository provides a broad audit work program, not a proof that every Microsoft service or legal regime has been exhaustively assessed. Formal engagements still require tenant-specific criteria, authorized access, adequate evidence and qualified interpretation. Product-specific procedures for optional workloads should be expanded when those services enter scope. [S02: Zero Trust deployment plan with Microsoft 365](https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide); [S46: Office 365 GCC High and DoD](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod); [S45: Microsoft Product Terms](https://www.microsoft.com/licensing/terms/)
 

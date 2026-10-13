@@ -883,3 +883,973 @@ Publisher: Microsoft. Accessed: 2026-10-12.
 Used for: Site enumeration limits and property retrieval caveats.
 
 Review: Targeted command documentation review; examples were not executed against a tenant.
+
+## S89
+
+**[Microsoft reference: organization](https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for organization
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S90
+
+**[Microsoft reference: licenses](https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for licenses
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S91
+
+**[Microsoft reference: domains](https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for domains
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S92
+
+**[Microsoft reference: users](https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for users
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S93
+
+**[Microsoft reference: groups](https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for groups
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S94
+
+**[Microsoft reference: groupMembers](https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for groupMembers
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S95
+
+**[Microsoft reference: groupOwners](https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for groupOwners
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S96
+
+**[Microsoft reference: roles](https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for roles
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S97
+
+**[Microsoft reference: roleDefinitions](https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for roleDefinitions
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S98
+
+**[Microsoft reference: pimEligible](https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for pimEligible
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S99
+
+**[Microsoft reference: pimActive](https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for pimActive
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S100
+
+**[Microsoft reference: accessReviews](https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for accessReviews
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S101
+
+**[Microsoft reference: namedLocations](https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for namedLocations
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S102
+
+**[Microsoft reference: defaults](https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for defaults
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S103
+
+**[Microsoft reference: authPolicy](https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for authPolicy
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S104
+
+**[Microsoft reference: authMethods](https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for authMethods
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S105
+
+**[Microsoft reference: registration](https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for registration
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S106
+
+**[Microsoft reference: signIns](https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for signIns
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S107
+
+**[Microsoft reference: directoryAudit](https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for directoryAudit
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S108
+
+**[Microsoft reference: crossDefault](https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for crossDefault
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S109
+
+**[Microsoft reference: crossPartners](https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for crossPartners
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S110
+
+**[Microsoft reference: authorization](https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for authorization
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S111
+
+**[Microsoft reference: apps](https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for apps
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S112
+
+**[Microsoft reference: principals](https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for principals
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S113
+
+**[Microsoft reference: grants](https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for grants
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S114
+
+**[Microsoft reference: appRoles](https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for appRoles
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S115
+
+**[Microsoft reference: appOwners](https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for appOwners
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S116
+
+**[Microsoft reference: federatedCredentials](https://learn.microsoft.com/en-us/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for federatedCredentials
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S117
+
+**[Microsoft reference: federation](https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for federation
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S118
+
+**[Microsoft reference: delegatedAdmin](https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for delegatedAdmin
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S119
+
+**[Microsoft reference: riskyUsers](https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for riskyUsers
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S120
+
+**[Microsoft reference: riskDetections](https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for riskDetections
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S121
+
+**[Microsoft reference: devices](https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for devices
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S122
+
+**[Microsoft reference: managedDevices](https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for managedDevices
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S123
+
+**[Microsoft reference: compliance](https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for compliance
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S124
+
+**[Microsoft reference: complianceAssignments](https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for complianceAssignments
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S125
+
+**[Microsoft reference: deviceConfigs](https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for deviceConfigs
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S126
+
+**[Microsoft reference: appProtection](https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for appProtection
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S127
+
+**[Microsoft reference: sites](https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for sites
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S128
+
+**[Microsoft reference: site](https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for site
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S129
+
+**[Microsoft reference: drives](https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for drives
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S130
+
+**[Microsoft reference: itemPermissions](https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for itemPermissions
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S131
+
+**[Microsoft reference: team](https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for team
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S132
+
+**[Microsoft reference: channels](https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for channels
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S133
+
+**[Microsoft reference: teamMembers](https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for teamMembers
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S134
+
+**[Microsoft reference: teamApps](https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for teamApps
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S135
+
+**[Microsoft reference: incidents](https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for incidents
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S136
+
+**[Microsoft reference: alerts](https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for alerts
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S137
+
+**[Microsoft reference: secureScores](https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for secureScores
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S138
+
+**[Microsoft reference: backupPolicies](https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for backupPolicies
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S139
+
+**[Microsoft reference: restoreSessions](https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for restoreSessions
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S140
+
+**[Microsoft reference: health](https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for health
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S141
+
+**[Microsoft reference: messages](https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for messages
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S142
+
+**[Microsoft reference: cloudPCs](https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for cloudPCs
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S143
+
+**[Microsoft reference: ppEnvironments](https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for ppEnvironments
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S144
+
+**[Microsoft reference: fabricWorkspaces](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for fabricWorkspaces
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S145
+
+**[Microsoft reference: fabricWorkspaceUsers](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for fabricWorkspaceUsers
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S146
+
+**[Microsoft reference: publicEmbeds](https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for publicEmbeds
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S147
+
+**[Microsoft reference: fabricSettings](https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for fabricSettings
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S148
+
+**[Microsoft reference: exoOrg](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for exoOrg
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S149
+
+**[Microsoft reference: auditConfig](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for auditConfig
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S150
+
+**[Microsoft reference: transport](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for transport
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S151
+
+**[Microsoft reference: dkim](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for dkim
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S152
+
+**[Microsoft reference: acceptedDomains](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for acceptedDomains
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S153
+
+**[Microsoft reference: remoteDomains](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for remoteDomains
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S154
+
+**[Microsoft reference: inboundConnectors](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for inboundConnectors
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S155
+
+**[Microsoft reference: outboundConnectors](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for outboundConnectors
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S156
+
+**[Microsoft reference: transportRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for transportRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S157
+
+**[Microsoft reference: antiPhish](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for antiPhish
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S158
+
+**[Microsoft reference: antiPhishRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for antiPhishRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S159
+
+**[Microsoft reference: spam](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for spam
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S160
+
+**[Microsoft reference: spamRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for spamRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S161
+
+**[Microsoft reference: outboundSpam](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for outboundSpam
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S162
+
+**[Microsoft reference: outboundSpamRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for outboundSpamRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S163
+
+**[Microsoft reference: malware](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for malware
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S164
+
+**[Microsoft reference: malwareRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for malwareRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S165
+
+**[Microsoft reference: safeLinks](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for safeLinks
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S166
+
+**[Microsoft reference: safeLinksRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for safeLinksRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S167
+
+**[Microsoft reference: safeAttachments](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for safeAttachments
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S168
+
+**[Microsoft reference: safeAttachmentsRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for safeAttachmentsRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S169
+
+**[Microsoft reference: presetEop](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for presetEop
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S170
+
+**[Microsoft reference: presetDefender](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for presetDefender
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S171
+
+**[Microsoft reference: quarantine](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for quarantine
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S172
+
+**[Microsoft reference: authPolicies](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for authPolicies
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S173
+
+**[Microsoft reference: mailboxes](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for mailboxes
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S174
+
+**[Microsoft reference: casMailboxes](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for casMailboxes
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S175
+
+**[Microsoft reference: mailboxPermissions](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for mailboxPermissions
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S176
+
+**[Microsoft reference: recipientPermissions](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for recipientPermissions
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S177
+
+**[Microsoft reference: labels](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for labels
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S178
+
+**[Microsoft reference: labelPolicies](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for labelPolicies
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S179
+
+**[Microsoft reference: dlp](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for dlp
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S180
+
+**[Microsoft reference: dlpRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for dlpRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S181
+
+**[Microsoft reference: retention](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for retention
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S182
+
+**[Microsoft reference: retentionRules](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for retentionRules
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S183
+
+**[Microsoft reference: recordLabels](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for recordLabels
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S184
+
+**[Microsoft reference: ediscovery](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for ediscovery
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.
+
+## S185
+
+**[Microsoft reference: auditRetention](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps)**
+
+Publisher: Microsoft. Accessed: 2026-10-12.
+
+Used for: Read-only operation syntax, permissions and limitations for auditRetention
+
+Review: Targeted API/command reference review and documented-path check; no live integration test.

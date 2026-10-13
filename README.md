@@ -2,11 +2,11 @@
 
 **A comprehensive, evidence-based work program for Microsoft 365 security, governance, compliance readiness, resilience and operations.**
 
-Prepared for Jeff Cadet. Version 1.0. Research reviewed **12 October 2026**.
+Prepared for Jeff Cadet. Version 1.1. Research reviewed **12 October 2026**.
 
 **[Read the playbook →](PLAYBOOK.md)**
 
-The toolkit contains **90 controls across 17 domains**, **10 fieldwork runbooks**, **16 engagement templates**, and **88 references—including 78 Microsoft sources**. Microsoft documentation is linked beside product claims and procedures. Consultant-defined tests, priorities, sample sizes and deadlines are clearly distinguished from Microsoft's guidance.
+The toolkit contains **90 controls across 17 domains**, **10 fieldwork runbooks**, **16 engagement templates**, and **185 references—including 175 Microsoft sources**. Microsoft documentation is linked beside product claims and procedures. Consultant-defined tests, priorities, sample sizes and deadlines are clearly distinguished from Microsoft's guidance.
 
 | Start here | What it provides |
 |---|---|
@@ -16,6 +16,7 @@ The toolkit contains **90 controls across 17 domains**, **10 fieldwork runbooks*
 | [Fieldwork runbooks](docs/FIELDWORK-RUNBOOKS.md) | Practical tests for access, apps, sharing, email, logs, DLP, devices, recovery and agents |
 | [Collection guide](docs/COLLECTION-GUIDE.md) | Permission planning, scoped read examples, completeness checks and tool limitations |
 | [Engagement templates](templates/README.md) | Charter, evidence, findings, remediation, exceptions, executive report and assessment worksheets |
+| [Read-only audit scripts](scripts/README.md) | 151 control/step/phase entry scripts, 100 documented reads, module setup, authentication, evidence reports and limitations |
 | [Source register](references/SOURCES.md) | Direct links, provenance, access date and the use of each source |
 | [Disconfirmation report](research/DISCONFIRMATION.md) | Claims rejected by evidence, actual check results and remaining limitations |
 
@@ -37,9 +38,9 @@ These steps are the consultant methodology explained and sourced in the [main pl
 
 ## Verification and boundaries
 
-The documentary review rejected five misleading shortcuts. The eight synthetic evidence cases returned their intended non-Pass classifications. All 88 registered references returned HTTP 200 during source checking. See the [actual results and limitations](research/DISCONFIRMATION.md).
+The documentary review rejected five misleading shortcuts. The eight synthetic evidence cases returned their intended non-Pass classifications. All 88 original methodology references returned HTTP 200 during the v1.0 source check; the 100 collector operation references were independently checked for v1.1. See the [actual results and limitations](research/DISCONFIRMATION.md).
 
-**No live tenant was audited.** This repository contains methodology, blank workpapers and synthetic verification cases. Collection examples were not run against Microsoft 365. Completed tenant exports, credentials and sensitive client reports belong in a controlled evidence store.
+**No live tenant was audited.** This repository contains methodology, blank workpapers and synthetic verification cases. Scripts were tested locally with synthetic data and mocked transports; no live integration test was performed. Each script includes a title, description and Microsoft documentation references. Default setup checks/installs required modules, authenticates and verifies the tenant before read-only collection. See [measured script checks](research/SCRIPT-DISCONFIRMATION.md). Completed tenant exports, credentials and sensitive client reports belong in a controlled evidence store.
 
 The full CIS benchmark was not obtained; no complete CIS conformity claim or proprietary benchmark reproduction is made. This playbook is not a Microsoft publication or certification. Referenced materials remain governed by their publishers' terms.
 
@@ -48,14 +49,24 @@ The full CIS benchmark was not obtained; no complete CIS conformity claim or pro
 Requires Python 3.10+ for the local document utilities; no additional Python packages are required.
 
 ```powershell
+# Title: Rebuild the documented audit toolkit
+# Description: Regenerate scripts, references and navigation; validate local documents.
+# Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help
+python tools/build_scripts.py
 python tools/build.py
+python tools/integrate_script_docs.py
 python tools/validate.py
+pwsh -NoProfile -File tests/Test-ReadOnly.ps1
 ```
 
 To recheck external references and documentary counterexamples, run:
 
 ```powershell
+# Title: Verify Microsoft reference accessibility
+# Description: Fetch cited source pages and record status, hashes and targeted checks.
+# Reference: https://learn.microsoft.com/en-us/graph/overview
 python tools/check_sources.py
+python tools/check_script_sources.py
 ```
 
 The network check records current source hashes and status; it does not connect to a tenant. Revisit licensing, cloud availability, preview features and retirement dates before each engagement. The [source register](references/SOURCES.md) identifies the original research boundary.

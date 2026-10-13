@@ -1,0 +1,14 @@
+{
+  "tenantId": "00000000-0000-0000-0000-000000000000",
+  "userIds": [],
+  "groupIds": [],
+  "applicationIds": [],
+  "servicePrincipalIds": [],
+  "domainNames": [],
+  "mailboxes": [],
+  "siteIds": [],
+  "teamIds": [],
+  "compliancePolicyIds": [],
+  "workspaceIds": [],
+  "driveItems": []
+}

@@ -1,0 +1,1254 @@
+{
+  "organization": {
+    "id": "organization",
+    "kind": "graph",
+    "path": "/organization",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Organization.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Organization.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/organization-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "licenses": {
+    "id": "licenses",
+    "kind": "graph",
+    "path": "/subscribedSkus",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "LicenseAssignment.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "LicenseAssignment.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/subscribedsku-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "domains": {
+    "id": "domains",
+    "kind": "graph",
+    "path": "/domains",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Domain.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Domain.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/domain-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "users": {
+    "id": "users",
+    "kind": "graph",
+    "path": "/users?$select=id,displayName,userPrincipalName,userType,accountEnabled,createdDateTime,assignedLicenses,onPremisesSyncEnabled",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "User.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "User.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "groups": {
+    "id": "groups",
+    "kind": "graph",
+    "path": "/groups?$select=id,displayName,groupTypes,securityEnabled,mailEnabled,visibility,resourceProvisioningOptions",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Group.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Group.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/group-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "groupMembers": {
+    "id": "groupMembers",
+    "kind": "graph",
+    "path": "/groups/{id}/transitiveMembers",
+    "target": "groupIds",
+    "shape": "collection",
+    "scopes": [
+      "GroupMember.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "GroupMember.Read.All; limited properties need object read permissions; hidden members need Member.Read.Hidden",
+    "source": "https://learn.microsoft.com/en-us/graph/api/group-list-transitivemembers?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "groupOwners": {
+    "id": "groupOwners",
+    "kind": "graph",
+    "path": "/groups/{id}/owners",
+    "target": "groupIds",
+    "shape": "collection",
+    "scopes": [
+      "Group.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Group.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/group-list-owners?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "roles": {
+    "id": "roles",
+    "kind": "graph",
+    "path": "/roleManagement/directory/roleAssignments",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "RoleManagement.Read.Directory"
+    ],
+    "delegatedSupported": true,
+    "permission": "RoleManagement.Read.Directory",
+    "source": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "roleDefinitions": {
+    "id": "roleDefinitions",
+    "kind": "graph",
+    "path": "/roleManagement/directory/roleDefinitions",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "RoleManagement.Read.Directory"
+    ],
+    "delegatedSupported": true,
+    "permission": "RoleManagement.Read.Directory",
+    "source": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "pimEligible": {
+    "id": "pimEligible",
+    "kind": "graph",
+    "path": "/roleManagement/directory/roleEligibilityScheduleInstances",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "RoleEligibilitySchedule.Read.Directory"
+    ],
+    "delegatedSupported": true,
+    "permission": "RoleEligibilitySchedule.Read.Directory",
+    "source": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "pimActive": {
+    "id": "pimActive",
+    "kind": "graph",
+    "path": "/roleManagement/directory/roleAssignmentScheduleInstances",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "RoleAssignmentSchedule.Read.Directory"
+    ],
+    "delegatedSupported": true,
+    "permission": "RoleAssignmentSchedule.Read.Directory",
+    "source": "https://learn.microsoft.com/en-us/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "accessReviews": {
+    "id": "accessReviews",
+    "kind": "graph",
+    "path": "/identityGovernance/accessReviews/definitions",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "AccessReview.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "AccessReview.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "ca": {
+    "id": "ca",
+    "kind": "graph",
+    "path": "/identity/conditionalAccess/policies",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "namedLocations": {
+    "id": "namedLocations",
+    "kind": "graph",
+    "path": "/identity/conditionalAccess/namedLocations",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "defaults": {
+    "id": "defaults",
+    "kind": "graph",
+    "path": "/policies/identitySecurityDefaultsEnforcementPolicy",
+    "target": "",
+    "shape": "object",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "authPolicy": {
+    "id": "authPolicy",
+    "kind": "graph",
+    "path": "/policies/authenticationMethodsPolicy",
+    "target": "",
+    "shape": "object",
+    "scopes": [
+      "Policy.Read.AuthenticationMethod"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.AuthenticationMethod",
+    "source": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "authMethods": {
+    "id": "authMethods",
+    "kind": "graph",
+    "path": "/users/{id}/authentication/methods",
+    "target": "userIds",
+    "shape": "collection",
+    "scopes": [
+      "UserAuthenticationMethod.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "UserAuthenticationMethod.Read.All; delegated role restrictions apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/authentication-list-methods?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "registration": {
+    "id": "registration",
+    "kind": "graph",
+    "path": "/reports/authenticationMethods/userRegistrationDetails",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "AuditLog.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "AuditLog.Read.All; licensing and delegated role requirements apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "signIns": {
+    "id": "signIns",
+    "kind": "graph",
+    "path": "/auditLogs/signIns?$filter=createdDateTime ge {start} and createdDateTime le {end}",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "AuditLog.Read.All",
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "AuditLog.Read.All; Policy.Read.All for Conditional Access details; licensing and roles apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/signIn-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "directoryAudit": {
+    "id": "directoryAudit",
+    "kind": "graph",
+    "path": "/auditLogs/directoryAudits?$filter=activityDateTime ge {start} and activityDateTime le {end}",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "AuditLog.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "AuditLog.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/directoryaudit-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "crossDefault": {
+    "id": "crossDefault",
+    "kind": "graph",
+    "path": "/policies/crossTenantAccessPolicy/default",
+    "target": "",
+    "shape": "object",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "crossPartners": {
+    "id": "crossPartners",
+    "kind": "graph",
+    "path": "/policies/crossTenantAccessPolicy/partners",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "authorization": {
+    "id": "authorization",
+    "kind": "graph",
+    "path": "/policies/authorizationPolicy",
+    "target": "",
+    "shape": "object",
+    "scopes": [
+      "Policy.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Policy.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/authorizationpolicy-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "apps": {
+    "id": "apps",
+    "kind": "graph",
+    "path": "/applications",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Application.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Application.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/application-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "principals": {
+    "id": "principals",
+    "kind": "graph",
+    "path": "/servicePrincipals",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Application.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Application.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "grants": {
+    "id": "grants",
+    "kind": "graph",
+    "path": "/oauth2PermissionGrants",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Directory.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Directory.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "appRoles": {
+    "id": "appRoles",
+    "kind": "graph",
+    "path": "/servicePrincipals/{id}/appRoleAssignments",
+    "target": "servicePrincipalIds",
+    "shape": "collection",
+    "scopes": [
+      "Application.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Application.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "appOwners": {
+    "id": "appOwners",
+    "kind": "graph",
+    "path": "/applications/{id}/owners",
+    "target": "applicationIds",
+    "shape": "collection",
+    "scopes": [
+      "Application.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Application.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/application-list-owners?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "federatedCredentials": {
+    "id": "federatedCredentials",
+    "kind": "graph",
+    "path": "/applications/{id}/federatedIdentityCredentials",
+    "target": "applicationIds",
+    "shape": "collection",
+    "scopes": [
+      "Application.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Application.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "federation": {
+    "id": "federation",
+    "kind": "graph",
+    "path": "/domains/{id}/federationConfiguration",
+    "target": "domainNames",
+    "shape": "collection",
+    "scopes": [
+      "Domain-InternalFederation.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Domain-InternalFederation.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "delegatedAdmin": {
+    "id": "delegatedAdmin",
+    "kind": "graph",
+    "path": "/tenantRelationships/delegatedAdminRelationships",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "DelegatedAdminRelationship.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DelegatedAdminRelationship.Read.All; partner/customer visibility limitations apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "riskyUsers": {
+    "id": "riskyUsers",
+    "kind": "graph",
+    "path": "/identityProtection/riskyUsers",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "IdentityRiskyUser.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "IdentityRiskyUser.Read.All; licensing and roles apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "riskDetections": {
+    "id": "riskDetections",
+    "kind": "graph",
+    "path": "/identityProtection/riskDetections",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "IdentityRiskEvent.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "IdentityRiskEvent.Read.All; licensing and roles apply",
+    "source": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "devices": {
+    "id": "devices",
+    "kind": "graph",
+    "path": "/devices",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Device.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Device.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/device-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "managedDevices": {
+    "id": "managedDevices",
+    "kind": "graph",
+    "path": "/deviceManagement/managedDevices",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "DeviceManagementManagedDevices.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DeviceManagementManagedDevices.Read.All; active Intune license",
+    "source": "https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "compliance": {
+    "id": "compliance",
+    "kind": "graph",
+    "path": "/deviceManagement/deviceCompliancePolicies",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "DeviceManagementConfiguration.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DeviceManagementConfiguration.Read.All; active Intune license",
+    "source": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicy-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "complianceAssignments": {
+    "id": "complianceAssignments",
+    "kind": "graph",
+    "path": "/deviceManagement/deviceCompliancePolicies/{id}/assignments",
+    "target": "compliancePolicyIds",
+    "shape": "collection",
+    "scopes": [
+      "DeviceManagementConfiguration.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DeviceManagementConfiguration.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "deviceConfigs": {
+    "id": "deviceConfigs",
+    "kind": "graph",
+    "path": "/deviceManagement/deviceConfigurations",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "DeviceManagementConfiguration.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DeviceManagementConfiguration.Read.All; excludes settings catalog and some endpoint security policy families",
+    "source": "https://learn.microsoft.com/en-us/graph/api/intune-deviceconfig-deviceconfiguration-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "appProtection": {
+    "id": "appProtection",
+    "kind": "graph",
+    "path": "/deviceAppManagement/managedAppPolicies",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "DeviceManagementApps.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "DeviceManagementApps.Read.All; expand platform assignments separately",
+    "source": "https://learn.microsoft.com/en-us/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "sites": {
+    "id": "sites",
+    "kind": "graph",
+    "path": "/sites/getAllSites",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "Sites.Read.All"
+    ],
+    "delegatedSupported": false,
+    "permission": "APPLICATION ONLY: Sites.Read.All; delegated unsupported",
+    "source": "https://learn.microsoft.com/en-us/graph/api/site-getallsites?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "site": {
+    "id": "site",
+    "kind": "graph",
+    "path": "/sites/{id}",
+    "target": "siteIds",
+    "shape": "object",
+    "scopes": [
+      "Sites.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Sites.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/site-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "drives": {
+    "id": "drives",
+    "kind": "graph",
+    "path": "/sites/{id}/drives",
+    "target": "siteIds",
+    "shape": "collection",
+    "scopes": [
+      "Sites.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Sites.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/drive-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "itemPermissions": {
+    "id": "itemPermissions",
+    "kind": "graph",
+    "path": "/drives/{driveId}/items/{itemId}/permissions",
+    "target": "driveItems",
+    "shape": "collection",
+    "scopes": [
+      "Files.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Files.Read.All or Sites.Read.All; caller-dependent permission visibility",
+    "source": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-permissions?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "team": {
+    "id": "team",
+    "kind": "graph",
+    "path": "/teams/{id}",
+    "target": "teamIds",
+    "shape": "object",
+    "scopes": [
+      "Team.ReadBasic.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Team.ReadBasic.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/team-get?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "channels": {
+    "id": "channels",
+    "kind": "graph",
+    "path": "/teams/{id}/channels",
+    "target": "teamIds",
+    "shape": "collection",
+    "scopes": [
+      "Channel.ReadBasic.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "Channel.ReadBasic.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/channel-list?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "teamMembers": {
+    "id": "teamMembers",
+    "kind": "graph",
+    "path": "/teams/{id}/members",
+    "target": "teamIds",
+    "shape": "collection",
+    "scopes": [
+      "TeamMember.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "TeamMember.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/team-list-members?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "teamApps": {
+    "id": "teamApps",
+    "kind": "graph",
+    "path": "/teams/{id}/installedApps?$expand=teamsAppDefinition",
+    "target": "teamIds",
+    "shape": "collection",
+    "scopes": [
+      "TeamsAppInstallation.ReadForTeam"
+    ],
+    "delegatedSupported": true,
+    "permission": "Delegated: TeamsAppInstallation.ReadForTeam. Application: TeamsAppInstallation.Read.Group (resource-specific consent) or TeamsAppInstallation.ReadForTeam.All for approved tenant-wide reading.",
+    "source": "https://learn.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "incidents": {
+    "id": "incidents",
+    "kind": "graph",
+    "path": "/security/incidents",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "SecurityIncident.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "SecurityIncident.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/security-list-incidents?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "alerts": {
+    "id": "alerts",
+    "kind": "graph",
+    "path": "/security/alerts_v2",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "SecurityAlert.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "SecurityAlert.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "secureScores": {
+    "id": "secureScores",
+    "kind": "graph",
+    "path": "/security/secureScores",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "SecurityEvents.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "SecurityEvents.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/security-list-securescores?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "backupPolicies": {
+    "id": "backupPolicies",
+    "kind": "graph",
+    "path": "/solutions/backupRestore/protectionPolicies",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "BackupRestore-Configuration.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "BackupRestore-Configuration.Read.All; Global cloud only",
+    "source": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-protectionpolicies?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "restoreSessions": {
+    "id": "restoreSessions",
+    "kind": "graph",
+    "path": "/solutions/backupRestore/restoreSessions",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "BackupRestore-Restore.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "BackupRestore-Restore.Read.All; Global cloud only",
+    "source": "https://learn.microsoft.com/en-us/graph/api/backuprestoreroot-list-restoresessions?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "health": {
+    "id": "health",
+    "kind": "graph",
+    "path": "/admin/serviceAnnouncement/healthOverviews",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "ServiceHealth.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "ServiceHealth.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "messages": {
+    "id": "messages",
+    "kind": "graph",
+    "path": "/admin/serviceAnnouncement/messages",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "ServiceMessage.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "ServiceMessage.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "cloudPCs": {
+    "id": "cloudPCs",
+    "kind": "graph",
+    "path": "/deviceManagement/virtualEndpoint/cloudPCs",
+    "target": "",
+    "shape": "collection",
+    "scopes": [
+      "CloudPC.Read.All"
+    ],
+    "delegatedSupported": true,
+    "permission": "CloudPC.Read.All",
+    "source": "https://learn.microsoft.com/en-us/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0",
+    "note": "Read the permission table and cloud availability in the linked API reference. Collection means all returned pages for this query, not proof of tenant-wide visibility."
+  },
+  "ppEnvironments": {
+    "id": "ppEnvironments",
+    "kind": "rest",
+    "path": "/environmentmanagement/environments?api-version=2024-10-01",
+    "resource": "https://api.powerplatform.com",
+    "host": "api.powerplatform.com",
+    "source": "https://learn.microsoft.com/en-us/rest/api/power-platform/environmentmanagement/environments/list-environments-for-user",
+    "permission": "Power Platform API environment read permissions and existing user access; PREVIEW, user-visible environments, not guaranteed tenant-wide inventory.",
+    "target": "",
+    "array": "value",
+    "paging": "nextLink",
+    "note": "Commercial cloud only in this adapter. Setup verifies/installs Az.Accounts and authenticates before collection, unless existing-session mode is selected. Reads use a token for this resource. Results are bounded by caller visibility. Review API request limits and preview status at the source."
+  },
+  "fabricWorkspaces": {
+    "id": "fabricWorkspaces",
+    "kind": "rest",
+    "path": "/v1.0/myorg/admin/groups?$top=5000&$skip={skip}&$expand=reports,datasets,dashboards",
+    "resource": "https://analysis.windows.net/powerbi/api",
+    "host": "api.powerbi.com",
+    "source": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-groups-as-admin",
+    "permission": "Delegated Tenant.Read.All plus Fabric administrator; service principals have separate documented tenant settings and consent restrictions.",
+    "target": "",
+    "array": "value",
+    "paging": "skip",
+    "note": "Commercial cloud only in this adapter. Setup verifies/installs Az.Accounts and authenticates before collection, unless existing-session mode is selected. Reads use a token for this resource. Results are bounded by caller visibility. Review API request limits and preview status at the source."
+  },
+  "fabricWorkspaceUsers": {
+    "id": "fabricWorkspaceUsers",
+    "kind": "rest",
+    "path": "/v1.0/myorg/admin/groups/{id}/users",
+    "resource": "https://analysis.windows.net/powerbi/api",
+    "host": "api.powerbi.com",
+    "source": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/groups-get-group-users-as-admin",
+    "permission": "Delegated Tenant.Read.All plus Fabric administrator; service principal conditions apply.",
+    "target": "workspaceIds",
+    "array": "value",
+    "paging": "nextLink",
+    "note": "Commercial cloud only in this adapter. Setup verifies/installs Az.Accounts and authenticates before collection, unless existing-session mode is selected. Reads use a token for this resource. Results are bounded by caller visibility. Review API request limits and preview status at the source."
+  },
+  "publicEmbeds": {
+    "id": "publicEmbeds",
+    "kind": "rest",
+    "path": "/v1.0/myorg/admin/widelySharedArtifacts/publishedToWeb",
+    "resource": "https://analysis.windows.net/powerbi/api",
+    "host": "api.powerbi.com",
+    "source": "https://learn.microsoft.com/en-us/rest/api/power-bi/admin/widely-shared-artifacts-published-to-web",
+    "permission": "Tenant.Read.All; Fabric administrator or supported service principal.",
+    "target": "",
+    "array": "artifactAccessEntities",
+    "paging": "token",
+    "note": "Commercial cloud only in this adapter. Setup verifies/installs Az.Accounts and authenticates before collection, unless existing-session mode is selected. Reads use a token for this resource. Results are bounded by caller visibility. Review API request limits and preview status at the source."
+  },
+  "fabricSettings": {
+    "id": "fabricSettings",
+    "kind": "rest",
+    "path": "/v1/admin/tenantsettings",
+    "resource": "https://api.fabric.microsoft.com",
+    "host": "api.fabric.microsoft.com",
+    "source": "https://learn.microsoft.com/en-us/rest/api/fabric/admin/tenants/list-tenant-settings",
+    "permission": "Delegated Tenant.Read.All plus Fabric administrator; supported service principal or managed identity conditions apply.",
+    "target": "",
+    "array": "value",
+    "paging": "token",
+    "note": "Commercial cloud only in this adapter. Setup verifies/installs Az.Accounts and authenticates before collection, unless existing-session mode is selected. Reads use a token for this resource. Results are bounded by caller visibility. Review API request limits and preview status at the source."
+  },
+  "exoOrg": {
+    "id": "exoOrg",
+    "kind": "exchange",
+    "command": "Get-OrganizationConfig",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-organizationconfig?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "auditConfig": {
+    "id": "auditConfig",
+    "kind": "exchange",
+    "command": "Get-AdminAuditLogConfig",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-adminauditlogconfig?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "transport": {
+    "id": "transport",
+    "kind": "exchange",
+    "command": "Get-TransportConfig",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportconfig?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "dkim": {
+    "id": "dkim",
+    "kind": "exchange",
+    "command": "Get-DkimSigningConfig",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dkimsigningconfig?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "acceptedDomains": {
+    "id": "acceptedDomains",
+    "kind": "exchange",
+    "command": "Get-AcceptedDomain",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-accepteddomain?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "remoteDomains": {
+    "id": "remoteDomains",
+    "kind": "exchange",
+    "command": "Get-RemoteDomain",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-remotedomain?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "inboundConnectors": {
+    "id": "inboundConnectors",
+    "kind": "exchange",
+    "command": "Get-InboundConnector",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboundconnector?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "outboundConnectors": {
+    "id": "outboundConnectors",
+    "kind": "exchange",
+    "command": "Get-OutboundConnector",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "transportRules": {
+    "id": "transportRules",
+    "kind": "exchange",
+    "command": "Get-TransportRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "antiPhish": {
+    "id": "antiPhish",
+    "kind": "exchange",
+    "command": "Get-AntiPhishPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "antiPhishRules": {
+    "id": "antiPhishRules",
+    "kind": "exchange",
+    "command": "Get-AntiPhishRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-antiphishrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "spam": {
+    "id": "spam",
+    "kind": "exchange",
+    "command": "Get-HostedContentFilterPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "spamRules": {
+    "id": "spamRules",
+    "kind": "exchange",
+    "command": "Get-HostedContentFilterRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedcontentfilterrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "outboundSpam": {
+    "id": "outboundSpam",
+    "kind": "exchange",
+    "command": "Get-HostedOutboundSpamFilterPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "outboundSpamRules": {
+    "id": "outboundSpamRules",
+    "kind": "exchange",
+    "command": "Get-HostedOutboundSpamFilterRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "malware": {
+    "id": "malware",
+    "kind": "exchange",
+    "command": "Get-MalwareFilterPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "malwareRules": {
+    "id": "malwareRules",
+    "kind": "exchange",
+    "command": "Get-MalwareFilterRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-malwarefilterrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "safeLinks": {
+    "id": "safeLinks",
+    "kind": "exchange",
+    "command": "Get-SafeLinksPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinkspolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "safeLinksRules": {
+    "id": "safeLinksRules",
+    "kind": "exchange",
+    "command": "Get-SafeLinksRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safelinksrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "safeAttachments": {
+    "id": "safeAttachments",
+    "kind": "exchange",
+    "command": "Get-SafeAttachmentPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "safeAttachmentsRules": {
+    "id": "safeAttachmentsRules",
+    "kind": "exchange",
+    "command": "Get-SafeAttachmentRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-safeattachmentrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "presetEop": {
+    "id": "presetEop",
+    "kind": "exchange",
+    "command": "Get-EOPProtectionPolicyRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-eopprotectionpolicyrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "presetDefender": {
+    "id": "presetDefender",
+    "kind": "exchange",
+    "command": "Get-ATPProtectionPolicyRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-atpprotectionpolicyrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "quarantine": {
+    "id": "quarantine",
+    "kind": "exchange",
+    "command": "Get-QuarantinePolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-quarantinepolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "authPolicies": {
+    "id": "authPolicies",
+    "kind": "exchange",
+    "command": "Get-AuthenticationPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-authenticationpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "mailboxes": {
+    "id": "mailboxes",
+    "kind": "exchange",
+    "command": "Get-Mailbox",
+    "parameters": {
+      "ResultSize": "Unlimited"
+    },
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailbox?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "casMailboxes": {
+    "id": "casMailboxes",
+    "kind": "exchange",
+    "command": "Get-CASMailbox",
+    "parameters": {
+      "ResultSize": "Unlimited"
+    },
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-casmailbox?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "inboxRules": {
+    "id": "inboxRules",
+    "kind": "exchange",
+    "command": "Get-InboxRule",
+    "parameters": {
+      "Mailbox": "{id}",
+      "IncludeHidden": true
+    },
+    "target": "mailboxes",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "mailboxPermissions": {
+    "id": "mailboxPermissions",
+    "kind": "exchange",
+    "command": "Get-MailboxPermission",
+    "parameters": {
+      "Identity": "{id}"
+    },
+    "target": "mailboxes",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "recipientPermissions": {
+    "id": "recipientPermissions",
+    "kind": "exchange",
+    "command": "Get-RecipientPermission",
+    "parameters": {
+      "Identity": "{id}"
+    },
+    "target": "mailboxes",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "ual": {
+    "id": "ual",
+    "kind": "exchange",
+    "command": "Search-UnifiedAuditLog",
+    "parameters": {
+      "StartDate": "{start}",
+      "EndDate": "{end}",
+      "SessionCommand": "ReturnLargeSet",
+      "ResultSize": 5000
+    },
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+    "note": "Runner repeats a unique SessionId until an empty page. The 50,000-result limit, duplicate pages, missing ResultCount, or a count mismatch produce Partial; split the interval and rerun. This remains a source query, not proof of event generation or retention."
+  },
+  "labels": {
+    "id": "labels",
+    "kind": "purview",
+    "command": "Get-Label",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-label?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "labelPolicies": {
+    "id": "labelPolicies",
+    "kind": "purview",
+    "command": "Get-LabelPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-labelpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "dlp": {
+    "id": "dlp",
+    "kind": "purview",
+    "command": "Get-DlpCompliancePolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "dlpRules": {
+    "id": "dlpRules",
+    "kind": "purview",
+    "command": "Get-DlpComplianceRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "retention": {
+    "id": "retention",
+    "kind": "purview",
+    "command": "Get-RetentionCompliancePolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancepolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "retentionRules": {
+    "id": "retentionRules",
+    "kind": "purview",
+    "command": "Get-RetentionComplianceRule",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-retentioncompliancerule?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "recordLabels": {
+    "id": "recordLabels",
+    "kind": "purview",
+    "command": "Get-ComplianceTag",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancetag?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "ediscovery": {
+    "id": "ediscovery",
+    "kind": "purview",
+    "command": "Get-ComplianceCase",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-compliancecase?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  },
+  "auditRetention": {
+    "id": "auditRetention",
+    "kind": "purview",
+    "command": "Get-UnifiedAuditLogRetentionPolicy",
+    "parameters": {},
+    "target": "",
+    "permission": "Existing session with an RBAC role exposing this read command and the required object scope. See command reference; do not assume Global Reader covers Exchange/Purview.",
+    "source": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-unifiedauditlogretentionpolicy?view=exchange-ps",
+    "note": "Inspect RBAC scoping, warnings and result limits. Results are a snapshot; confirm effective assignments and operational evidence separately."
+  }
+}

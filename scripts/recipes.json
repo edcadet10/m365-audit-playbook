@@ -1,0 +1,4057 @@
+{
+  "GOV-01": {
+    "id": "GOV-01",
+    "type": "control",
+    "title": "Tenant and workload boundary",
+    "controls": [
+      "GOV-01"
+    ],
+    "operations": [
+      "organization",
+      "domains",
+      "licenses",
+      "users",
+      "groups",
+      "sites"
+    ],
+    "requiredFields": [
+      "tenantBoundary",
+      "workloadInventory",
+      "exclusions"
+    ],
+    "objective": "Establish the complete population being assessed.",
+    "review": "Reconcile finance, identity and administrator inventories. Include production, development, acquired and partner-managed tenants. Record enabled workloads, geographies, business owners, external dependencies and explicit exclusions.",
+    "criterion": "The sponsor approves a boundary with every discovered tenant and workload accounted for; unexamined dependencies appear as limitations.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide"
+    ]
+  },
+  "GOV-02": {
+    "id": "GOV-02",
+    "type": "control",
+    "title": "Obligations and control criteria",
+    "controls": [
+      "GOV-02"
+    ],
+    "operations": [
+      "organization",
+      "licenses"
+    ],
+    "requiredFields": [
+      "obligations",
+      "adoptedCriteria",
+      "applicability",
+      "approval"
+    ],
+    "objective": "Translate business commitments into testable requirements.",
+    "review": "Identify mandatory obligations, contractual promises and internal targets separately. Select dated Microsoft, CISA and licensed CIS criteria. Map each adopted requirement to evidence and a control owner; mark unmapped requirements.",
+    "criterion": "Every claimed obligation has an owner, applicable population and assessment procedure. No benchmark score is presented as legal certification.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "GOV-03": {
+    "id": "GOV-03",
+    "type": "control",
+    "title": "Roles, accountability and separation",
+    "controls": [
+      "GOV-03"
+    ],
+    "operations": [
+      "roles",
+      "roleDefinitions",
+      "pimActive"
+    ],
+    "requiredFields": [
+      "responsibilityMatrix",
+      "separationReview",
+      "ownerAcceptance"
+    ],
+    "objective": "Prevent unowned or self-approved security administration.",
+    "review": "Match operational responsibilities to actual permissions. Examine who approves their own elevation, grants consent, exports investigations and accepts risk. Review conflicts and independent oversight.",
+    "criterion": "Sensitive functions have named accountable owners, justified access and independent review where separation is impractical.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "GOV-04": {
+    "id": "GOV-04",
+    "type": "control",
+    "title": "Exception governance",
+    "controls": [
+      "GOV-04"
+    ],
+    "operations": [
+      "ca",
+      "authorization"
+    ],
+    "requiredFields": [
+      "exceptionRegister",
+      "expiryReview",
+      "compensatingControls"
+    ],
+    "objective": "Keep accepted risk visible and time bounded.",
+    "review": "Join exceptions to actual users, applications, locations and policy IDs. Verify business necessity, expiration, compensating evidence and reapproval. Look for expired exclusions still active.",
+    "criterion": "Every active exception is discoverable, justified, approved and bounded; residual risk remains visible in reporting.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "GOV-05": {
+    "id": "GOV-05",
+    "type": "control",
+    "title": "License and entitlement assurance",
+    "controls": [
+      "GOV-05"
+    ],
+    "operations": [
+      "licenses",
+      "users"
+    ],
+    "requiredFields": [
+      "entitlementMatrix",
+      "purchasedLicenses",
+      "featureRequirements",
+      "contractReconciliation"
+    ],
+    "objective": "Determine which controls can actually be used and sustained.",
+    "review": "Distinguish Microsoft 365 from Office 365 bundles. Match benefiting users and workloads to feature prerequisites; inspect disabled plans and trial expiration. Validate backup and AI consumption separately.",
+    "criterion": "Required capabilities have verified entitlement and assignment, or an evidenced alternative and recorded gap. Missing licensing never becomes an automatic Pass.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "IAM-01": {
+    "id": "IAM-01",
+    "type": "control",
+    "title": "Privileged role population",
+    "controls": [
+      "IAM-01"
+    ],
+    "operations": [
+      "roles",
+      "roleDefinitions",
+      "pimActive",
+      "pimEligible",
+      "groupMembers"
+    ],
+    "requiredFields": [
+      "privilegedPopulation",
+      "nestedGroups",
+      "justification",
+      "approvals"
+    ],
+    "objective": "Identify every effective route to high privilege.",
+    "review": "Enumerate permanent, eligible, scoped and group-derived roles. Resolve memberships and app principals. Include Exchange, SharePoint, Teams, Purview, Intune and Defender administration; compare with HR and support rosters.",
+    "criterion": "Every effective privilege has a current owner and justification; unauthorized paths are findings, regardless of Global Administrator count.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "IAM-02": {
+    "id": "IAM-02",
+    "type": "control",
+    "title": "Effective MFA and authentication strength",
+    "controls": [
+      "IAM-02"
+    ],
+    "operations": [
+      "ca",
+      "defaults",
+      "authPolicy",
+      "registration",
+      "signIns"
+    ],
+    "requiredFields": [
+      "requiredStrength",
+      "personaMatrix",
+      "allowedCase",
+      "prohibitedCase"
+    ],
+    "objective": "Verify required identities receive the intended authentication control.",
+    "review": "Define required strength by role and risk. Reconcile registrations with policy scope. Test administrator, employee, guest and exception identities using fresh sessions; include trusted locations and alternate clients. Interpret token claims rather than requiring a prompt every time.",
+    "criterion": "The intended population is covered by enforced controls and observed outcomes, with documented exceptions; registration alone is insufficient.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults"
+    ]
+  },
+  "IAM-03": {
+    "id": "IAM-03",
+    "type": "control",
+    "title": "Conditional Access coverage and interaction",
+    "controls": [
+      "IAM-03"
+    ],
+    "operations": [
+      "ca",
+      "namedLocations",
+      "defaults",
+      "crossDefault",
+      "signIns"
+    ],
+    "requiredFields": [
+      "coverageMatrix",
+      "exclusions",
+      "effectivePolicyReview"
+    ],
+    "objective": "Find gaps caused by policy state, scope and combined evaluation.",
+    "review": "Build an identity-by-resource-by-client matrix. Check exclusions, authentication strengths, grant operators and session controls. Use What If for design analysis, then corroborate with sign-ins and approved tests. Account for existing tokens and dependencies.",
+    "criterion": "No unexplained route bypasses the adopted access requirements; report-only policies are assessed as design evidence only.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0"
+    ]
+  },
+  "IAM-04": {
+    "id": "IAM-04",
+    "type": "control",
+    "title": "Emergency administrative access",
+    "controls": [
+      "IAM-04"
+    ],
+    "operations": [
+      "roles",
+      "authMethods",
+      "ca",
+      "signIns",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "emergencyAccounts",
+      "independentDependencies",
+      "custody",
+      "alertReceipt",
+      "exerciseTiming"
+    ],
+    "objective": "Maintain independently usable recovery access without uncontrolled privilege.",
+    "review": "Review at least two cloud-only emergency accounts, independent strong credentials, active role assignment and relevant policy exclusions against current Microsoft guidance. Observe an authorized sign-in exercise, alert delivery and secure credential recovery.",
+    "criterion": "Recovery access works when normal admin dependencies fail; access is monitored, controlled and exercised. Password-only MFA bypass is not a blanket recommendation.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "IAM-05": {
+    "id": "IAM-05",
+    "type": "control",
+    "title": "Privileged elevation and review",
+    "controls": [
+      "IAM-05"
+    ],
+    "operations": [
+      "pimEligible",
+      "pimActive",
+      "accessReviews",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "elevationApprovals",
+      "reviewDecisions",
+      "expiredAssignments"
+    ],
+    "objective": "Limit standing administrative access and verify elevation governance.",
+    "review": "Examine approval, justification, duration and authentication requirements for sensitive roles. Sample activations and subsequent use. Check stale eligible assignments and whether approvers can be unavailable simultaneously.",
+    "criterion": "Elevation is justified, constrained and reviewed; approved emergency access remains available. A configured PIM policy without operational review is insufficient.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "IAM-06": {
+    "id": "IAM-06",
+    "type": "control",
+    "title": "Joiner, mover and leaver lifecycle",
+    "controls": [
+      "IAM-06"
+    ],
+    "operations": [
+      "users",
+      "groups",
+      "groupMembers",
+      "directoryAudit",
+      "signIns"
+    ],
+    "requiredFields": [
+      "hrPopulation",
+      "lifecycleSamples",
+      "removalTimes",
+      "residualSessions"
+    ],
+    "objective": "Remove access when business authorization ends.",
+    "review": "Select recent leavers, movers and urgent terminations. Compare authoritative timestamps to disablement and downstream access removal. Check hybrid source, refresh tokens, application sessions, mailbox delegation and owned automations.",
+    "criterion": "Access removal meets the organization's documented SLA across relevant systems; preservation and business continuity are handled separately.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent"
+    ]
+  },
+  "IAM-07": {
+    "id": "IAM-07",
+    "type": "control",
+    "title": "External identity lifecycle and partner trust",
+    "controls": [
+      "IAM-07"
+    ],
+    "operations": [
+      "users",
+      "crossDefault",
+      "crossPartners",
+      "accessReviews",
+      "signIns"
+    ],
+    "requiredFields": [
+      "guestSponsors",
+      "reviewDates",
+      "partnerTrust",
+      "lifecycleDecisions"
+    ],
+    "objective": "Constrain guest and cross-tenant access to approved collaboration.",
+    "review": "Resolve guest sponsors and resource access. Review both default and partner-specific trust, including accepted MFA/device claims. Inspect dormant identities, access packages and review decisions; reconcile shared-channel participants separately.",
+    "criterion": "External access is sponsored, scoped, reviewed and removed when no longer needed; trusted claims have a documented partner rationale.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
+      "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals"
+    ]
+  },
+  "IAM-08": {
+    "id": "IAM-08",
+    "type": "control",
+    "title": "Authentication recovery and legacy access",
+    "controls": [
+      "IAM-08"
+    ],
+    "operations": [
+      "authPolicy",
+      "authMethods",
+      "authPolicies",
+      "casMailboxes",
+      "signIns"
+    ],
+    "requiredFields": [
+      "recoveryProcess",
+      "legacyExceptions",
+      "recoveryExercises"
+    ],
+    "objective": "Prevent weak fallback paths from defeating strong access controls.",
+    "review": "Review helpdesk identity verification, recovery credentials and method registration. Check legacy protocols and app dependencies. Test one recovery workflow with an authorized account; confirm the result does not create an undocumented bypass.",
+    "criterion": "Recovery assurance is proportionate to the account's privilege and legacy access has a documented migration or compensating control.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+      "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission"
+    ]
+  },
+  "IAM-09": {
+    "id": "IAM-09",
+    "type": "control",
+    "title": "Risk-based access and investigation",
+    "controls": [
+      "IAM-09"
+    ],
+    "operations": [
+      "riskyUsers",
+      "riskDetections",
+      "ca",
+      "signIns"
+    ],
+    "requiredFields": [
+      "riskTriage",
+      "remediations",
+      "licensing",
+      "effectiveEnforcement"
+    ],
+    "objective": "Verify identity risk leads to appropriate control and investigation.",
+    "review": "Review user and sign-in risk separately, feature entitlement and deployed policy experience. Inspect how detected risk is investigated and dismissed. Use permitted simulations or historical sanitized cases rather than provoking real account compromise.",
+    "criterion": "Risk handling matches approved thresholds and evidence supports closure; unavailable premium signals remain a disclosed limitation.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "APP-01": {
+    "id": "APP-01",
+    "type": "control",
+    "title": "Application and service principal inventory",
+    "controls": [
+      "APP-01"
+    ],
+    "operations": [
+      "apps",
+      "principals",
+      "appOwners",
+      "delegatedAdmin"
+    ],
+    "requiredFields": [
+      "applicationRegister",
+      "businessOwners",
+      "approvalDates"
+    ],
+    "objective": "Expose persistent non-human access and abandoned applications.",
+    "review": "Reconcile registrations with service principals and business systems. Identify orphaned owners, unused high privilege, multitenant publishers and credentials. Distinguish application permissions from delegated grants and user-assigned access.",
+    "criterion": "Each privileged application has an accountable owner, purpose, reviewed permission set and lifecycle.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    ]
+  },
+  "APP-02": {
+    "id": "APP-02",
+    "type": "control",
+    "title": "Consent and existing grants",
+    "controls": [
+      "APP-02"
+    ],
+    "operations": [
+      "authorization",
+      "grants",
+      "appRoles",
+      "principals"
+    ],
+    "requiredFields": [
+      "consentApprovals",
+      "permissionJustification",
+      "historicGrantReview"
+    ],
+    "objective": "Prevent inappropriate app authorization and inherited excessive consent.",
+    "review": "Review new-consent rules and enumerate existing grants separately. Examine permissions exposing mail, files, directory roles or write capabilities. Sample approval decisions and publisher verification without equating publisher verification to trust.",
+    "criterion": "Granted access matches business need and approved scope; changing consent settings does not substitute for reviewing old grants.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "APP-03": {
+    "id": "APP-03",
+    "type": "control",
+    "title": "Workload identity credentials and trust",
+    "controls": [
+      "APP-03"
+    ],
+    "operations": [
+      "apps",
+      "principals",
+      "federatedCredentials",
+      "appOwners"
+    ],
+    "requiredFields": [
+      "credentialInventory",
+      "rotationRecords",
+      "federationTrustReview"
+    ],
+    "objective": "Reduce credential and federation abuse in unattended access.",
+    "review": "Inspect metadata without collecting secret values. Review owner changes, credential addition alerts and federation restrictions. Evaluate managed identities on their actual resources; workload Conditional Access coverage is not universal.",
+    "criterion": "Credentials are scoped, protected, monitored and replaceable; trust subjects cannot be satisfied by unintended workloads.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    ]
+  },
+  "APP-04": {
+    "id": "APP-04",
+    "type": "control",
+    "title": "Application resource boundaries",
+    "controls": [
+      "APP-04"
+    ],
+    "operations": [
+      "appRoles",
+      "grants",
+      "principals",
+      "itemPermissions"
+    ],
+    "requiredFields": [
+      "approvedResources",
+      "allowedCase",
+      "prohibitedCase",
+      "effectiveScope"
+    ],
+    "objective": "Prove applications reach only approved data and actions.",
+    "review": "Map app permissions through both API and workload authorization. With a controlled identity, test an allowed resource and one outside its intended scope. Review owner and credential administrators as privilege paths.",
+    "criterion": "Allowed operations succeed and prohibited resource/action combinations fail; permission names alone do not establish isolation.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    ]
+  },
+  "APP-05": {
+    "id": "APP-05",
+    "type": "control",
+    "title": "Automation and partner administration",
+    "controls": [
+      "APP-05"
+    ],
+    "operations": [
+      "delegatedAdmin",
+      "apps",
+      "roles",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "automationInventory",
+      "partnerAccess",
+      "pipelineControls",
+      "offboarding"
+    ],
+    "objective": "Audit external administrators and administrative pipelines.",
+    "review": "Trace a partner or pipeline action to a named authorization. Review expiration, offboarding, repository permissions and secret custody. Confirm automated output and logs do not expose tenant evidence publicly.",
+    "criterion": "Delegated access is bounded to current need and changes are attributable; pipelines cannot silently grant themselves new authority.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "APP-06": {
+    "id": "APP-06",
+    "type": "control",
+    "title": "Cloud app discovery and session controls",
+    "controls": [
+      "APP-06"
+    ],
+    "operations": [
+      "ca",
+      "signIns",
+      "alerts"
+    ],
+    "requiredFields": [
+      "cloudDiscoveryExport",
+      "sessionPolicyExport",
+      "trafficCoverage",
+      "bypassCases"
+    ],
+    "objective": "Assess connected SaaS and browser session restrictions.",
+    "review": "Inventory connected and unsanctioned services. Test protected browser sessions and native-client paths, content inspection limits and encrypted/large-file cases. Confirm resource apps are covered and collector credentials remain healthy.",
+    "criterion": "Required sessions and transfer paths are governed with explicit unsupported cases and tested alternatives.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-cloud-apps/caac-known-issues",
+      "https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "HYB-01": {
+    "id": "HYB-01",
+    "type": "control",
+    "title": "Identity synchronization and federation",
+    "controls": [
+      "HYB-01"
+    ],
+    "operations": [
+      "organization",
+      "users",
+      "domains",
+      "federation"
+    ],
+    "requiredFields": [
+      "syncServerInventory",
+      "versionStatus",
+      "privilegedAccess",
+      "healthExport"
+    ],
+    "objective": "Protect infrastructure that can influence cloud identity.",
+    "review": "Identify every server, agent and trust path. Review hardening, patch support, service accounts and remote administration. Verify staging/recovery arrangements and monitor unexpected synchronization or federation changes.",
+    "criterion": "Cloud identity authority is understood, supported, access-controlled and monitored, with tested recovery.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "HYB-02": {
+    "id": "HYB-02",
+    "type": "control",
+    "title": "Hybrid messaging and application connectors",
+    "controls": [
+      "HYB-02"
+    ],
+    "operations": [
+      "inboundConnectors",
+      "outboundConnectors",
+      "transportRules",
+      "federation"
+    ],
+    "requiredFields": [
+      "hybridTopology",
+      "connectorOwners",
+      "certificateExpiry",
+      "failoverRecords"
+    ],
+    "objective": "Prevent unmanaged relay and integration paths.",
+    "review": "Walk inbound and outbound paths, including bypass routes around filtering. Verify trust by endpoint and credential, renewal ownership and legacy dependencies. Test approved representative messages and application access.",
+    "criterion": "Every connector has a business owner, bounded trust and observed expected routing.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+      "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission"
+    ]
+  },
+  "HYB-03": {
+    "id": "HYB-03",
+    "type": "control",
+    "title": "Source-of-authority and outage exercise",
+    "controls": [
+      "HYB-03"
+    ],
+    "operations": [
+      "organization",
+      "federation",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "sourceAuthority",
+      "dependencyMap",
+      "outageExercise",
+      "reconciliation"
+    ],
+    "objective": "Prove identity continuity and emergency changes work across systems.",
+    "review": "Tabletop loss of federation or sync and urgent termination during that outage. Identify which system accepts each change, what is cached and how reconciliations occur. Observe a non-disruptive recovery rehearsal.",
+    "criterion": "The organization can maintain essential access and revoke dangerous access within approved objectives during dependency failure.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "MAIL-01": {
+    "id": "MAIL-01",
+    "type": "control",
+    "title": "Sender authentication and domain ownership",
+    "controls": [
+      "MAIL-01"
+    ],
+    "operations": [
+      "domains",
+      "acceptedDomains",
+      "dkim"
+    ],
+    "requiredFields": [
+      "senderInventory",
+      "dnsRecords",
+      "messageHeaders",
+      "alignmentResults"
+    ],
+    "objective": "Prevent unauthorized domain use while preserving legitimate sending.",
+    "review": "Reconcile senders with business owners. Check SPF structure and lookup constraints, DKIM signing and tenant-provided selectors, and DMARC alignment. Sample each sending platform; inspect parked domains separately. Stage enforcement based on legitimate traffic evidence.",
+    "criterion": "Approved senders authenticate and align; unauthorized use is addressed by the adopted policy. A published record without successful headers is insufficient.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+    ]
+  },
+  "MAIL-02": {
+    "id": "MAIL-02",
+    "type": "control",
+    "title": "Threat policy coverage and precedence",
+    "controls": [
+      "MAIL-02"
+    ],
+    "operations": [
+      "presetEop",
+      "presetDefender",
+      "antiPhish",
+      "antiPhishRules",
+      "spam",
+      "spamRules",
+      "malware",
+      "malwareRules",
+      "safeLinks",
+      "safeLinksRules",
+      "safeAttachments",
+      "safeAttachmentsRules"
+    ],
+    "requiredFields": [
+      "recipientPopulation",
+      "effectivePrecedence",
+      "exceptions",
+      "protectionObservations"
+    ],
+    "objective": "Verify intended email protection actually applies to recipients.",
+    "review": "Map ordinary, executive and exception recipients to effective policy. Review impersonation targets, protections and quarantine handling. Resolve precedence before judging custom settings; use approved benign tests and policy evaluation evidence.",
+    "criterion": "Required recipient populations receive the adopted protection profile; unavailable premium features are disclosed.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies"
+    ]
+  },
+  "MAIL-03": {
+    "id": "MAIL-03",
+    "type": "control",
+    "title": "Forwarding, inbox rules and delegation",
+    "controls": [
+      "MAIL-03"
+    ],
+    "operations": [
+      "mailboxes",
+      "inboxRules",
+      "mailboxPermissions",
+      "recipientPermissions",
+      "outboundSpam",
+      "outboundSpamRules",
+      "remoteDomains",
+      "transportRules"
+    ],
+    "requiredFields": [
+      "approvedForwarding",
+      "effectiveDestinations",
+      "deliveryEvidence",
+      "delegationApprovals"
+    ],
+    "objective": "Identify unauthorized mailbox persistence or data transfer.",
+    "review": "Review all high-risk mailboxes and a justified remaining sample. Correlate forwarding and delegates with approvals and sign-in events. Inspect outbound policies, remote domains and transport rules together; verify actual forwarding behavior.",
+    "criterion": "External forwarding and delegation are authorized, constrained and monitored; suspicious rules are escalated promptly.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
+      "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing"
+    ]
+  },
+  "MAIL-04": {
+    "id": "MAIL-04",
+    "type": "control",
+    "title": "SMTP AUTH and legacy dependencies",
+    "controls": [
+      "MAIL-04"
+    ],
+    "operations": [
+      "transport",
+      "casMailboxes",
+      "authPolicies",
+      "signIns"
+    ],
+    "requiredFields": [
+      "smtpClients",
+      "authModes",
+      "oauthEvidence",
+      "exceptionOwners"
+    ],
+    "objective": "Eliminate avoidable password-based messaging access.",
+    "review": "Distinguish the SMTP AUTH protocol from Basic authentication. Check organization settings, mailbox overrides and actual client authentication. Recheck Microsoft's live retirement notice; identify owners and modern-authentication migration tests.",
+    "criterion": "Legacy access is either removed or explicitly risk-managed with a tested transition plan; the audit does not assume an obsolete retirement date has removed it.",
+    "sources": [
+      "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+      "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission"
+    ]
+  },
+  "MAIL-05": {
+    "id": "MAIL-05",
+    "type": "control",
+    "title": "Mail-flow bypass and quarantine",
+    "controls": [
+      "MAIL-05"
+    ],
+    "operations": [
+      "transportRules",
+      "inboundConnectors",
+      "quarantine",
+      "spam",
+      "spamRules"
+    ],
+    "requiredFields": [
+      "bypassJustifications",
+      "allowedSenders",
+      "quarantineRoles",
+      "releaseSamples"
+    ],
+    "objective": "Prevent broad exceptions from neutralizing filtering.",
+    "review": "Trace messages through third-party gateways and Exchange. Investigate broad allow rules, filtering bypass, unauthenticated relay and user release permissions. Sample exception creation and suspicious release events.",
+    "criterion": "Bypasses have narrow business scope, accountable owners and periodic review; suspicious content is handled through an assigned process.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing"
+    ]
+  },
+  "MAIL-06": {
+    "id": "MAIL-06",
+    "type": "control",
+    "title": "Mailbox auditing and administrative exposure",
+    "controls": [
+      "MAIL-06"
+    ],
+    "operations": [
+      "auditConfig",
+      "exoOrg",
+      "mailboxes",
+      "ual"
+    ],
+    "requiredFields": [
+      "auditedActions",
+      "bypassAssociations",
+      "knownEvents",
+      "delegatedAccessReview"
+    ],
+    "objective": "Establish reliable evidence for sensitive mailbox access.",
+    "review": "Check organization-level auditing before interpreting per-mailbox flags. Review bypasses and action coverage, including licensed events. Trace a permitted test action through the audit pipeline and review mailbox-level privileged access.",
+    "criterion": "Required access is auditable and least-privileged, or limitations are explicit; a single boolean does not establish full event coverage.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "https://learn.microsoft.com/en-us/purview/audit-search",
+      "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable"
+    ]
+  },
+  "COL-01": {
+    "id": "COL-01",
+    "type": "control",
+    "title": "External sharing boundaries",
+    "controls": [
+      "COL-01"
+    ],
+    "operations": [
+      "sites",
+      "site",
+      "groups",
+      "groupMembers",
+      "itemPermissions"
+    ],
+    "requiredFields": [
+      "spoTenantExport",
+      "siteSharingExport",
+      "approvedAudience",
+      "externalAccessCases"
+    ],
+    "objective": "Control external collaboration at tenant, site and item levels.",
+    "review": "Inventory permissive sites and sensitive content. Review link types, expiration, guests and direct grants. Evaluate tenant limits alongside site settings and item permissions. Test anonymous, approved guest and unrelated user access to synthetic content.",
+    "criterion": "Access matches approved collaboration requirements and sensitive data is not publicly exposed without authorization.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "COL-02": {
+    "id": "COL-02",
+    "type": "control",
+    "title": "Effective permissions and broad access",
+    "controls": [
+      "COL-02"
+    ],
+    "operations": [
+      "groupMembers",
+      "groupOwners",
+      "itemPermissions"
+    ],
+    "requiredFields": [
+      "siteAclExport",
+      "broadGroups",
+      "linkInventory",
+      "itemSamples",
+      "actualAccess"
+    ],
+    "objective": "Find oversharing hidden behind group membership and inheritance.",
+    "review": "Trace permissions from broad groups to sampled sensitive items, including broken inheritance. Review owner and administrator rights, inactive memberships and all-company access. Compare discovered access with the data owner's intended audience.",
+    "criterion": "The actual audience is approved and reviewed; a private site name or label is not proof.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy"
+    ]
+  },
+  "COL-03": {
+    "id": "COL-03",
+    "type": "control",
+    "title": "Site lifecycle and owner accountability",
+    "controls": [
+      "COL-03"
+    ],
+    "operations": [
+      "sites",
+      "site",
+      "groupOwners"
+    ],
+    "requiredFields": [
+      "siteOwners",
+      "reviewDates",
+      "staleSiteDisposition",
+      "lifecycleApproval"
+    ],
+    "objective": "Prevent abandoned collaboration spaces from retaining uncontrolled access.",
+    "review": "Reconcile site creation, guest access and ownership with projects and business units. Sample inactive and orphaned sites; inspect Teams private/shared-channel sites independently. Determine archive, retention and deletion dependencies.",
+    "criterion": "Each site has an accountable owner, classification and lifecycle decision; no unmanaged high-risk space remains unexplained.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "https://learn.microsoft.com/en-us/purview/retention"
+    ]
+  },
+  "COL-04": {
+    "id": "COL-04",
+    "type": "control",
+    "title": "Unmanaged-device and sync access",
+    "controls": [
+      "COL-04"
+    ],
+    "operations": [
+      "ca",
+      "site",
+      "signIns"
+    ],
+    "requiredFields": [
+      "spoAccessExport",
+      "syncRestrictions",
+      "deviceAccessCases"
+    ],
+    "objective": "Limit data transfer to devices outside approved management.",
+    "review": "Test approved device/browser combinations with synthetic content. Verify download, sync and session restrictions rather than judging only sign-in success. Consider app protection and permitted business exceptions.",
+    "criterion": "Data handling on unmanaged devices matches the agreed control design across tested clients.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview"
+    ]
+  },
+  "COL-05": {
+    "id": "COL-05",
+    "type": "control",
+    "title": "Leaver content, versioning and restoration",
+    "controls": [
+      "COL-05"
+    ],
+    "operations": [
+      "users",
+      "sites",
+      "drives"
+    ],
+    "requiredFields": [
+      "leaverContentAssignments",
+      "versionSettings",
+      "recycleBinInventory",
+      "restoreRecords"
+    ],
+    "objective": "Preserve business content while retiring access.",
+    "review": "Sample departed owners and deleted content. Confirm approved transfer, removal of sharing and preservation obligations. Perform recovery testing on synthetic items; document what version or recycle mechanisms cannot restore.",
+    "criterion": "Content remains available to authorized successors for the required period and recovery outcomes are demonstrated.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/retention",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "TEAM-01": {
+    "id": "TEAM-01",
+    "type": "control",
+    "title": "External, guest and shared-channel paths",
+    "controls": [
+      "TEAM-01"
+    ],
+    "operations": [
+      "team",
+      "channels",
+      "teamMembers",
+      "crossDefault",
+      "crossPartners"
+    ],
+    "requiredFields": [
+      "teamsFederationExport",
+      "guestPolicyExport",
+      "sharedChannelMembership",
+      "actualAccess"
+    ],
+    "objective": "Assess every distinct route for external collaboration.",
+    "review": "Review federation, guest membership and shared channels as separate mechanisms. Reconcile shared-channel users with partner trust and channel sites. Test allowed and disallowed partner scenarios using controlled identities.",
+    "criterion": "Each collaboration path matches approved partner relationships; closing one path does not leave another unexplained.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
+      "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview"
+    ]
+  },
+  "TEAM-02": {
+    "id": "TEAM-02",
+    "type": "control",
+    "title": "Meeting, recording and transcript exposure",
+    "controls": [
+      "TEAM-02"
+    ],
+    "operations": [
+      "team",
+      "channels"
+    ],
+    "requiredFields": [
+      "meetingPolicyExport",
+      "policyAssignments",
+      "recordingPermissions",
+      "transcriptRetention"
+    ],
+    "objective": "Protect sensitive meetings and their persistent artifacts.",
+    "review": "Define meeting tiers and test organizer/attendee behavior. Inspect who can join, present, record, transcribe and retrieve artifacts afterward. Reconcile retention with recording expiration; verify actual license support.",
+    "criterion": "Sensitive meetings and artifacts have the intended audience and lifecycle; recommended defaults are tailored to business use.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
+      "https://learn.microsoft.com/en-us/purview/retention",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "TEAM-03": {
+    "id": "TEAM-03",
+    "type": "control",
+    "title": "Applications, bots and integrations",
+    "controls": [
+      "TEAM-03"
+    ],
+    "operations": [
+      "teamApps",
+      "apps",
+      "grants",
+      "appRoles"
+    ],
+    "requiredFields": [
+      "teamsAppPolicyExport",
+      "botOwners",
+      "runtimePermissions",
+      "approvalRecords"
+    ],
+    "objective": "Control third-party and custom extensions in collaboration.",
+    "review": "Review app approval and availability, actual grants and data transfer. Sample custom apps and bots that act across channels. Check whether removal from Teams also resolves relevant backend access and credentials.",
+    "criterion": "Every enabled integration has reviewed permissions, accountable ownership and an offboarding path.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    ]
+  },
+  "TEAM-04": {
+    "id": "TEAM-04",
+    "type": "control",
+    "title": "Team ownership, channel sites and telephony",
+    "controls": [
+      "TEAM-04"
+    ],
+    "operations": [
+      "groups",
+      "groupOwners",
+      "team",
+      "channels",
+      "teamMembers"
+    ],
+    "requiredFields": [
+      "ownerCoverage",
+      "channelSiteMapping",
+      "telephonyPolicies",
+      "emergencyCallingReview"
+    ],
+    "objective": "Capture operational dependencies beyond chat settings.",
+    "review": "Review owner redundancy and project closure. Reconcile channel sites with retention and backup scope. For voice, examine number ownership, emergency-calling design, carrier dependencies and authorized toll usage with telecom specialists.",
+    "criterion": "Teams-related resources and voice dependencies are owned and included in appropriate operational and recovery plans.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoftteams/shared-channels",
+      "https://learn.microsoft.com/en-us/microsoftteams/configure-meetings-three-tiers-protection",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "END-01": {
+    "id": "END-01",
+    "type": "control",
+    "title": "Device population and management coverage",
+    "controls": [
+      "END-01"
+    ],
+    "operations": [
+      "devices",
+      "managedDevices"
+    ],
+    "requiredFields": [
+      "assetRegister",
+      "defenderInventory",
+      "ownership",
+      "reconciliationDecisions"
+    ],
+    "objective": "Establish the real denominator for endpoint assurance.",
+    "review": "Join inventories by stable identifiers and investigate unmatched assets. Separate registered, enrolled, compliant and protected states. Include macOS, mobile and Linux where deployed; identify duplicate/stale records and unsupported systems.",
+    "criterion": "All business devices are accounted for with an approved management model; unmanaged assets remain in the risk denominator.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+      "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies"
+    ]
+  },
+  "END-02": {
+    "id": "END-02",
+    "type": "control",
+    "title": "Compliance and access enforcement",
+    "controls": [
+      "END-02"
+    ],
+    "operations": [
+      "managedDevices",
+      "compliance",
+      "complianceAssignments",
+      "ca",
+      "signIns"
+    ],
+    "requiredFields": [
+      "noPolicySetting",
+      "gracePeriods",
+      "effectiveAssignments",
+      "accessCases"
+    ],
+    "objective": "Ensure device health meaningfully affects access.",
+    "review": "Inspect tenant-wide treatment of devices without assigned policies, platform-specific assignments and stale-state handling. Test compliant, noncompliant, unassigned and grace-period devices against protected resources.",
+    "criterion": "Observed access follows the approved device trust policy; enrollment or a policy object alone does not establish protection.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "END-03": {
+    "id": "END-03",
+    "type": "control",
+    "title": "Security baseline and local privilege",
+    "controls": [
+      "END-03"
+    ],
+    "operations": [
+      "deviceConfigs",
+      "managedDevices"
+    ],
+    "requiredFields": [
+      "settingsCatalogExport",
+      "endpointSecurityExport",
+      "assignmentStatus",
+      "localAdmin",
+      "encryption",
+      "firewall"
+    ],
+    "objective": "Verify effective hardening on representative endpoints.",
+    "review": "Sample platform and build cohorts. Reconcile baseline and other management sources; inspect effective settings on devices. Check encryption, local admin control, recovery-key custody, firewall and attack-surface rules against adopted platform requirements.",
+    "criterion": "Required settings are effective, exceptions are approved and recovery access is controlled.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/intune-service/protect/security-baselines-configure",
+      "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies"
+    ]
+  },
+  "END-04": {
+    "id": "END-04",
+    "type": "control",
+    "title": "Endpoint detection and response health",
+    "controls": [
+      "END-04"
+    ],
+    "operations": [
+      "managedDevices",
+      "alerts",
+      "incidents"
+    ],
+    "requiredFields": [
+      "defenderInventory",
+      "sensorHealth",
+      "tamperProtection",
+      "detectionReceipt"
+    ],
+    "objective": "Confirm sensors and response workflows work beyond onboarding.",
+    "review": "Reconcile protection inventory with devices. Inspect unhealthy sensors, broad exclusions and response access. Use an approved vendor benign validation procedure on a test endpoint and trace the alert to the assigned responder.",
+    "criterion": "Coverage and sensor health are measured against the real fleet; the response team receives and handles test telemetry.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+      "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks"
+    ]
+  },
+  "END-05": {
+    "id": "END-05",
+    "type": "control",
+    "title": "Patch, application and browser lifecycle",
+    "controls": [
+      "END-05"
+    ],
+    "operations": [
+      "managedDevices",
+      "deviceConfigs",
+      "messages"
+    ],
+    "requiredFields": [
+      "updateRings",
+      "installedSoftware",
+      "vulnerabilityExport",
+      "exceptions"
+    ],
+    "objective": "Reduce exposure from unsupported software and unsafe client configuration.",
+    "review": "Compare deployed versions with currently supported vendor releases. Sample failed updates and long-lived exceptions. Review Office/browser extensions and document handling against the adopted baseline, including business macros.",
+    "criterion": "Update and application controls meet approved SLAs with validated exceptions and accountable remediation.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/intune-service/protect/security-baselines-configure",
+      "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies"
+    ]
+  },
+  "END-06": {
+    "id": "END-06",
+    "type": "control",
+    "title": "BYOD and application data protection",
+    "controls": [
+      "END-06"
+    ],
+    "operations": [
+      "appProtection",
+      "ca",
+      "signIns"
+    ],
+    "requiredFields": [
+      "platformPolicyExports",
+      "appAssignments",
+      "copySaveCases",
+      "selectiveRemovalRecords"
+    ],
+    "objective": "Protect organizational data in permitted unmanaged-device scenarios.",
+    "review": "Test supported apps and platforms using synthetic data, including personal-account transfer and offline conditions. Confirm restrictions attach to the correct user and app, and assess selective removal without affecting personal content.",
+    "criterion": "Approved app data remains within intended boundaries and a controlled selective-wipe exercise succeeds.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "DATA-01": {
+    "id": "DATA-01",
+    "type": "control",
+    "title": "Data discovery and classification",
+    "controls": [
+      "DATA-01"
+    ],
+    "operations": [
+      "sites",
+      "drives",
+      "labels"
+    ],
+    "requiredFields": [
+      "dataMap",
+      "classificationResults",
+      "repositoryCoverage",
+      "businessValidation"
+    ],
+    "objective": "Locate sensitive information and assign protection requirements.",
+    "review": "Reconcile automated discovery with business interviews and sampled content. Cover mail, files, chats, recordings, Power Platform and analytics. Use synthetic or minimized data to test classifiers and document uninspectable/encrypted formats.",
+    "criterion": "Sensitive data classes, locations and owners are known; blind spots are recorded and prioritized.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+      "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing"
+    ]
+  },
+  "DATA-02": {
+    "id": "DATA-02",
+    "type": "control",
+    "title": "Sensitivity labels and encryption",
+    "controls": [
+      "DATA-02"
+    ],
+    "operations": [
+      "labels",
+      "labelPolicies"
+    ],
+    "requiredFields": [
+      "labelAssignments",
+      "encryptionSettings",
+      "containerVsFile",
+      "downloadCases"
+    ],
+    "objective": "Verify classification causes the intended protection.",
+    "review": "Distinguish labels on files/emails from group/site labels. Test allowed and denied recipients, offline use, supported clients and external collaboration. Check downgrade justification and access recovery procedures.",
+    "criterion": "Required information has effective protection with demonstrated recipient behavior; a labeled container does not prove files are encrypted.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "DATA-03": {
+    "id": "DATA-03",
+    "type": "control",
+    "title": "DLP effectiveness and exception handling",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [
+      "dlp",
+      "dlpRules",
+      "alerts"
+    ],
+    "requiredFields": [
+      "policyDistribution",
+      "classifierSpecimen",
+      "expectedTransfers",
+      "observedTransfers",
+      "exceptions"
+    ],
+    "objective": "Prevent or detect prohibited information transfer as designed.",
+    "review": "Map scenarios to locations and rules. Use synthetic examples with required context and confidence thresholds; include negative controls. Test actions, notifications, overrides and incident routing. Review excluded identities and endpoints.",
+    "criterion": "The approved prevention/detection objective operates for the tested scenarios; simulation does not satisfy an enforcement requirement.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn"
+    ]
+  },
+  "DATA-04": {
+    "id": "DATA-04",
+    "type": "control",
+    "title": "Retention, records and disposition",
+    "controls": [
+      "DATA-04"
+    ],
+    "operations": [
+      "retention",
+      "retentionRules",
+      "recordLabels"
+    ],
+    "requiredFields": [
+      "retentionSchedule",
+      "locationCoverage",
+      "holds",
+      "dispositionApprovals"
+    ],
+    "objective": "Preserve and delete information according to approved requirements.",
+    "review": "Map each record class and workload to duration and trigger. Inspect overlapping controls, held content, distribution errors and locations not covered. Test a short-lived synthetic lifecycle in an approved environment; assess storage and deletion effects.",
+    "criterion": "Implemented rules match the approved schedule; conflicting holds and irreversible settings are understood and authorized.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/retention",
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components"
+    ]
+  },
+  "DATA-05": {
+    "id": "DATA-05",
+    "type": "control",
+    "title": "eDiscovery and investigation readiness",
+    "controls": [
+      "DATA-05"
+    ],
+    "operations": [
+      "ediscovery",
+      "retention",
+      "roles"
+    ],
+    "requiredFields": [
+      "caseAccess",
+      "roleGroups",
+      "preservationSearchSamples",
+      "chainOfCustody"
+    ],
+    "objective": "Prove authorized investigators can preserve, search and export relevant evidence.",
+    "review": "Run an approved synthetic case from identification to hold, search and export. Record selected custodians and workload locations, failures and export hashes. Verify unauthorized staff cannot enter the case; use the current supported experience.",
+    "criterion": "The workflow is complete, access-controlled and reproducible, with explicit coverage and processing limitations.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+      "https://learn.microsoft.com/en-us/purview/ediscovery"
+    ]
+  },
+  "DATA-06": {
+    "id": "DATA-06",
+    "type": "control",
+    "title": "Privacy, insider risk and compliance ownership",
+    "controls": [
+      "DATA-06"
+    ],
+    "operations": [
+      "licenses",
+      "roles"
+    ],
+    "requiredFields": [
+      "privacyRequests",
+      "insiderRiskRoles",
+      "caseSeparation",
+      "complianceActionOwners"
+    ],
+    "objective": "Prevent sensitive monitoring and regulatory work from becoming ungoverned access.",
+    "review": "Review why data is collected, who can inspect it and how long it remains. Sample a request or investigation from intake to closure. Validate human review of automated indicators and separation of sensitive roles.",
+    "criterion": "Monitoring and requests follow approved purpose, access and review rules; legal exceptions and uncertainty are documented.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "DATA-07": {
+    "id": "DATA-07",
+    "type": "control",
+    "title": "Customer-managed encryption and support access",
+    "controls": [
+      "DATA-07"
+    ],
+    "operations": [
+      "exoOrg",
+      "roles",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "customerKeyExport",
+      "keyAvailability",
+      "lockboxRequests",
+      "approvalSeparation"
+    ],
+    "objective": "Evaluate enhanced data-control features against actual requirements.",
+    "review": "Determine whether the organization requires these features before assessing deployment. Distinguish service encryption, content encryption and support-access approval. Review supported workloads and recovery dependencies; tabletop key loss without deleting keys.",
+    "criterion": "Required controls are licensed, scoped, operationally owned and recoverable; feature names are not treated as interchangeable.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption",
+      "https://learn.microsoft.com/en-us/purview/customer-lockbox-requests",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "LOG-01": {
+    "id": "LOG-01",
+    "type": "control",
+    "title": "Audit ingestion and event visibility",
+    "controls": [
+      "LOG-01"
+    ],
+    "operations": [
+      "auditConfig",
+      "exoOrg",
+      "ual",
+      "directoryAudit",
+      "signIns"
+    ],
+    "requiredFields": [
+      "knownEvents",
+      "ingestionDelays",
+      "workloadCoverage"
+    ],
+    "objective": "Demonstrate required activities are recorded and retrievable.",
+    "review": "Read ingestion status in the Exchange Online context. Identify required operations by workload. Trace a permitted known action using UTC time, actor and object; record ingestion delay, permissions and missing events separately.",
+    "criterion": "A known required event is searchable with the necessary fields; a default-setting assumption or empty query is insufficient.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+      "https://learn.microsoft.com/en-us/purview/audit-search",
+      "https://learn.microsoft.com/en-us/purview/audit-mailboxes"
+    ]
+  },
+  "LOG-02": {
+    "id": "LOG-02",
+    "type": "control",
+    "title": "Retention by source, user and workload",
+    "controls": [
+      "LOG-02"
+    ],
+    "operations": [
+      "licenses",
+      "auditRetention",
+      "signIns",
+      "ual"
+    ],
+    "requiredFields": [
+      "retentionMatrix",
+      "historicalKnownEvents",
+      "archiveQueries"
+    ],
+    "objective": "Ensure investigation history meets business requirements.",
+    "review": "For each source, document required history and actual entitlement/configuration. Review user-specific premium coverage and policy priority. Query historical known records and distinguish source retention from search-job history.",
+    "criterion": "Required history is retrievable from a protected source, or a dated gap is reported; retention is never inferred from a single tenant license.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "https://learn.microsoft.com/en-us/purview/audit-search"
+    ]
+  },
+  "LOG-03": {
+    "id": "LOG-03",
+    "type": "control",
+    "title": "Collection completeness and pipeline health",
+    "controls": [
+      "LOG-03"
+    ],
+    "operations": [
+      "signIns",
+      "directoryAudit",
+      "ual"
+    ],
+    "requiredFields": [
+      "sourceCounts",
+      "siemCounts",
+      "ingestionLatency",
+      "missingIntervals"
+    ],
+    "objective": "Detect silently incomplete exports and logging interruptions.",
+    "review": "Reconcile population and event counts. Follow all pages, partition capped windows and de-duplicate stable event IDs. Check throttling, connector failures, ingestion latency, authentication expiry and alerting on collector outage.",
+    "criterion": "Exports have documented completeness bounds and pipeline outages are detectable; unknown portions remain unassessed.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/paging",
+      "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps"
+    ]
+  },
+  "LOG-04": {
+    "id": "LOG-04",
+    "type": "control",
+    "title": "Evidence integrity and privileged access",
+    "controls": [
+      "LOG-04"
+    ],
+    "operations": [
+      "roles",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "evidenceRegister",
+      "storageAcl",
+      "immutability",
+      "accessLogs",
+      "custodyTransfers"
+    ],
+    "objective": "Keep collected evidence authentic, restricted and usable.",
+    "review": "Inspect raw-versus-working copies and storage permissions. Recompute a sample hash; trace transfers and modifications. Confirm collected data is proportionate and never stored in a public methodology repository.",
+    "criterion": "Another authorized reviewer can reproduce provenance and detect changed evidence; access and disposal are controlled.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components"
+    ]
+  },
+  "LOG-05": {
+    "id": "LOG-05",
+    "type": "control",
+    "title": "Alerts for sensitive configuration changes",
+    "controls": [
+      "LOG-05"
+    ],
+    "operations": [
+      "directoryAudit",
+      "alerts",
+      "incidents"
+    ],
+    "requiredFields": [
+      "alertRules",
+      "changeCases",
+      "alertReceipt",
+      "responseTimes"
+    ],
+    "objective": "Detect changes that weaken controls or evidence.",
+    "review": "Select high-impact changes: role grant, credential addition, forwarding, consent, logging disablement and backup changes. Trace approved benign events through detection, routing, acknowledgement and escalation.",
+    "criterion": "Selected changes generate actionable alerts within approved timing or have an explicit monitored alternative.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "SOC-01": {
+    "id": "SOC-01",
+    "type": "control",
+    "title": "Cross-workload detection coverage",
+    "controls": [
+      "SOC-01"
+    ],
+    "operations": [
+      "alerts",
+      "incidents",
+      "secureScores"
+    ],
+    "requiredFields": [
+      "detectionMatrix",
+      "requiredSignals",
+      "routingEvidence",
+      "coverageGaps"
+    ],
+    "objective": "Validate visibility for realistic compromise sequences.",
+    "review": "Map identity compromise, malicious consent, mailbox abuse and data access to available telemetry. Sample cases across identity, email and endpoint. Review suppressions and integration failures, including outsourced SOC responsibilities.",
+    "criterion": "The SOC can correlate material events and explain uncovered stages; licenses or installed tools alone are insufficient.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing"
+    ]
+  },
+  "SOC-02": {
+    "id": "SOC-02",
+    "type": "control",
+    "title": "Account and token compromise exercise",
+    "controls": [
+      "SOC-02"
+    ],
+    "operations": [
+      "signIns",
+      "directoryAudit",
+      "incidents"
+    ],
+    "requiredFields": [
+      "containmentTimeline",
+      "sessionRevocationEvidence",
+      "appAccessEvidence",
+      "exerciseAcceptance"
+    ],
+    "objective": "Verify containment and evidence preservation are timely.",
+    "review": "Tabletop or rehearse with test identities: detect compromise, preserve evidence, isolate relevant access, remove persistence and verify restoration. Include application sessions and malicious grants so password reset is not the only action.",
+    "criterion": "The team can execute authorized containment and confirm remaining access paths within its approved objectives.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing"
+    ]
+  },
+  "SOC-03": {
+    "id": "SOC-03",
+    "type": "control",
+    "title": "Phishing and malicious app response",
+    "controls": [
+      "SOC-03"
+    ],
+    "operations": [
+      "incidents",
+      "alerts",
+      "apps",
+      "grants"
+    ],
+    "requiredFields": [
+      "phishingCase",
+      "consentCase",
+      "containmentRecords",
+      "recoveredEvidence"
+    ],
+    "objective": "Test intake, scoping, containment and communication.",
+    "review": "Use a synthetic report or historical sanitized incident. Identify recipients, interaction, account activity, grants and affected data. Verify escalation to identity/app owners and documented closure evidence; separate real incidents from audit observations.",
+    "criterion": "Responders can scope and close the scenario with evidence and appropriate business communication.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks"
+    ]
+  },
+  "SOC-04": {
+    "id": "SOC-04",
+    "type": "control",
+    "title": "Response authority and evidence readiness",
+    "controls": [
+      "SOC-04"
+    ],
+    "operations": [
+      "roles",
+      "incidents"
+    ],
+    "requiredFields": [
+      "incidentAuthority",
+      "alternateCommunications",
+      "legalContacts",
+      "evidenceAccess",
+      "exerciseAcceptance"
+    ],
+    "objective": "Keep response possible during compromise of ordinary communication.",
+    "review": "Test contact availability and who can authorize disruptive containment. Check support-provider SLAs and evidence access during tenant outage. Review notification decisions with the responsible legal team rather than inventing deadlines.",
+    "criterion": "Authority, alternate communications and evidence access are executable and documented.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "REC-01": {
+    "id": "REC-01",
+    "type": "control",
+    "title": "Business recovery requirements and coverage",
+    "controls": [
+      "REC-01"
+    ],
+    "operations": [
+      "backupPolicies",
+      "sites",
+      "mailboxes"
+    ],
+    "requiredFields": [
+      "businessImpact",
+      "recoveryUnits",
+      "rtoSeconds",
+      "rpoSeconds",
+      "coverageReconciliation"
+    ],
+    "objective": "Identify exactly what must be recoverable and by when.",
+    "review": "Define recovery units and dependencies for mail, files, sites, chats, configurations, apps and keys. Reconcile protection scope against the inventory. Distinguish provider availability from customer data restoration and tenant reconstruction.",
+    "criterion": "Each critical service has approved objectives, an accountable recovery method and explicit uncovered objects.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "REC-02": {
+    "id": "REC-02",
+    "type": "control",
+    "title": "Timed restore and integrity exercise",
+    "controls": [
+      "REC-02"
+    ],
+    "operations": [
+      "backupPolicies",
+      "restoreSessions"
+    ],
+    "requiredFields": [
+      "startedUtc",
+      "acceptedUtc",
+      "recoveryPointUtc",
+      "incidentUtc",
+      "rtoSeconds",
+      "rpoSeconds",
+      "integrityChecks",
+      "businessAcceptance"
+    ],
+    "objective": "Measure actual recovery capability.",
+    "review": "Restore representative synthetic content to an approved isolated destination. Measure from declared recovery start to business acceptance; record data age, errors, permissions and prerequisites. Include one bulk or dependency-rich scenario where required.",
+    "criterion": "Measured RTO/RPO and integrity meet approved requirements for the tested scope; configuration alone is not operational proof.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "REC-03": {
+    "id": "REC-03",
+    "type": "control",
+    "title": "Backup administration and destructive change",
+    "controls": [
+      "REC-03"
+    ],
+    "operations": [
+      "backupPolicies",
+      "roles",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "backupAdminRoles",
+      "destructiveChangeControls",
+      "separateApprovals",
+      "compromiseExercise"
+    ],
+    "objective": "Protect recovery capability from the same compromise as production.",
+    "review": "Review who can alter coverage, retention or recovery data. Inspect destructive-change safeguards and monitoring. Tabletop a compromised production admin and a lost backup credential; examine retention/deletion behavior for the actual platform.",
+    "criterion": "Recovery remains governed and observable during administrator compromise; architecture-specific limitations are acknowledged.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference"
+    ]
+  },
+  "REC-04": {
+    "id": "REC-04",
+    "type": "control",
+    "title": "Tenant configuration and service outage recovery",
+    "controls": [
+      "REC-04"
+    ],
+    "operations": [
+      "organization",
+      "ca",
+      "health",
+      "messages"
+    ],
+    "requiredFields": [
+      "configurationExports",
+      "dependencyMap",
+      "outageProcedure",
+      "recoveryExercise"
+    ],
+    "objective": "Restore service dependencies beyond content.",
+    "review": "Identify rebuild sequence, credential access and trusted recovery copies. Rehearse a service or dependency outage without destructive production testing. Confirm staff can access runbooks and support channels outside the affected tenant.",
+    "criterion": "The organization has a tested dependency-aware recovery sequence and accessible recovery information.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+      "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites"
+    ]
+  },
+  "AI-01": {
+    "id": "AI-01",
+    "type": "control",
+    "title": "AI inventory and approved data flows",
+    "controls": [
+      "AI-01"
+    ],
+    "operations": [
+      "licenses",
+      "apps",
+      "principals",
+      "grants"
+    ],
+    "requiredFields": [
+      "aiInventory",
+      "dataFlows",
+      "processingLocations",
+      "approvedUse",
+      "retention"
+    ],
+    "objective": "Identify AI experiences and their distinct permissions and data handling.",
+    "review": "Distinguish enterprise experiences from consumer services and extensions. Record grounding sources, actions, identities, external endpoints, retention and feature availability. Review material changes against the actual service documentation.",
+    "criterion": "Each AI use case has a defined owner, data boundary and approved action scope; one product's commitments are not assumed to cover every extension.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "AI-02": {
+    "id": "AI-02",
+    "type": "control",
+    "title": "Oversharing and discovery restrictions",
+    "controls": [
+      "AI-02"
+    ],
+    "operations": [
+      "sites",
+      "itemPermissions",
+      "groupMembers"
+    ],
+    "requiredFields": [
+      "discoverySettings",
+      "permissionSamples",
+      "retrievalCases",
+      "directAccessCases"
+    ],
+    "objective": "Verify AI cannot expose data beyond approved business access.",
+    "review": "Test approved personas with seeded synthetic documents. Compare direct file access, search discovery and AI retrieval separately. Inspect broad permissions and temporary discovery controls; do not infer protection from a single unsuccessful prompt.",
+    "criterion": "Authorization aligns with business intent; discoverability controls have a documented purpose and do not substitute for permission repair.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search"
+    ]
+  },
+  "AI-03": {
+    "id": "AI-03",
+    "type": "control",
+    "title": "Agent tools, identity and adversarial behavior",
+    "controls": [
+      "AI-03"
+    ],
+    "operations": [
+      "apps",
+      "appRoles",
+      "grants",
+      "federatedCredentials"
+    ],
+    "requiredFields": [
+      "agentInventory",
+      "tools",
+      "endpoints",
+      "approvalGates",
+      "adversarialCases",
+      "actionLogs"
+    ],
+    "objective": "Constrain agent actions under untrusted inputs.",
+    "review": "In a controlled environment, supply synthetic instructions embedded in untrusted content and ask for an out-of-scope action. Inspect whether the agent's credential can perform it, whether confirmation is enforced and whether actions are logged.",
+    "criterion": "Sensitive actions are bounded by authorization and independently testable safeguards; model refusal alone is insufficient evidence.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies"
+    ]
+  },
+  "AI-04": {
+    "id": "AI-04",
+    "type": "control",
+    "title": "AI auditability, retention and incident handling",
+    "controls": [
+      "AI-04"
+    ],
+    "operations": [
+      "retention",
+      "ual",
+      "incidents"
+    ],
+    "requiredFields": [
+      "aiEventSamples",
+      "conversationRetention",
+      "incidentRouting",
+      "investigationCase"
+    ],
+    "objective": "Make AI use governable throughout its lifecycle.",
+    "review": "Identify which events and artifacts exist for each experience and license. Test synthetic interaction retrieval and permitted investigation access; review external extension logs and output handling. Confirm an owner handles inaccurate or sensitive outputs.",
+    "criterion": "Required AI evidence is discoverable with appropriate privacy controls; documented gaps feed the risk register.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components"
+    ]
+  },
+  "PP-01": {
+    "id": "PP-01",
+    "type": "control",
+    "title": "Environment and maker governance",
+    "controls": [
+      "PP-01"
+    ],
+    "operations": [
+      "licenses",
+      "users",
+      "ppEnvironments"
+    ],
+    "requiredFields": [
+      "environmentExport",
+      "makerRoles",
+      "environmentOwners",
+      "lifecycleDecisions"
+    ],
+    "objective": "Prevent uncontrolled business applications and flows.",
+    "review": "Reconcile apps, flows and agents to business owners. Inspect who can create environments, use premium features and share applications. Include orphaned resources, personal connections, unmanaged production and acquisition remnants.",
+    "criterion": "Resources have accountable owners, appropriate environment placement and governed creation/sharing.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "PP-02": {
+    "id": "PP-02",
+    "type": "control",
+    "title": "Connector and data policy effectiveness",
+    "controls": [
+      "PP-02"
+    ],
+    "operations": [
+      "apps",
+      "grants"
+    ],
+    "requiredFields": [
+      "dataPolicyExport",
+      "connectorGroups",
+      "endpointRules",
+      "policyMode",
+      "allowedCase",
+      "prohibitedCase"
+    ],
+    "objective": "Control prohibited data movement through low-code applications.",
+    "review": "Identify which policy model actually applies. Review new connector defaults, custom connectors, HTTP/MCP actions and environment exclusions. Test allowed and forbidden connector combinations at design and runtime; verify current limitations.",
+    "criterion": "The chosen model enforces the approved flows for covered environments; unsupported/nonblockable cases are explicit.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification"
+    ]
+  },
+  "PP-03": {
+    "id": "PP-03",
+    "type": "control",
+    "title": "Connections, application permissions and release control",
+    "controls": [
+      "PP-03"
+    ],
+    "operations": [
+      "apps",
+      "appRoles",
+      "grants"
+    ],
+    "requiredFields": [
+      "appFlowInventory",
+      "connectionOwners",
+      "connectionReferences",
+      "releaseApprovals",
+      "effectivePermissions"
+    ],
+    "objective": "Prevent low-code automation from becoming an unreviewed privileged service.",
+    "review": "Trace the identity and permissions used by sensitive flows. Review who can edit versus invoke, approval steps and source control. Test a forbidden invocation using a controlled low-privilege user.",
+    "criterion": "Runtime permissions and invocation scope match the business need; editable automations cannot bypass approval unnoticed.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    ]
+  },
+  "PP-04": {
+    "id": "PP-04",
+    "type": "control",
+    "title": "Operational resilience and data accountability",
+    "controls": [
+      "PP-04"
+    ],
+    "operations": [
+      "health",
+      "licenses",
+      "ppEnvironments"
+    ],
+    "requiredFields": [
+      "flowFailureExport",
+      "dataverseCapacity",
+      "continuityRecords",
+      "recoveryAcceptance"
+    ],
+    "objective": "Ensure business automation remains recoverable and observable.",
+    "review": "Trace a failed critical flow to notification and recovery. Verify solution and data protection separately, connection reauthorization and dependency restoration. Check retention, audit coverage and environment deletion authority.",
+    "criterion": "Critical solutions can be operated and recovered against documented objectives; content backup claims explicitly cover these workloads.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "FAB-01": {
+    "id": "FAB-01",
+    "type": "control",
+    "title": "Public publishing and external sharing",
+    "controls": [
+      "FAB-01"
+    ],
+    "operations": [
+      "groups",
+      "users",
+      "fabricSettings",
+      "publicEmbeds"
+    ],
+    "requiredFields": [
+      "fabricTenantSettings",
+      "publicEmbedInventory",
+      "externalSharing",
+      "publicAccessObservations"
+    ],
+    "objective": "Prevent unintended public or cross-tenant disclosure.",
+    "review": "Review existing public embeds as well as future publishing permissions. Inspect sensitive reports, underlying models and scoped tenant exceptions. Validate access using an unauthenticated browser on synthetic content only.",
+    "criterion": "Only approved public material is publicly accessible; existing embeds and underlying data are assessed.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web"
+    ]
+  },
+  "FAB-02": {
+    "id": "FAB-02",
+    "type": "control",
+    "title": "Workspace and semantic data permissions",
+    "controls": [
+      "FAB-02"
+    ],
+    "operations": [
+      "groups",
+      "groupMembers",
+      "apps",
+      "grants",
+      "fabricWorkspaces",
+      "fabricWorkspaceUsers"
+    ],
+    "requiredFields": [
+      "workspaceAccess",
+      "itemAccess",
+      "semanticModelRoles",
+      "sourceCredentials",
+      "effectiveAccessCases"
+    ],
+    "objective": "Verify effective access across report, model and data sources.",
+    "review": "Map representative personas through report and model access to underlying sources. Test restricted data using the actual assigned role; do not assume viewer controls apply to privileged editors. Review gateway and service identity custody.",
+    "criterion": "Users and service principals can access only the data/actions approved for their role, demonstrated by positive and negative tests.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "FAB-03": {
+    "id": "FAB-03",
+    "type": "control",
+    "title": "Analytics governance and continuity",
+    "controls": [
+      "FAB-03"
+    ],
+    "operations": [
+      "health",
+      "licenses",
+      "fabricWorkspaces"
+    ],
+    "requiredFields": [
+      "lineageExport",
+      "refreshHistory",
+      "gatewayInventory",
+      "workspaceOwners",
+      "continuityRecords"
+    ],
+    "objective": "Govern exports, ownership, refresh and recovery of analytics.",
+    "review": "Trace critical reports to data sources, gateway credentials and owners. Review exports and external storage; test refresh failure notification and recovery of definitions/configuration. Assess data retention separately from report artifacts.",
+    "criterion": "Critical analytics has accountable ownership, governed data movement and a tested recovery path.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "OPS-01": {
+    "id": "OPS-01",
+    "type": "control",
+    "title": "Health, change and lifecycle management",
+    "controls": [
+      "OPS-01"
+    ],
+    "operations": [
+      "health",
+      "messages"
+    ],
+    "requiredFields": [
+      "serviceOwners",
+      "changeImpact",
+      "lifecycleActions",
+      "incidentCommunications"
+    ],
+    "objective": "Keep service changes and outages from creating untracked risk.",
+    "review": "Sample a recent service change, deprecation and outage. Verify impact analysis, assigned actions, communication and closure. Review preview features and automatically enabled services against governance.",
+    "criterion": "Material changes and incidents have accountable review and evidence of action; outdated procedures are revised.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search",
+      "https://learn.microsoft.com/en-us/purview/ediscovery"
+    ]
+  },
+  "OPS-02": {
+    "id": "OPS-02",
+    "type": "control",
+    "title": "Cost, capacity and license hygiene",
+    "controls": [
+      "OPS-02"
+    ],
+    "operations": [
+      "licenses",
+      "users",
+      "managedDevices",
+      "sites"
+    ],
+    "requiredFields": [
+      "billingExports",
+      "capacityReports",
+      "allocationDecisions",
+      "dormantLicenseReview"
+    ],
+    "objective": "Control waste without compromising preservation or required protection.",
+    "review": "Identify unused allocations and expiring trials, but check holds, shared mailbox requirements, backup and dependencies before reclaiming. Review capacity forecasts and pay-as-you-go owners; validate proposed savings against contract terms.",
+    "criterion": "Costs have owners and reconciled usage; reclaim decisions preserve security, retention and business requirements.",
+    "sources": [
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "OPS-03": {
+    "id": "OPS-03",
+    "type": "control",
+    "title": "Supplier and shared-responsibility assurance",
+    "controls": [
+      "OPS-03"
+    ],
+    "operations": [
+      "apps",
+      "grants",
+      "delegatedAdmin"
+    ],
+    "requiredFields": [
+      "supplierRegister",
+      "sharedResponsibilities",
+      "contracts",
+      "assuranceReports",
+      "accessReviews"
+    ],
+    "objective": "Separate Microsoft controls from customer and third-party responsibilities.",
+    "review": "Review available supplier assurance for the actual service and period. Identify customer responsibilities, exclusions, subservices and integration risks. Map required actions to tenant evidence and service-owner procedures.",
+    "criterion": "Assurance claims identify whose control was assessed, which service and which period; certifications do not substitute for customer configuration review.",
+    "sources": [
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod"
+    ]
+  },
+  "OPS-04": {
+    "id": "OPS-04",
+    "type": "control",
+    "title": "Long-term drift and re-audit",
+    "controls": [
+      "OPS-04"
+    ],
+    "operations": [
+      "ca",
+      "roles",
+      "apps",
+      "licenses"
+    ],
+    "requiredFields": [
+      "priorBaseline",
+      "driftReview",
+      "changeApprovals",
+      "retestEvidence"
+    ],
+    "objective": "Keep audit conclusions current after changes.",
+    "review": "Identify which controls need continuous monitoring versus periodic interviews/tests. Pin tool versions and preserve baseline changes. Track new services and permissions, and compare like-for-like populations rather than only scores.",
+    "criterion": "Material drift creates owned work and closed findings have new evidence; a rising score does not hide reduced scope.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score"
+    ]
+  },
+  "EXT-01": {
+    "id": "EXT-01",
+    "type": "control",
+    "title": "Government and sovereign cloud fit",
+    "controls": [
+      "EXT-01"
+    ],
+    "operations": [
+      "organization",
+      "licenses",
+      "domains"
+    ],
+    "requiredFields": [
+      "cloudServiceMatrix",
+      "contractualRequirements",
+      "featureAvailability",
+      "prohibitedIntegrations"
+    ],
+    "objective": "Prevent commercial-cloud assumptions from invalidating the audit.",
+    "review": "Validate each service, API and scanner against the actual cloud. Record unavailable or differently deployed features and data-handling boundaries. Use cloud-appropriate authentication; report untested tool support separately.",
+    "criterion": "Every applied procedure is supported in the target cloud or replaced with documented manual evidence.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+      "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
+      "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0"
+    ]
+  },
+  "EXT-02": {
+    "id": "EXT-02",
+    "type": "control",
+    "title": "Education, frontline and shared-user populations",
+    "controls": [
+      "EXT-02"
+    ],
+    "operations": [
+      "users",
+      "licenses",
+      "devices",
+      "managedDevices"
+    ],
+    "requiredFields": [
+      "populationTypes",
+      "sharedDeviceControls",
+      "studentSafeguards",
+      "shiftAccessCases"
+    ],
+    "objective": "Adapt access and data governance to distinct user populations.",
+    "review": "Separate staff, students, minors where applicable, temporary workers and shared devices in sampling. Confirm actual SKU capability and approved privacy obligations. Test rapid turnover, shared-session cleanup and resource access without assuming enterprise defaults.",
+    "criterion": "Population-specific requirements are explicit and supported by evidence; business convenience does not silently exempt a cohort.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/app-management/protection/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/moving-data-to-new-datacenter-geos?view=o365-worldwide"
+    ]
+  },
+  "EXT-03": {
+    "id": "EXT-03",
+    "type": "control",
+    "title": "Multi-Geo and residency verification",
+    "controls": [
+      "EXT-03"
+    ],
+    "operations": [
+      "organization",
+      "users",
+      "sites"
+    ],
+    "requiredFields": [
+      "geoAssignments",
+      "workloadResidency",
+      "contractBoundary",
+      "transferReview"
+    ],
+    "objective": "Test data-location commitments at the relevant service boundary.",
+    "review": "Map each requirement to the exact workload and data category. Distinguish storage from processing and support access. Verify current versus committed locations, pending moves and external copies.",
+    "criterion": "Evidence supports the particular residency claim; tenant home geography is not used as proof for all data.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/moving-data-to-new-datacenter-geos?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-multi-geo",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "EXT-04": {
+    "id": "EXT-04",
+    "type": "control",
+    "title": "Loop and SharePoint Embedded",
+    "controls": [
+      "EXT-04"
+    ],
+    "operations": [
+      "sites",
+      "drives",
+      "apps"
+    ],
+    "requiredFields": [
+      "loopStorageMap",
+      "embeddedContainers",
+      "owners",
+      "externalAccess",
+      "retentionCoverage"
+    ],
+    "objective": "Include content outside ordinary site inventory assumptions.",
+    "review": "Identify actual storage for each content type and creator experience. Verify membership, lifecycle, retention and eDiscovery against current capability tables. Test a synthetic artifact through discovery and authorized access; do not assume all storage variants behave identically.",
+    "criterion": "Containers and workspaces are governed and included in evidence/recovery scope, with current limitations recorded.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/loop/loop-compliance-summary?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview",
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components"
+    ]
+  },
+  "EXT-05": {
+    "id": "EXT-05",
+    "type": "control",
+    "title": "Forms and public intake",
+    "controls": [
+      "EXT-05"
+    ],
+    "operations": [
+      "users",
+      "licenses"
+    ],
+    "requiredFields": [
+      "formsSettings",
+      "formOwnerInventory",
+      "externalResponses",
+      "sensitiveCollectionControls"
+    ],
+    "objective": "Control information collected and shared through forms.",
+    "review": "Sample public forms, sensitive questions and response exports. Verify ownership transfer, respondent identity needs, anonymous access and collaboration links. Trace stored responses and connected automation to their retention and access controls.",
+    "criterion": "Public intake collects only approved information and response data has an authorized audience and lifecycle.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-forms/set-up-microsoft-forms",
+      "https://learn.microsoft.com/en-us/purview/retention",
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy"
+    ]
+  },
+  "EXT-06": {
+    "id": "EXT-06",
+    "type": "control",
+    "title": "Other enabled productivity workloads",
+    "controls": [
+      "EXT-06"
+    ],
+    "operations": [
+      "licenses",
+      "apps"
+    ],
+    "requiredFields": [
+      "enabledServiceRegister",
+      "storageMap",
+      "owners",
+      "auditCoverage",
+      "retentionCoverage"
+    ],
+    "objective": "Avoid silently omitting smaller services.",
+    "review": "For every enabled service, complete the workload worksheet: identity, sharing, storage, licensing, retention, audit and recovery. Identify its backing services and verify current product-specific documentation before issuing a result. Escalate unsupported assumptions as scope gaps.",
+    "criterion": "No enabled workload is silently omitted. This generic overlay is a scoping procedure, not a product-specific configuration certification.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "EXT-07": {
+    "id": "EXT-07",
+    "type": "control",
+    "title": "Mergers and multiple tenants",
+    "controls": [
+      "EXT-07"
+    ],
+    "operations": [
+      "organization",
+      "crossPartners",
+      "delegatedAdmin"
+    ],
+    "requiredFields": [
+      "tenantInventory",
+      "migrationCoexistence",
+      "trustApprovals",
+      "exitCriteria"
+    ],
+    "objective": "Assess trust and data movement across organizational boundaries.",
+    "review": "Review who retains access before, during and after transition. Inspect partner-specific trust, cross-tenant synchronization and migration service accounts. Reconcile retention and evidence obligations before decommissioning.",
+    "criterion": "Trust, data ownership and access removal are planned and evidenced for each transition phase.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/purview/retention"
+    ]
+  },
+  "EXT-08": {
+    "id": "EXT-08",
+    "type": "control",
+    "title": "Regulated control overlay and formal assurance",
+    "controls": [
+      "EXT-08"
+    ],
+    "operations": [
+      "licenses",
+      "roles"
+    ],
+    "requiredFields": [
+      "frameworkVersion",
+      "controlCrosswalk",
+      "evidencePeriod",
+      "independentAssurance",
+      "exclusions"
+    ],
+    "objective": "Translate a framework engagement into defensible testing.",
+    "review": "Map each applicable requirement to one or more control tests and identify uncovered clauses. Have qualified owners interpret legal requirements. Validate technical evidence, process operation and provider/customer boundaries separately.",
+    "criterion": "Any conformity claim matches the authorized assessment standard, scope, period and assessor role; this playbook alone confers no certification.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "EXT-09": {
+    "id": "EXT-09",
+    "type": "control",
+    "title": "Virtual desktops and Cloud PCs",
+    "controls": [
+      "EXT-09"
+    ],
+    "operations": [
+      "cloudPCs",
+      "managedDevices",
+      "ca",
+      "signIns"
+    ],
+    "requiredFields": [
+      "avdHostPools",
+      "imageSecurity",
+      "redirectPolicies",
+      "sessionAccessCases",
+      "continuity"
+    ],
+    "objective": "Include hosted endpoints in identity and device assurance.",
+    "review": "Apply endpoint and access tests to hosted desktops, including image lifecycle, local data, redirection and privileged sessions. Validate product-specific configuration against current primary documentation before scoring the deployment.",
+    "criterion": "Hosted endpoints are included in coverage and recovery; omitted product-specific checks remain Not assessed.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/device-security/endpoint-security-policies",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/purview/microsoft-365-service-encryption"
+    ]
+  },
+  "EXT-10": {
+    "id": "EXT-10",
+    "type": "control",
+    "title": "Network and access dependencies",
+    "controls": [
+      "EXT-10"
+    ],
+    "operations": [
+      "domains",
+      "namedLocations",
+      "inboundConnectors",
+      "outboundConnectors"
+    ],
+    "requiredFields": [
+      "dnsExport",
+      "proxyPaths",
+      "egressRules",
+      "connectivityMeasurements",
+      "failureDependencies"
+    ],
+    "objective": "Validate DNS, connectivity and secure access dependencies.",
+    "review": "Trace administrator and user connectivity to authentication and workloads. Review who controls DNS and named locations; identify proxy bypass and authentication dependencies. Test a representative outage or alternate access path under an approved plan.",
+    "criterion": "Critical connectivity has owners and recovery plans; network location alone is not treated as strong identity assurance.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide"
+    ]
+  },
+  "EXT-11": {
+    "id": "EXT-11",
+    "type": "control",
+    "title": "Accessibility and control usability",
+    "controls": [
+      "EXT-11"
+    ],
+    "operations": [
+      "authPolicy",
+      "ca",
+      "appProtection"
+    ],
+    "requiredFields": [
+      "accessibilityRequirements",
+      "userTestRecords",
+      "approvedAlternatives",
+      "equivalentProtection"
+    ],
+    "objective": "Keep required protection usable for the intended workforce.",
+    "review": "Review whether users with differing devices, connectivity or accessibility needs can use approved controls. Test representative personas and recovery paths. Track repeated support workarounds as evidence of a design gap.",
+    "criterion": "Protection remains effective and usable for legitimate users; workarounds do not create permanent unowned bypasses.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/intune/app-management/protection/overview"
+    ]
+  },
+  "T01-01": {
+    "id": "T01-01",
+    "type": "fieldwork",
+    "title": "T01 step 1",
+    "controls": [
+      "IAM-03"
+    ],
+    "operations": [
+      "ca",
+      "defaults",
+      "namedLocations"
+    ],
+    "requiredFields": [
+      "personaMatrix",
+      "exclusions"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Export all policy states, assignments, conditions, grant/session controls and exclusions. Record the security-defaults alternative where used. Build cases for administrators, ordinary staff, guests and exceptions. [S55: Graph: List Conditional Access policies](https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0); [S09: Conditional Access overview](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview); [S63: Security defaults in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults"
+    ]
+  },
+  "T01-02": {
+    "id": "T01-02",
+    "type": "fieldwork",
+    "title": "T01 step 2",
+    "controls": [
+      "IAM-02"
+    ],
+    "operations": [
+      "signIns"
+    ],
+    "requiredFields": [
+      "resource",
+      "client",
+      "location",
+      "deviceState",
+      "existingClaims"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Select a test resource/client combination per case. Include trusted/untrusted location and managed/unmanaged device cases when material. Record existing authentication claims; absence of an interactive MFA prompt does not alone prove bypass. [S08: Analyze Conditional Access policy impact](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only); [S09: Conditional Access overview](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "T01-03": {
+    "id": "T01-03",
+    "type": "fieldwork",
+    "title": "T01 step 3",
+    "controls": [
+      "IAM-02"
+    ],
+    "operations": [
+      "signIns"
+    ],
+    "requiredFields": [
+      "allowedCase",
+      "prohibitedCase",
+      "correlationIds"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "In an authorized fresh session, perform an allowed attempt and a case that should fail the adopted requirement. Record correlation identifiers and actual sign-in authentication/Conditional Access details. [S08: Analyze Conditional Access policy impact](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only); [S09: Conditional Access overview](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "T01-04": {
+    "id": "T01-04",
+    "type": "fieldwork",
+    "title": "T01 step 4",
+    "controls": [
+      "IAM-03"
+    ],
+    "operations": [
+      "ca",
+      "crossDefault",
+      "crossPartners",
+      "signIns"
+    ],
+    "requiredFields": [
+      "effectivePolicyReview",
+      "acceptedClaims"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Resolve how multiple policies and accepted guest claims affected the result. Treat What If or report-only output as design evidence and corroborate operation separately. [S08: Analyze Conditional Access policy impact](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only); [S16: Cross-tenant access overview](https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview"
+    ]
+  },
+  "T01-05": {
+    "id": "T01-05",
+    "type": "fieldwork",
+    "title": "T01 step 5",
+    "controls": [
+      "APP-04"
+    ],
+    "operations": [
+      "principals",
+      "appRoles",
+      "grants"
+    ],
+    "requiredFields": [
+      "workloadBoundaryTests"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Do not apply this human-MFA test to app-only identities. Inspect supported workload controls and effective app permission boundaries instead. [S10: Conditional Access for workload identities](https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "T02-01": {
+    "id": "T02-01",
+    "type": "fieldwork",
+    "title": "T02 step 1",
+    "controls": [
+      "IAM-04"
+    ],
+    "operations": [
+      "roles",
+      "authMethods",
+      "ca"
+    ],
+    "requiredFields": [
+      "independentDependencies",
+      "custody",
+      "alerts"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Review account independence, permanent active role assignment, authentication methods, policy exclusions, custody and alerts against the live emergency-access guidance. [S07: Manage emergency access accounts](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "T02-02": {
+    "id": "T02-02",
+    "type": "fieldwork",
+    "title": "T02 step 2",
+    "controls": [
+      "IAM-04"
+    ],
+    "operations": [
+      "federation"
+    ],
+    "requiredFields": [
+      "exercisePlan",
+      "alternateDependencies"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Plan a controlled exercise in which the normal phone or federation path is treated as unavailable. Do not actually disable production identity infrastructure for an audit walkthrough. This non-disruptive exercise design is **consultant method**. [S07: Manage emergency access accounts](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access); [S65: Entra Connect prerequisites](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access",
+      "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites"
+    ]
+  },
+  "T02-03": {
+    "id": "T02-03",
+    "type": "fieldwork",
+    "title": "T02 step 3",
+    "controls": [
+      "IAM-04"
+    ],
+    "operations": [
+      "signIns",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "custodianDemonstration",
+      "alertReceipt"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Have an authorized custodian demonstrate credential retrieval and sign-in from the approved secure environment; verify the resulting alert reaches its owner. [S07: Manage emergency access accounts](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "T02-04": {
+    "id": "T02-04",
+    "type": "fieldwork",
+    "title": "T02 step 4",
+    "controls": [
+      "IAM-04"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "timing",
+      "alternateCustodian",
+      "cleanupRecord"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Record timing, unexpected dependencies, alternate custodian availability and cleanup. Keep credential material out of evidence exports. **Consultant handling method.** [S07: Manage emergency access accounts](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access"
+    ]
+  },
+  "T03-01": {
+    "id": "T03-01",
+    "type": "fieldwork",
+    "title": "T03 step 1",
+    "controls": [
+      "APP-01",
+      "APP-02",
+      "APP-03"
+    ],
+    "operations": [
+      "apps",
+      "principals",
+      "grants",
+      "appRoles",
+      "appOwners",
+      "federatedCredentials"
+    ],
+    "requiredFields": [
+      "approvedResourceScopes"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Inventory service principals, delegated grants, app role assignments, owners and credential metadata; identify high-impact access and resource scoping. [S13: Configure user consent to applications](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "T03-02": {
+    "id": "T03-02",
+    "type": "fieldwork",
+    "title": "T03 step 2",
+    "controls": [
+      "APP-02"
+    ],
+    "operations": [
+      "authorization",
+      "grants",
+      "appRoles"
+    ],
+    "requiredFields": [
+      "consentApprovals",
+      "businessNeed"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Match grants to approval and business need. Review old grants even when new user consent is restricted. [S13: Configure user consent to applications](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent"
+    ]
+  },
+  "T03-03": {
+    "id": "T03-03",
+    "type": "fieldwork",
+    "title": "T03 step 3",
+    "controls": [
+      "APP-04"
+    ],
+    "operations": [
+      "appRoles",
+      "grants"
+    ],
+    "requiredFields": [
+      "allowedCase",
+      "prohibitedCase",
+      "resource",
+      "authMode"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "With a controlled app identity, test an allowed resource/action and a prohibited resource/action. Record status, resource and authentication mode without capturing tokens. **Consultant test design.** [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "T03-04": {
+    "id": "T03-04",
+    "type": "fieldwork",
+    "title": "T03 step 4",
+    "controls": [
+      "APP-05"
+    ],
+    "operations": [
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "ownershipLossCase",
+      "credentialAdditionCase",
+      "decommissioningCase"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Tabletop ownership loss, credential addition and app decommissioning. Confirm incident procedures can revoke malicious access beyond password reset. [S14: App consent grant investigation](https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent); [S15: Revoke user access in an emergency](https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access"
+    ]
+  },
+  "T04-01": {
+    "id": "T04-01",
+    "type": "fieldwork",
+    "title": "T04 step 1",
+    "controls": [
+      "COL-02"
+    ],
+    "operations": [
+      "itemPermissions",
+      "groupMembers"
+    ],
+    "requiredFields": [
+      "syntheticDocumentManifest",
+      "intendedAudience"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Create approved synthetic documents representing sensitive and ordinary information. Record their intended audiences and actual group/direct permissions. **Consultant test design.** [S27: Overview of external sharing in SharePoint and OneDrive](https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview); [S36: Sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "T04-02": {
+    "id": "T04-02",
+    "type": "fieldwork",
+    "title": "T04 step 2",
+    "controls": [
+      "COL-01"
+    ],
+    "operations": [
+      "itemPermissions"
+    ],
+    "requiredFields": [
+      "directAccessCase",
+      "sharingLinkCase",
+      "searchCase",
+      "personas"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Test access through a direct URL, existing sharing link and relevant search experience with an owner, authorized recipient, ordinary internal user and external test user. [S27: Overview of external sharing in SharePoint and OneDrive](https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview); [S28: Restrict discovery of SharePoint sites and content](https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery"
+    ]
+  },
+  "T04-03": {
+    "id": "T04-03",
+    "type": "fieldwork",
+    "title": "T04 step 3",
+    "controls": [
+      "AI-02"
+    ],
+    "operations": [
+      "itemPermissions"
+    ],
+    "requiredFields": [
+      "retrievalPrompts",
+      "groundingReferences",
+      "directAccessCase"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "If Copilot is in scope, test representative retrieval prompts and inspect grounding references. Repeat direct access independently; an unsuccessful prompt does not establish a permission boundary. **Consultant interpretation.** [S47: Data, Privacy, and Security for Microsoft Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy); [S28: Restrict discovery of SharePoint sites and content](https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-content-discovery"
+    ]
+  },
+  "T04-04": {
+    "id": "T04-04",
+    "type": "fieldwork",
+    "title": "T04 step 4",
+    "controls": [
+      "DATA-02"
+    ],
+    "operations": [
+      "labels",
+      "labelPolicies"
+    ],
+    "requiredFields": [
+      "containerLabel",
+      "fileLabel",
+      "downloadCase",
+      "forwardingCase"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Check container labels separately from document labels. Confirm how file protection behaves after download or forwarding through supported clients. [S36: Sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+    ]
+  },
+  "T04-05": {
+    "id": "T04-05",
+    "type": "fieldwork",
+    "title": "T04 step 5",
+    "controls": [
+      "AI-02"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "restrictedSearchExport",
+      "migrationDecision"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "For older Restricted SharePoint Search deployments, inspect the current retirement/migration guidance rather than recommending new enablement unconditionally. [S48: Restricted SharePoint Search](https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search"
+    ]
+  },
+  "T05-01": {
+    "id": "T05-01",
+    "type": "fieldwork",
+    "title": "T05 step 1",
+    "controls": [
+      "MAIL-01"
+    ],
+    "operations": [
+      "dkim",
+      "acceptedDomains"
+    ],
+    "requiredFields": [
+      "senderPlatform",
+      "headers",
+      "traceIds",
+      "dnsRecords",
+      "alignment"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Select one authorized test message from each material sending platform; capture headers and message trace identifiers. Review SPF, DKIM and DMARC alignment for the actual sender domain. [S22: Configure SPF](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure); [S23: Configure DKIM](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure); [S24: Configure DMARC](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+      "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+    ]
+  },
+  "T05-02": {
+    "id": "T05-02",
+    "type": "fieldwork",
+    "title": "T05 step 2",
+    "controls": [
+      "MAIL-02"
+    ],
+    "operations": [
+      "presetEop",
+      "presetDefender",
+      "antiPhishRules",
+      "spamRules",
+      "safeLinksRules",
+      "safeAttachmentsRules"
+    ],
+    "requiredFields": [
+      "recipientAssignments",
+      "precedenceDecision"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Resolve the recipient's effective threat policies. Standard/Strict preset precedence can override a custom policy that looks stronger when viewed in isolation. [S21: Preset security policies](https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies"
+    ]
+  },
+  "T05-03": {
+    "id": "T05-03",
+    "type": "fieldwork",
+    "title": "T05 step 3",
+    "controls": [
+      "MAIL-03"
+    ],
+    "operations": [
+      "mailboxes",
+      "inboxRules",
+      "mailboxPermissions",
+      "recipientPermissions",
+      "remoteDomains",
+      "transportRules",
+      "outboundSpam"
+    ],
+    "requiredFields": [
+      "approvedForwardingDestinations"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Inspect forwarding settings, rules, delegates, remote domains and mail-flow exceptions. For an authorized forwarding exercise, use a harmless marker and a controlled destination. **Consultant test design.** [S25: Control external email forwarding](https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding); [S87: Get-InboxRule](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding",
+      "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps"
+    ]
+  },
+  "T05-04": {
+    "id": "T05-04",
+    "type": "fieldwork",
+    "title": "T05 step 4",
+    "controls": [
+      "MAIL-03"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "forwardingDeliveryCase",
+      "expectedResult",
+      "actualResult"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Confirm whether the forwarded message is delivered or blocked, and compare with the adopted requirement. Avoid inferring the result solely from \u201cAutomatic\u201d forwarding settings. [S25: Control external email forwarding](https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding"
+    ]
+  },
+  "T05-05": {
+    "id": "T05-05",
+    "type": "fieldwork",
+    "title": "T05 step 5",
+    "controls": [
+      "MAIL-04"
+    ],
+    "operations": [
+      "transport",
+      "casMailboxes",
+      "authPolicies",
+      "signIns"
+    ],
+    "requiredFields": [
+      "clientInventory",
+      "authModes",
+      "retirementReview"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Review actual SMTP client authentication and mailbox overrides. Check the current retirement timeline; distinguish Basic authentication from SMTP AUTH using OAuth. [S26: Updated SMTP AUTH Basic Authentication deprecation timeline](https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835); [S70: SMTP AUTH configuration](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835",
+      "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission"
+    ]
+  },
+  "T06-01": {
+    "id": "T06-01",
+    "type": "fieldwork",
+    "title": "T06 step 1",
+    "controls": [
+      "LOG-01"
+    ],
+    "operations": [
+      "auditConfig"
+    ],
+    "requiredFields": [
+      "exchangeSessionConfirmation"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Verify UAL ingestion in an Exchange Online session. Do not interpret the same property from an inappropriate session as authoritative; Microsoft documents this caveat. [S60: Turn auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable"
+    ]
+  },
+  "T06-02": {
+    "id": "T06-02",
+    "type": "fieldwork",
+    "title": "T06 step 2",
+    "controls": [
+      "LOG-01"
+    ],
+    "operations": [
+      "ual",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "knownEvent",
+      "actor",
+      "object",
+      "operation",
+      "occurredUtc"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Select a documented audited operation and a known authorized occurrence. Record tenant, actor, object, operation and UTC timestamp. Query a sufficient window after expected ingestion. [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-search"
+    ]
+  },
+  "T06-03": {
+    "id": "T06-03",
+    "type": "fieldwork",
+    "title": "T06 step 3",
+    "controls": [
+      "LOG-03"
+    ],
+    "operations": [
+      "ual",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "rawEventFields",
+      "siemArrivalUtc"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Confirm the raw event exists and inspect its essential fields. Compare source and SIEM arrival time if a downstream pipeline is in scope. **Consultant correlation method.** [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search); [S17: Microsoft Entra data retention](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-search",
+      "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention"
+    ]
+  },
+  "T06-04": {
+    "id": "T06-04",
+    "type": "fieldwork",
+    "title": "T06 step 4",
+    "controls": [
+      "LOG-02"
+    ],
+    "operations": [
+      "ual",
+      "signIns",
+      "auditRetention"
+    ],
+    "requiredFields": [
+      "historicalKnownEvents",
+      "licenseStrata",
+      "archiveEvidence"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Retrieve an older known event within the required window for each material user/license/workload stratum. Record source-retention and archive evidence separately. [S17: Microsoft Entra data retention](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention); [S18: Manage audit log retention policies](https://learn.microsoft.com/en-us/purview/audit-log-retention-policies)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies"
+    ]
+  },
+  "T06-05": {
+    "id": "T06-05",
+    "type": "fieldwork",
+    "title": "T06 step 5",
+    "controls": [
+      "LOG-03"
+    ],
+    "operations": [
+      "ual",
+      "signIns",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "sourceCounts",
+      "exportCounts",
+      "filters",
+      "duplicateReview"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Reconcile pagination, caps, filters, errors and duplicates before declaring the export complete. For large programmatic acquisition, follow Microsoft's API guidance. [S53: Microsoft Graph paging](https://learn.microsoft.com/en-us/graph/paging); [S56: Search-UnifiedAuditLog](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/paging",
+      "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps"
+    ]
+  },
+  "T07-01": {
+    "id": "T07-01",
+    "type": "fieldwork",
+    "title": "T07 step 1",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "dataClass",
+      "location",
+      "actor",
+      "destination",
+      "expectedAction",
+      "exception",
+      "specimen"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Write a scenario: data class, location, actor, destination, expected action and permitted exception. Use a synthetic test pattern with the context needed by the chosen classifier. **Consultant design.** [S37: Data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp"
+    ]
+  },
+  "T07-02": {
+    "id": "T07-02",
+    "type": "fieldwork",
+    "title": "T07 step 2",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [
+      "dlp",
+      "dlpRules"
+    ],
+    "requiredFields": [
+      "positiveSpecimen",
+      "negativeSpecimen",
+      "rulePriority",
+      "assignments"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Include a matching positive specimen and a similar nonmatching negative specimen. Record policy state, rule priority, included locations, assignments and exclusions. [S37: Data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp); [S69: DLP simulation mode](https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn"
+    ]
+  },
+  "T07-03": {
+    "id": "T07-03",
+    "type": "fieldwork",
+    "title": "T07 step 3",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [
+      "alerts"
+    ],
+    "requiredFields": [
+      "allowedCase",
+      "prohibitedCase",
+      "userExperience",
+      "blockOverride",
+      "alertCase"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Test a permitted action and a prohibited transfer on approved clients. Record user experience, block/override behavior and corresponding alert/case. [S37: Data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp"
+    ]
+  },
+  "T07-04": {
+    "id": "T07-04",
+    "type": "fieldwork",
+    "title": "T07 step 4",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [
+      "dlp",
+      "dlpRules"
+    ],
+    "requiredFields": [
+      "excludedUserCase",
+      "secondLocationCase",
+      "policyMode"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Review an excluded user or a second location to identify unintended coverage gaps. When enforcement is not enabled, report only what simulation demonstrates. [S37: Data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp); [S69: DLP simulation mode](https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn"
+    ]
+  },
+  "T07-05": {
+    "id": "T07-05",
+    "type": "fieldwork",
+    "title": "T07 step 5",
+    "controls": [
+      "DATA-03"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "labeledCases",
+      "falsePositives",
+      "missedCases",
+      "testSetSize"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Measure false-positive and missed-case observations only within the labeled test set; do not extrapolate a detection rate for all organizational content. **Consultant interpretation.** [S37: Data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp"
+    ]
+  },
+  "T08-01": {
+    "id": "T08-01",
+    "type": "fieldwork",
+    "title": "T08 step 1",
+    "controls": [
+      "END-01"
+    ],
+    "operations": [
+      "devices",
+      "managedDevices",
+      "compliance",
+      "complianceAssignments"
+    ],
+    "requiredFields": [
+      "testDevices",
+      "defenderInventory",
+      "protectionState"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Reconcile the test devices with inventory and document platform, enrollment, last check-in, assigned policies and protection state. [S32: Intune device compliance policies](https://learn.microsoft.com/en-us/intune/device-security/compliance/overview); [S35: Onboard devices to Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding"
+    ]
+  },
+  "T08-02": {
+    "id": "T08-02",
+    "type": "fieldwork",
+    "title": "T08 step 2",
+    "controls": [
+      "END-02"
+    ],
+    "operations": [
+      "managedDevices",
+      "ca",
+      "signIns"
+    ],
+    "requiredFields": [
+      "compliantCase",
+      "noncompliantCase",
+      "unassignedCase",
+      "gracePeriodCase",
+      "noPolicySetting"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Test an assigned compliant device, a known noncompliant device, an unassigned device and a relevant grace-period case. Inspect the tenant's no-policy setting and actual access result. [S32: Intune device compliance policies](https://learn.microsoft.com/en-us/intune/device-security/compliance/overview); [S09: Conditional Access overview](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "T08-03": {
+    "id": "T08-03",
+    "type": "fieldwork",
+    "title": "T08 step 3",
+    "controls": [
+      "END-06"
+    ],
+    "operations": [
+      "appProtection"
+    ],
+    "requiredFields": [
+      "copyCase",
+      "saveCase",
+      "conditionalLaunchCase",
+      "selectiveRemovalRecord"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "On supported BYOD applications, test copy/save to a personal location using synthetic data; verify conditional launch and approved selective-removal behavior. [S33: Intune app protection policies](https://learn.microsoft.com/en-us/intune/app-management/protection/overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/intune/app-management/protection/overview"
+    ]
+  },
+  "T08-04": {
+    "id": "T08-04",
+    "type": "fieldwork",
+    "title": "T08 step 4",
+    "controls": [
+      "END-04"
+    ],
+    "operations": [
+      "alerts",
+      "incidents"
+    ],
+    "requiredFields": [
+      "validationProcedure",
+      "testDevice",
+      "telemetry",
+      "responderReceipt"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Verify a benign endpoint detection validation produces telemetry and reaches the expected responder. Use the product's approved procedure and a test device; do not introduce malware. **Consultant exercise boundary.** [S35: Onboard devices to Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding); [S43: Incident response playbooks](https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-endpoint/configure-machines-onboarding",
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks"
+    ]
+  },
+  "T09-01": {
+    "id": "T09-01",
+    "type": "fieldwork",
+    "title": "T09 step 1",
+    "controls": [
+      "REC-01"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "recoveryUnit",
+      "destination",
+      "knownGoodPoint",
+      "expectedContent",
+      "access",
+      "rtoSeconds",
+      "rpoSeconds",
+      "acceptanceOwner"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Define recovery unit, authorized destination, known-good point, expected content, access permissions, RTO/RPO, start event and acceptance owner before testing. These metrics are **consultant/business definitions**. [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide); [S42: Microsoft 365 Backup FAQ](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "T09-02": {
+    "id": "T09-02",
+    "type": "fieldwork",
+    "title": "T09 step 2",
+    "controls": [
+      "REC-01"
+    ],
+    "operations": [
+      "backupPolicies"
+    ],
+    "requiredFields": [
+      "protectedUnits",
+      "restorePoints",
+      "dependencies"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Verify actual protection coverage and available restore points. Include dependencies such as configuration, credentials and connectors that may fall outside content protection. [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide); [S42: Microsoft 365 Backup FAQ](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "T09-03": {
+    "id": "T09-03",
+    "type": "fieldwork",
+    "title": "T09 step 3",
+    "controls": [
+      "REC-02"
+    ],
+    "operations": [
+      "restoreSessions"
+    ],
+    "requiredFields": [
+      "startedUtc",
+      "requestUtc",
+      "serviceCompletedUtc",
+      "acceptedUtc",
+      "destination"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Restore synthetic or approved test content to an isolated destination where supported. Record declaration time, request time, service completion and business acceptance separately. [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "T09-04": {
+    "id": "T09-04",
+    "type": "fieldwork",
+    "title": "T09 step 4",
+    "controls": [
+      "REC-02"
+    ],
+    "operations": [
+      "restoreSessions"
+    ],
+    "requiredFields": [
+      "startedUtc",
+      "acceptedUtc",
+      "recoveryPointUtc",
+      "incidentUtc",
+      "rtoSeconds",
+      "rpoSeconds",
+      "integrityChecks",
+      "businessAcceptance"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Validate readable content, relevant versions, item counts or hashes, permissions and owner acceptance. Calculate observed recovery duration and data age. **Consultant validation method.** [S42: Microsoft 365 Backup FAQ](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "T09-05": {
+    "id": "T09-05",
+    "type": "fieldwork",
+    "title": "T09 step 5",
+    "controls": [
+      "REC-03"
+    ],
+    "operations": [
+      "roles",
+      "directoryAudit"
+    ],
+    "requiredFields": [
+      "backupAdminRoles",
+      "destructiveChangeSafeguards",
+      "compromiseExercise"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Tabletop backup administrator compromise and inspect destructive-change safeguards. Do not delete recovery copies to demonstrate a risk. **Consultant exercise boundary.** [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "T09-06": {
+    "id": "T09-06",
+    "type": "fieldwork",
+    "title": "T09 step 6",
+    "controls": [
+      "REC-02"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "cleanupApproval",
+      "cleanupRecord",
+      "holdReview",
+      "scaleLimit"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Remove test artifacts only under the approved cleanup plan and retention/hold rules; document whether the tested scale represents a wider recovery claim. [S38: Retention policies and retention labels](https://learn.microsoft.com/en-us/purview/retention); [S41: Microsoft 365 Backup overview](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/retention",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide"
+    ]
+  },
+  "T10-01": {
+    "id": "T10-01",
+    "type": "fieldwork",
+    "title": "T10 step 1",
+    "controls": [
+      "PP-03",
+      "AI-03"
+    ],
+    "operations": [
+      "apps",
+      "grants",
+      "appRoles",
+      "ppEnvironments"
+    ],
+    "requiredFields": [
+      "runtimeIdentity",
+      "connectors",
+      "environment",
+      "tools",
+      "endpoints",
+      "policyMode",
+      "exceptions"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Inventory an app/flow/agent's runtime identity, connectors, environment/workspace, tool permissions and external endpoints. Review the actual policy mode and exceptions. [S49: Power Platform data policy strategy](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy); [S50: Power Platform advanced connector policies](https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/power-platform/guidance/adoption/dlp-strategy",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "T10-02": {
+    "id": "T10-02",
+    "type": "fieldwork",
+    "title": "T10 step 2",
+    "controls": [
+      "PP-02"
+    ],
+    "operations": [],
+    "requiredFields": [
+      "allowedCase",
+      "prohibitedCase",
+      "customConnectors",
+      "nonblockableConnectors",
+      "runtimeObservations"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Test one allowed and one prohibited synthetic data flow. Cover custom or nonblockable connectors in the active policy model; verify existing runtime behavior as well as maker experience. [S75: Power Platform connector classification](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification); [S50: Power Platform advanced connector policies](https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification",
+      "https://learn.microsoft.com/en-us/power-platform/admin/advanced-connector-policies"
+    ]
+  },
+  "T10-03": {
+    "id": "T10-03",
+    "type": "fieldwork",
+    "title": "T10 step 3",
+    "controls": [
+      "FAB-01"
+    ],
+    "operations": [
+      "publicEmbeds",
+      "fabricSettings"
+    ],
+    "requiredFields": [
+      "publicEmbedInventory",
+      "approvedSyntheticPublicAccess"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Inspect existing public analytics embeds. A tenant restriction on future publishing is not a substitute for reviewing previously exposed content. Test public access only on approved synthetic material. **Consultant procedure.** [S51: Fabric export and sharing tenant settings](https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing); [S52: Power BI Publish to web](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/fabric/admin/service-admin-portal-export-sharing",
+      "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web"
+    ]
+  },
+  "T10-04": {
+    "id": "T10-04",
+    "type": "fieldwork",
+    "title": "T10 step 4",
+    "controls": [
+      "AI-03"
+    ],
+    "operations": [
+      "appRoles",
+      "grants"
+    ],
+    "requiredFields": [
+      "untrustedInstruction",
+      "requestedAction",
+      "authorizationDecision",
+      "approvalEvidence"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "For agents, place an out-of-scope instruction in untrusted synthetic content. Observe requested actions, tool authorization and required approvals. Model behavior alone is not the authorization boundary. **Consultant adversarial test.** [S47: Data, Privacy, and Security for Microsoft Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "T10-05": {
+    "id": "T10-05",
+    "type": "fieldwork",
+    "title": "T10 step 5",
+    "controls": [
+      "AI-04"
+    ],
+    "operations": [
+      "ual",
+      "incidents"
+    ],
+    "requiredFields": [
+      "testedAction",
+      "eventIds",
+      "incidentEvidence",
+      "permissionChangeRetest"
+    ],
+    "objective": "Collect and evaluate the existing evidence for this precise fieldwork step.",
+    "review": "Verify event and incident evidence for the tested action, and repeat after any permission changes. [S47: Data, Privacy, and Security for Microsoft Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy); [S19: Search the audit log](https://learn.microsoft.com/en-us/purview/audit-search)",
+    "criterion": "Confirm the expected and actual outcomes, scope, provenance and unresolved limitations. Active exercises are evaluated from existing records.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+      "https://learn.microsoft.com/en-us/purview/audit-search"
+    ]
+  },
+  "P01": {
+    "id": "P01",
+    "type": "phase",
+    "title": "Engagement model",
+    "controls": [
+      "GOV-01",
+      "GOV-02",
+      "GOV-03"
+    ],
+    "operations": [
+      "organization",
+      "domains",
+      "licenses",
+      "users",
+      "groups",
+      "sites",
+      "roles",
+      "roleDefinitions",
+      "pimActive"
+    ],
+    "requiredFields": [
+      "charter",
+      "reviewPeriod",
+      "adoptedCriteria",
+      "sponsorAcceptance"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "P02": {
+    "id": "P02",
+    "type": "phase",
+    "title": "Scope and discovery",
+    "controls": [
+      "GOV-01",
+      "GOV-05"
+    ],
+    "operations": [
+      "organization",
+      "domains",
+      "licenses",
+      "users",
+      "groups",
+      "sites"
+    ],
+    "requiredFields": [
+      "workloadScope",
+      "procurementReconciliation",
+      "exclusions"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?view=o365-worldwide",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/microsoft-365/enterprise/m365-dr-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies"
+    ]
+  },
+  "P03": {
+    "id": "P03",
+    "type": "phase",
+    "title": "Delivery plan and responsibilities",
+    "controls": [
+      "GOV-03"
+    ],
+    "operations": [
+      "roles",
+      "roleDefinitions",
+      "pimActive"
+    ],
+    "requiredFields": [
+      "deliveryPlan",
+      "responsibilityMatrix",
+      "escalationContacts"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "P04": {
+    "id": "P04",
+    "type": "phase",
+    "title": "Access and licensing",
+    "controls": [
+      "GOV-05",
+      "IAM-01"
+    ],
+    "operations": [
+      "licenses",
+      "users",
+      "roles",
+      "roleDefinitions",
+      "pimActive",
+      "pimEligible",
+      "groupMembers"
+    ],
+    "requiredFields": [
+      "accessRequest",
+      "roleScope",
+      "licenseMatrix"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals",
+      "https://learn.microsoft.com/en-us/purview/audit-log-retention-policies",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  },
+  "P05": {
+    "id": "P05",
+    "type": "phase",
+    "title": "Evidence and collection quality",
+    "controls": [
+      "LOG-03",
+      "LOG-04"
+    ],
+    "operations": [
+      "signIns",
+      "directoryAudit",
+      "ual",
+      "roles"
+    ],
+    "requiredFields": [
+      "evidenceRegister",
+      "custody",
+      "collectionLimits"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/graph/paging",
+      "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog?view=exchange-ps",
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components"
+    ]
+  },
+  "P06": {
+    "id": "P06",
+    "type": "phase",
+    "title": "Sampling and operating effectiveness",
+    "controls": [
+      "IAM-02",
+      "DATA-03",
+      "REC-02"
+    ],
+    "operations": [
+      "ca",
+      "defaults",
+      "authPolicy",
+      "registration",
+      "signIns",
+      "dlp",
+      "dlpRules",
+      "alerts",
+      "backupPolicies",
+      "restoreSessions"
+    ],
+    "requiredFields": [
+      "population",
+      "sampleMethod",
+      "coverage",
+      "operatingEvidence"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication",
+      "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+      "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/en-us/purview/dlp-simulation-mode-learn",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview?view=o365-worldwide",
+      "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-faq?view=o365-worldwide"
+    ]
+  },
+  "P07": {
+    "id": "P07",
+    "type": "phase",
+    "title": "Control assessment rules",
+    "controls": [
+      "GOV-02",
+      "GOV-04"
+    ],
+    "operations": [
+      "organization",
+      "licenses",
+      "ca",
+      "authorization"
+    ],
+    "requiredFields": [
+      "assessmentWorksheet",
+      "evidenceLayers",
+      "limitations",
+      "reviewer"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://www.microsoft.com/licensing/terms/",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "P08": {
+    "id": "P08",
+    "type": "phase",
+    "title": "Risk and prioritization",
+    "controls": [
+      "SOC-01",
+      "GOV-04"
+    ],
+    "operations": [
+      "alerts",
+      "incidents",
+      "secureScores",
+      "ca",
+      "authorization"
+    ],
+    "requiredFields": [
+      "findingRegister",
+      "impact",
+      "likelihood",
+      "priorities",
+      "exceptions"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/security/compass/incident-response-playbooks",
+      "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent",
+      "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "P09": {
+    "id": "P09",
+    "type": "phase",
+    "title": "Fieldwork sequence",
+    "controls": [
+      "LOG-01",
+      "IAM-03",
+      "MAIL-02",
+      "END-02"
+    ],
+    "operations": [
+      "auditConfig",
+      "exoOrg",
+      "ual",
+      "directoryAudit",
+      "signIns",
+      "ca",
+      "namedLocations",
+      "defaults",
+      "crossDefault",
+      "presetEop",
+      "presetDefender",
+      "antiPhish",
+      "antiPhishRules",
+      "spam",
+      "spamRules",
+      "malware",
+      "malwareRules",
+      "safeLinks",
+      "safeLinksRules",
+      "safeAttachments",
+      "safeAttachmentsRules",
+      "managedDevices",
+      "compliance",
+      "complianceAssignments"
+    ],
+    "requiredFields": [
+      "fieldworkTracker",
+      "evidenceCrossReferences",
+      "unresolvedSteps"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/audit-log-enable-disable",
+      "https://learn.microsoft.com/en-us/purview/audit-search",
+      "https://learn.microsoft.com/en-us/purview/audit-mailboxes",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
+      "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies",
+      "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview"
+    ]
+  },
+  "P10": {
+    "id": "P10",
+    "type": "phase",
+    "title": "Reporting and remediation",
+    "controls": [
+      "GOV-03",
+      "GOV-04"
+    ],
+    "operations": [
+      "roles",
+      "roleDefinitions",
+      "pimActive",
+      "ca",
+      "authorization"
+    ],
+    "requiredFields": [
+      "executiveReport",
+      "factualReview",
+      "remediationPlan",
+      "accountableOwners"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview",
+      "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+    ]
+  },
+  "P11": {
+    "id": "P11",
+    "type": "phase",
+    "title": "Tenant and industry overlays",
+    "controls": [
+      "EXT-01",
+      "EXT-08"
+    ],
+    "operations": [
+      "organization",
+      "licenses",
+      "domains",
+      "roles"
+    ],
+    "requiredFields": [
+      "applicabilityMatrix",
+      "frameworkCrosswalk",
+      "featureAvailability"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod",
+      "https://learn.microsoft.com/en-us/office365/servicedescriptions/office-applications-service-description/office-application-and-feature-availability-in-government-plans",
+      "https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0",
+      "https://learn.microsoft.com/en-us/purview/compliance-manager",
+      "https://www.microsoft.com/licensing/terms/"
+    ]
+  },
+  "P12": {
+    "id": "P12",
+    "type": "phase",
+    "title": "Continuous assurance",
+    "controls": [
+      "OPS-04"
+    ],
+    "operations": [
+      "ca",
+      "roles",
+      "apps",
+      "licenses"
+    ],
+    "requiredFields": [
+      "baseline",
+      "driftReview",
+      "retestSchedule",
+      "closureEvidence"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/defender-xdr/microsoft-secure-score"
+    ]
+  },
+  "P13": {
+    "id": "P13",
+    "type": "phase",
+    "title": "Limitations and handoff",
+    "controls": [
+      "LOG-04",
+      "GOV-03"
+    ],
+    "operations": [
+      "roles",
+      "directoryAudit",
+      "roleDefinitions",
+      "pimActive"
+    ],
+    "requiredFields": [
+      "limitations",
+      "evidenceTransfer",
+      "accessRemovalRecord",
+      "ownerAcceptance"
+    ],
+    "objective": "Review the completed engagement workpapers for this phase.",
+    "review": "Reconcile the named phase workpapers with collected evidence and the main playbook; record outstanding decisions.",
+    "criterion": "No unsigned, missing or untraceable required workpaper; consultant review still required.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+      "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference",
+      "https://learn.microsoft.com/en-us/graph/permissions-overview"
+    ]
+  }
+}

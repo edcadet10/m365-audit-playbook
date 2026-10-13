@@ -31,6 +31,7 @@ for domain in dict.fromkeys(c['domain'] for c in controls):
             f"**Proposed accountable owner:** {c['owner']}. **Suggested priority:** {c['priority']}. These are consultant assignments; determine actual finding severity from evidence.", '',
             f"**Evidence to collect:** {c['evidence']} {ms}", '',
             f"**Audit procedure (consultant method):** {c['procedure']} {ms}", '',
+            f"**Read-only execution — {c['title']}:** [{c['id']}.ps1](../scripts/controls/{c['id']}.ps1) collects the mapped live evidence and checks this control's existing workpapers. [Exact operations, required fields and Microsoft references](../docs/SCRIPT-COVERAGE.md#{c['id'].lower()}). Use `-Plan` to inspect its reads and permissions before execution; [execution guide](../scripts/README.md). Missing evidence remains incomplete; the script does not implement the remediation below.", '',
             f"**Proposed assessment criterion:** {c['criterion']} {ms}", '',
             f"**Falsifying probe (authorized test or evidence challenge):** {c['falsification']} {ms}", '',
             f"**Remediation direction:** {c['remediation']} {ms}", '',
@@ -38,12 +39,13 @@ for domain in dict.fromkeys(c['domain'] for c in controls):
             f"**Source trail:** {refs}", '']
 (ROOT / 'controls/CONTROL-CATALOG.md').write_text('\n'.join(lines), encoding='utf-8')
 
-fields = list(controls[0])
+fields = list(controls[0]) + ['read_only_script','script_evidence_contract']
 with (ROOT / 'controls/control-catalog.csv').open('w', newline='', encoding='utf-8-sig') as f:
     writer = csv.DictWriter(f, fieldnames=fields)
     writer.writeheader()
     for c in controls:
-        writer.writerow({**c, 'sources': '; '.join(by_id[i]['url'] for i in c['sources'])})
+        writer.writerow({**c, 'sources': '; '.join(by_id[i]['url'] for i in c['sources']),
+            'read_only_script':f"scripts/controls/{c['id']}.ps1", 'script_evidence_contract':f"docs/SCRIPT-COVERAGE.md#{c['id'].lower()}"})
 
 lines = ['# Source register', '',
     'Access/research date: **12 October 2026**. Sources are living documents unless a version is pinned. Links are cited at the point of use in the playbook and control catalog. Read current documentation again before an engagement, especially for licensing, rollouts and retirement dates.', '',

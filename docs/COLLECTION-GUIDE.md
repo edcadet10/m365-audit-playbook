@@ -1,6 +1,8 @@
 # Evidence collection guide
 
-These examples are a **reference workbench**, not a complete tenant collector. They were reviewed against linked Microsoft command documentation but were not executed against a tenant. They intentionally contain no automated remediation. Authentication, consent and test actions still require the engagement's authorization. [S85: Microsoft Graph PowerShell authentication](https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0); [S86: Connect to Exchange Online PowerShell](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
+**Executable work program:** use the [script runner](../scripts/README.md) for the new module-check → install-if-missing → authenticate → tenant-verification → read-only-collection sequence. The snippets below are focused command explanations; use the runner for execution guards, complete step mapping and preserved error results. Every [control/step script](SCRIPT-COVERAGE.md) includes a title, description and Microsoft references.
+
+These examples invoke the documented control scripts, including their module availability, installation and authentication preflight. They were reviewed against linked Microsoft command documentation but were not executed against a tenant. They intentionally contain no automated remediation. Authentication, consent and test actions still require the engagement's authorization. [S85: Microsoft Graph PowerShell authentication](https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0); [S86: Connect to Exchange Online PowerShell](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
 
 ## Preflight
 
@@ -17,66 +19,19 @@ Keep raw output outside the repository in the approved evidence store. Use an en
 The example explicitly targets the **commercial Global environment**. Adapt authentication and endpoint selection to a verified national-cloud plan. Review consent before connecting. [S85: Microsoft Graph PowerShell authentication](https://learn.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0); [S55: Graph: List Conditional Access policies](https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
 
 ~~~powershell
-# Modules must already be installed and approved.
-Import-Module Microsoft.Graph.Authentication
-$ErrorActionPreference = 'Stop'
-
-$auditTenantId = '<approved-tenant-guid>'
-$auditEvidenceRoot = '<approved-evidence-directory>'
-$auditRunId = [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ')
-$auditRunPath = Join-Path $auditEvidenceRoot $auditRunId
-New-Item -ItemType Directory -Path $auditRunPath -ErrorAction Stop | Out-Null
-
-Connect-MgGraph -TenantId $auditTenantId -Environment Global -Scopes 'Policy.Read.All' -ContextScope Process -NoWelcome
-try {
-    $auditContext = Get-MgContext
-    if ($auditContext.TenantId -ne $auditTenantId -or
-        $auditContext.Environment -ne 'Global') {
-        throw 'Unexpected tenant or environment. Stop collection.'
-    }
-
-    $auditPolicies = [System.Collections.Generic.List[object]]::new()
-    $auditNext = 'https://graph.microsoft.com/v1.0/identity/conditionalAccess/policies'
-    $auditPageCount = 0
-
-    while ($auditNext) {
-        $auditUri = [uri]$auditNext
-        if ($auditUri.Scheme -ne 'https' -or
-            $auditUri.Host -ne 'graph.microsoft.com') {
-            throw 'Unexpected pagination endpoint. Stop collection.'
-        }
-        $auditPage = Invoke-MgGraphRequest -Method GET -Uri $auditNext -OutputType HashTable
-        if (-not $auditPage.Contains('value')) {
-            throw 'Expected collection missing from response.'
-        }
-        foreach ($auditPolicy in $auditPage.value) {
-            $auditPolicies.Add($auditPolicy)
-        }
-        $auditPageCount++
-        $auditNext = $auditPage.'@odata.nextLink'
-    }
-
-    $auditOutput = Join-Path $auditRunPath 'conditional-access.json'
-    ConvertTo-Json -InputObject $auditPolicies.ToArray() -Depth 100 |
-        Set-Content -LiteralPath $auditOutput -Encoding utf8
-
-    [pscustomobject]@{
-        TenantId = $auditContext.TenantId
-        Environment = $auditContext.Environment
-        CollectedUtc = [DateTime]::UtcNow.ToString('o')
-        PageCount = $auditPageCount
-        ObjectCount = $auditPolicies.Count
-        CollectionState = 'Completed'
-        SHA256 = (Get-FileHash -LiteralPath $auditOutput -Algorithm SHA256).Hash
-    } | ConvertTo-Json |
-        Set-Content -LiteralPath (Join-Path $auditRunPath 'manifest.json') -Encoding utf8
+# Title: Read Conditional Access policies
+# Description: Collects policy definitions; the runner adds shared safeguards. Module setup and authentication run before collection.
+# Reference: https://learn.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0
+$auditParameters = @{
+    ExpectedTenantId = '<approved-tenant-guid>'
+    OutputRoot = 'D:/Audit/results'
+    InputRoot = 'D:/Audit/inputs'
+    TargetsPath = 'D:/Audit/targets.json'
 }
-finally {
-    Disconnect-MgGraph | Out-Null
-}
+./scripts/controls/IAM-03.ps1 @auditParameters
 ~~~
 
-The loop follows service-provided nextLink values. It fails on request errors rather than reporting a successful empty population. It does **not** implement a production retry, timeout, throttling or resumable-collection strategy. A failed run remains incomplete; record the error securely and rerun under an approved plan. Compare the count with an independent inventory. [S53: Microsoft Graph paging](https://learn.microsoft.com/en-us/graph/paging); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
+The shared runner follows service-provided nextLink values, preserves pages and enforces a page cap. It fails on request errors rather than reporting a successful empty population. It does **not** implement automatic retries or resumable collection; a throttled request remains incomplete. A failed run remains incomplete; record the error securely and rerun under an approved plan. Compare the count with an independent inventory. [S53: Microsoft Graph paging](https://learn.microsoft.com/en-us/graph/paging); [S54: Microsoft Graph permissions overview](https://learn.microsoft.com/en-us/graph/permissions-overview)
 
 ## Exchange Online: focused read operations
 
@@ -87,11 +42,16 @@ Connect through the approved Exchange Online module and correct tenant/cloud con
 Run ingestion verification in **Exchange Online PowerShell**. Microsoft documents that the corresponding property can return False in Security & Compliance PowerShell even when ingestion is enabled. Check organization mailbox auditing separately; required actions still need event validation. [S60: Turn auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable); [S20: Manage mailbox auditing](https://learn.microsoft.com/en-us/purview/audit-mailboxes)
 
 ~~~powershell
-Get-AdminAuditLogConfig |
-    Select-Object UnifiedAuditLogIngestionEnabled
-
-Get-OrganizationConfig |
-    Select-Object AuditDisabled
+# Title: Inspect audit ingestion and mailbox auditing
+# Description: Reads independent organization audit switches. Module setup and authentication run before collection.
+# Reference: https://learn.microsoft.com/en-us/purview/audit-log-enable-disable
+$auditParameters = @{
+    ExpectedTenantId = '<approved-tenant-guid>'
+    OutputRoot = 'D:/Audit/results'
+    InputRoot = 'D:/Audit/inputs'
+    TargetsPath = 'D:/Audit/targets.json'
+}
+./scripts/controls/LOG-01.ps1 @auditParameters
 ~~~
 
 ### SMTP AUTH settings
@@ -99,11 +59,16 @@ Get-OrganizationConfig |
 Inspect organization configuration and mailbox overrides together. The purpose is to identify effective exceptions, not to equate SMTP AUTH with Basic authentication. Review actual client usage and the migration timeline separately. [S70: SMTP AUTH configuration](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission); [S26: Updated SMTP AUTH Basic Authentication deprecation timeline](https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835)
 
 ~~~powershell
-Get-TransportConfig |
-    Select-Object SmtpClientAuthenticationDisabled
-
-Get-CASMailbox -ResultSize Unlimited |
-    Select-Object Identity, SmtpClientAuthenticationDisabled
+# Title: Inspect SMTP AUTH settings
+# Description: Reads organization defaults and mailbox overrides. Module setup and authentication run before collection.
+# Reference: https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission
+$auditParameters = @{
+    ExpectedTenantId = '<approved-tenant-guid>'
+    OutputRoot = 'D:/Audit/results'
+    InputRoot = 'D:/Audit/inputs'
+    TargetsPath = 'D:/Audit/targets.json'
+}
+./scripts/controls/MAIL-04.ps1 @auditParameters
 ~~~
 
 ### Inbox rules for an approved mailbox
@@ -111,9 +76,16 @@ Get-CASMailbox -ResultSize Unlimited |
 Use only within the agreed mailbox population. Hidden rules and forwarding/deletion actions warrant review in context; a rule name alone is not an incident finding. Preserve raw properties when investigating rather than relying only on a narrow table. [S87: Get-InboxRule](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps); [S25: Control external email forwarding](https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding); [S76: Microsoft phishing investigation playbook](https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-phishing)
 
 ~~~powershell
-Get-InboxRule -Mailbox '<approved-test-or-sampled-mailbox>' -IncludeHidden |
-    Select-Object Identity, Name, Enabled, Priority,
-        ForwardTo, RedirectTo, ForwardAsAttachmentTo, DeleteMessage
+# Title: Inspect approved mailbox rules
+# Description: Reads visible and hidden inbox rules for a named mailbox. Module setup and authentication run before collection.
+# Reference: https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-inboxrule?view=exchange-ps
+$auditParameters = @{
+    ExpectedTenantId = '<approved-tenant-guid>'
+    OutputRoot = 'D:/Audit/results'
+    InputRoot = 'D:/Audit/inputs'
+    TargetsPath = 'D:/Audit/targets.json'
+}
+./scripts/controls/MAIL-03.ps1 @auditParameters
 ~~~
 
 ### DKIM
@@ -121,8 +93,16 @@ Get-InboxRule -Mailbox '<approved-test-or-sampled-mailbox>' -IncludeHidden |
 Read tenant-provided selectors and current configuration. Verify DNS and actual signed headers for each material sending domain; do not construct selectors from an old hard-coded naming convention. [S23: Configure DKIM](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure)
 
 ~~~powershell
-Get-DkimSigningConfig |
-    Select-Object Domain, Enabled, Status, Selector1CNAME, Selector2CNAME
+# Title: Inspect DKIM configuration
+# Description: Reads signing state and tenant-provided DNS selectors. Module setup and authentication run before collection.
+# Reference: https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure
+$auditParameters = @{
+    ExpectedTenantId = '<approved-tenant-guid>'
+    OutputRoot = 'D:/Audit/results'
+    InputRoot = 'D:/Audit/inputs'
+    TargetsPath = 'D:/Audit/targets.json'
+}
+./scripts/controls/MAIL-01.ps1 @auditParameters
 ~~~
 
 ## SharePoint collection caveat
